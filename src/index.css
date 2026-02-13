@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-cairo: "Cairo", sans-serif;
+  
+  --color-primary: #524DE5;
+  --color-light-green: #C2FE9E;
+  --color-surface-light: #F4F5FF;
+  --color-secondary: #7875FB;
+  --color-black: #000000;
+  --color-light-purple: #BFBBFF;
+}
+
+:root {
+  font-family: var(--font-cairo);
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: var(--color-black);
+  background-color: var(--color-surface-light);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.scroll-linee-indicator{
+  width: 2px;
+  height: 150px;
+  background-color: #ffffff61;
+  position: relative;
+ 
+}
+
+.scroll-linee-indicator::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  background-color: #fff;
+}

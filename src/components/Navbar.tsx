@@ -1,0 +1,191 @@
+import Button from "./Button";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import logo from "../assets/logo.png";
+import logo2 from "../assets/logo2.png";
+import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
+
+const Navbar = () => {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+  const isAbout = location.pathname === "/about";
+  const [open, setOpen] = useState(false);
+  const getLinkClasses = (active: boolean) =>
+    `transition-colors ${
+      isHome
+        ? active
+          ? "text-light-green"
+          : "text-white hover:text-light-green"
+        : active
+        ? "text-primary"
+        : "text-gray-700 hover:text-primary"
+    }`;
+  useEffect(() => {
+    setOpen(false);
+  }, [location.pathname]);
+  useEffect(() => {
+    if (open) document.body.classList.add("overflow-hidden");
+    else document.body.classList.remove("overflow-hidden");
+    return () => document.body.classList.remove("overflow-hidden");
+  }, [open]);
+
+  return (
+    <nav
+      className={`w-full py-6 px-8 flex items-center justify-between font-cairo transition-colors duration-300 ${
+        isHome ? "bg-primary text-white" : "bg-white text-black shadow-sm"
+      }`}
+    >
+      <div className="flex gap-10 items-center justify-between">
+        {/* Logo Placeholder */}
+        <div className="flex items-center gap-2">
+          <div className="h-10 w-32 rounded flex items-center justify-center text-sm font-bold tracking-wider">
+            <img src={isHome ? logo : logo2} alt="Genix Drive Logo" />
+          </div>
+        </div>
+
+        {/* Navigation Links */}
+        <div className="hidden md:flex items-center gap-8 text-sm">
+          <NavLink
+            to="/"
+            className={({ isActive }) => getLinkClasses(isActive)}
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) => getLinkClasses(isActive)}
+          >
+            About us
+          </NavLink>
+          <NavLink
+            to="/features"
+            className={({ isActive }) => getLinkClasses(isActive)}
+          >
+            Features
+          </NavLink>
+          <NavLink
+            to="/pricing"
+            className={({ isActive }) => getLinkClasses(isActive)}
+          >
+            Demo
+          </NavLink>
+          <NavLink
+            to="/blogs"
+            className={({ isActive }) => getLinkClasses(isActive)}
+          >
+            Blogs
+          </NavLink>
+        </div>
+      </div>
+
+      {/* Auth Button */}
+      <div className="action-butto hidden md:flex gap-2">
+        <Button size="lg" variant={"primary"}>
+          {isHome ? "Sign Up/ Login" : "get started"}
+        </Button>
+        {!isAbout && !isHome && (
+          <Button size="lg" variant={"secondary"}>
+            Download Now
+          </Button>
+        )}
+      </div>
+      <button
+        aria-label="Open menu"
+        className={`md:hidden inline-flex items-center justify-center rounded-lg p-2 ${
+          isHome ? "text-white" : "text-black"
+        }`}
+        onClick={() => setOpen(true)}
+      >
+        <Menu className="w-7 h-7" />
+      </button>
+      <div
+        className={`fixed inset-0 z-50 transition-opacity duration-300 ${
+          open ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setOpen(false)}
+      >
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div
+          className={`absolute inset-y-0 right-0 w-full max-w-sm ${
+            isHome ? "bg-primary" : "bg-white"
+          } shadow-xl rounded-l-2xl transform transition-transform duration-300 ease-out ${
+            open ? "translate-x-0" : "translate-x-full"
+          }`}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="flex items-center justify-between px-6 py-5">
+            <img
+              src={isHome ? logo : logo2}
+              alt="Genix Drive Logo"
+              className="h-8"
+            />
+            <button
+              aria-label="Close menu"
+              className={`rounded-lg p-2 ${
+                isHome ? "text-white" : "text-black"
+              }`}
+              onClick={() => setOpen(false)}
+            >
+              <X className="w-7 h-7" />
+            </button>
+          </div>
+          <div className="px-6">
+            <div
+              className={`flex flex-col items-start gap-6 text-lg ${
+                isHome ? "text-white" : "text-black"
+              }`}
+            >
+              <NavLink
+                to="/"
+                className={({ isActive }) => getLinkClasses(isActive)}
+                onClick={() => setOpen(false)}
+              >
+                Home
+              </NavLink>
+              <NavLink
+                to="/about"
+                className={({ isActive }) => getLinkClasses(isActive)}
+                onClick={() => setOpen(false)}
+              >
+                About us
+              </NavLink>
+              <NavLink
+                to="/features"
+                className={({ isActive }) => getLinkClasses(isActive)}
+                onClick={() => setOpen(false)}
+              >
+                Features
+              </NavLink>
+              <NavLink
+                to="/pricing"
+                className={({ isActive }) => getLinkClasses(isActive)}
+                onClick={() => setOpen(false)}
+              >
+                Demo
+              </NavLink>
+              <NavLink
+                to="/blogs"
+                className={({ isActive }) => getLinkClasses(isActive)}
+                onClick={() => setOpen(false)}
+              >
+                Blogs
+              </NavLink>
+            </div>
+            <div className="mt-8 flex flex-col items-stretch gap-4">
+              <Button size="lg" variant={isHome ? "primary" : "secondary"}>
+                {isHome ? "Sign Up/ Login" : "get started"}
+              </Button>
+              {!isAbout && !isHome && (
+                <Button size="lg" variant={"secondary"}>
+                  Download Now
+                </Button>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
