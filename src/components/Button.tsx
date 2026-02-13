@@ -5,6 +5,7 @@ type ButtonProps = {
   variant?: "primary" | "outline" | "secondary" | "dark";
   size?: "sm" | "md" | "lg";
   className?: string;
+  isFullBtn?: boolean;
   children: ReactNode;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
@@ -27,14 +28,16 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       variant = "primary",
       size = "md",
       className = "",
+      isFullBtn,
       children,
       disabled,
       ...props
     },
     ref
   ) => {
-    const base =
-      "inline-flex max-w-[200px] text-[12px] items-center justify-center gap-2 rounded-lg font-bold uppercase tracking-wide transition-colors cursor-pointer font-cairo";
+    const base = `${
+      isFullBtn ? "max-w-full" : "max-w-[200px]"
+    } inline-flex  text-[12px] items-center justify-center gap-2 rounded-lg font-bold uppercase tracking-wide transition-colors cursor-pointer font-cairo`;
     const disabledClasses = disabled ? "opacity-60 cursor-not-allowed" : "";
     const classes = [
       base,
