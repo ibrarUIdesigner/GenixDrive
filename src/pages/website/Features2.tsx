@@ -9,8 +9,11 @@ import SectionHeading from "../../components/web/SectionHeading";
 
 import ab1 from "../../assets/ab1.jpg";
 import ab2 from "../../assets/ab2.png";
-import kf1 from "../../assets/kf1.png";
-const Features = () => {
+import kf1 from "../../assets/features/3kf1.png";
+import kf2 from "../../assets/features/3kf2.png";
+import kf3 from "../../assets/features/3kf3.png";
+import kf4 from "../../assets/features/3kf4.png";
+const Features2 = () => {
   const faqs = [
     {
       q: "Do I need permission to track a friend?",
@@ -57,14 +60,15 @@ const Features = () => {
         />
         <div className="content absolute md:w-1/3 top-5 md:top-1/2 left-[58px] transform md:-translate-y-1/2  text-white">
           <SubHeading size="4xl" className="mb-5">
-            1. Social & Family
-            <p className="text-secondary">Connect</p>
+            3. Driving
+            <p className="text-secondary">Insights</p>
           </SubHeading>
 
           <Paragraph size="sm">
-            tay close to what matters most — your loved ones. With AiGenix
-            Social & Family Connect, you can track, share, and ensure your
-            family’s safety in real time, no matter where life takes you.
+            Drive smarter, safer, and more confidently with GenixDrive. By
+            transforming your driving data into meaningful insights, GenixDrive
+            helps you understand your habits, improve safety, and protect what
+            truly matters.
           </Paragraph>
 
           <StoreActionsButtons />
@@ -78,8 +82,8 @@ const Features = () => {
           paraText="GenixDrive by AiGenix (Private) Limited is a smart telematics solution designed to make driving safer and more intelligent. It monitors driving habits, provides safety scores."
         >
           <p>
-            Key Highlights of <span className="text-secondary">Social</span> &
-            Family <span className="text-secondary">Connect</span>{" "}
+            Key Highlights of{" "}
+            <span className="text-secondary">Driving Insights</span> &
           </p>
         </SectionHeading>
 
@@ -88,25 +92,10 @@ const Features = () => {
           <div className="md:col-span-3 p-5 h-[400px] md:h-auto  bg-secondary rounded-2xl overflow-hidden z-10 relative">
             <img
               className="absolute top-0 left-0 w-full h-full object-cover"
-              src={ab1}
+              src={kf1}
               alt=""
             />
             <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
-            <div className="absolute bottom-0 left-0 w-full  p-5  z-10">
-              <SubHeading size="2xl" color="white" weight="medium">
-                About AiGenix (Private) Limited
-              </SubHeading>
-              <Paragraph
-                size="sm"
-                color="white"
-                weight="medium"
-                className="leading-5"
-              >
-                AiGenix is a Karachi-based tech company building AI-driven
-                solutions like GenixDrive to make mobility smarter, safer, and
-                more connected.
-              </Paragraph>
-            </div>
           </div>
           <div className="md:col-span-2 p-10 bg-light-green rounded-2xl flex items-center justify-center">
             <div>
@@ -116,7 +105,7 @@ const Features = () => {
                 weight="bold"
                 className="mb-4"
               >
-                What is GenixDrive?
+                1. Turning Data Into Safer Journeys
               </SubHeading>
               <Paragraph
                 size="sm"
@@ -124,13 +113,11 @@ const Features = () => {
                 weight="medium"
                 className="leading-8"
               >
-                GenixDrive is a smart telematics solution developed by AiGenix
-                (Private) Limited, a technology-driven company based in Karachi,
-                Pakistan. Designed for both mobile and in-vehicle devices,
-                GenixDrive tracks and analyzes driving behavior to generate
-                clear safety scores. From speed and braking to cornering and
-                acceleration, it provides drivers with meaningful insights into
-                how responsibly they drive.
+                GenixDrive transforms telematics data into practical safety
+                insights. By analyzing speed, braking, acceleration, and
+                cornering, it reveals patterns that affect your safety on the
+                road. These insights help you make smarter driving choices and
+                create a habit of safer mobility every day.
               </Paragraph>
             </div>
           </div>
@@ -146,7 +133,7 @@ const Features = () => {
                 weight="bold"
                 className="mb-4"
               >
-                What is GenixDrive?
+                2. Safety Scoring on Every Trip
               </SubHeading>
               <Paragraph
                 size="sm"
@@ -154,20 +141,18 @@ const Features = () => {
                 weight="medium"
                 className="leading-8"
               >
-                GenixDrive is a smart telematics solution developed by AiGenix
-                (Private) Limited, a technology-driven company based in Karachi,
-                Pakistan. Designed for both mobile and in-vehicle devices,
-                GenixDrive tracks and analyzes driving behavior to generate
-                clear safety scores. From speed and braking to cornering and
-                acceleration, it provides drivers with meaningful insights into
-                how responsibly they drive.
+                Every journey is tracked and scored with safety as the priority.
+                The score reflects how responsibly you handle your vehicle,
+                showing where you’re doing well and where improvement is needed.
+                Over time, these scores encourage safer driving and reduce the
+                risk of accidents.
               </Paragraph>
             </div>
           </div>
           <div className="md:col-span-3 h-[400px] md:h-auto p-5 bg-light-green rounded-2xl relative overflow-hidden">
             <img
               className="absolute top-0 left-0 w-full h-full object-cover"
-              src={ab2}
+              src={kf2}
               alt=""
             />
           </div>
@@ -178,13 +163,13 @@ const Features = () => {
           <div className="md:col-span-3 p-5 h-[400px] md:h-auto  bg-secondary rounded-2xl overflow-hidden z-10 relative">
             <img
               className="absolute top-0 left-0 w-full h-full object-cover"
-              src={ab1}
+              src={kf3}
               alt=""
             />
             <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
             <div className="absolute bottom-0 left-0 w-full  p-5  z-10">
               <SubHeading size="2xl" color="white" weight="medium">
-                About AiGenix (Private) Limited
+                3. Spotting Risky Behaviors
               </SubHeading>
               <Paragraph
                 size="sm"
@@ -192,9 +177,11 @@ const Features = () => {
                 weight="medium"
                 className="leading-5"
               >
-                AiGenix is a Karachi-based tech company building AI-driven
-                solutions like GenixDrive to make mobility smarter, safer, and
-                more connected.
+                Many unsafe habits go unnoticed while driving, but GenixDrive
+                brings them to light. The app highlights risky events like
+                over-speeding, sudden braking, or harsh cornering, making you
+                aware of potential dangers. By identifying these patterns, it
+                empowers you to drive more responsibly.
               </Paragraph>
             </div>
           </div>
@@ -206,7 +193,7 @@ const Features = () => {
                 weight="bold"
                 className="mb-4"
               >
-                What is GenixDrive?
+                3. Spotting Risky Behaviors
               </SubHeading>
               <Paragraph
                 size="sm"
@@ -214,13 +201,11 @@ const Features = () => {
                 weight="medium"
                 className="leading-8"
               >
-                GenixDrive is a smart telematics solution developed by AiGenix
-                (Private) Limited, a technology-driven company based in Karachi,
-                Pakistan. Designed for both mobile and in-vehicle devices,
-                GenixDrive tracks and analyzes driving behavior to generate
-                clear safety scores. From speed and braking to cornering and
-                acceleration, it provides drivers with meaningful insights into
-                how responsibly they drive.
+                Many unsafe habits go unnoticed while driving, but GenixDrive
+                brings them to light. The app highlights risky events like
+                over-speeding, sudden braking, or harsh cornering, making you
+                aware of potential dangers. By identifying these patterns, it
+                empowers you to drive more responsibly.
               </Paragraph>
             </div>
           </div>
@@ -236,7 +221,7 @@ const Features = () => {
                 weight="bold"
                 className="mb-4"
               >
-                What is GenixDrive?
+                4. Insights for Every Vehicle
               </SubHeading>
               <Paragraph
                 size="sm"
@@ -244,20 +229,18 @@ const Features = () => {
                 weight="medium"
                 className="leading-8"
               >
-                GenixDrive is a smart telematics solution developed by AiGenix
-                (Private) Limited, a technology-driven company based in Karachi,
-                Pakistan. Designed for both mobile and in-vehicle devices,
-                GenixDrive tracks and analyzes driving behavior to generate
-                clear safety scores. From speed and braking to cornering and
-                acceleration, it provides drivers with meaningful insights into
-                how responsibly they drive.
+                Safety should never depend on the type of vehicle you’re using.
+                GenixDrive works with both motorcycles and cars, tailoring its
+                analysis to give accurate safety feedback for each trip. Whether
+                two wheels or four, you’ll always know how safe your driving
+                really is.
               </Paragraph>
             </div>
           </div>
           <div className="md:col-span-3 h-[400px] md:h-auto p-5 bg-light-green rounded-2xl relative overflow-hidden">
             <img
               className="absolute top-0 left-0 w-full h-full object-cover"
-              src={ab2}
+              src={kf4}
               alt=""
             />
           </div>
@@ -307,4 +290,4 @@ const Features = () => {
   );
 };
 
-export default Features;
+export default Features2;

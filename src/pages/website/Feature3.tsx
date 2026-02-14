@@ -7,12 +7,12 @@ import Paragraph from "../../components/sharedui/Paragraph";
 import StoreActionsButtons from "../../components/web/StoreActionsButtons";
 import SectionHeading from "../../components/web/SectionHeading";
 
+import kf1 from "../../assets/features/4kf1.png";
+import kf2 from "../../assets/features/4kf2.png";
+import kf3 from "../../assets/features/4kf3.png";
+import kf4 from "../../assets/features/4kf4.png";
 
-import kf1 from "../../assets/features/2kf1.jpg";
-import kf2 from "../../assets/features/2kf2.png";
-import kf3 from "../../assets/features/2kf3.png";
-import kf4 from "../../assets/features/2kf4.png";
-const Features1 = () => {
+const Feature3 = () => {
   const faqs = [
     {
       q: "Do I need permission to track a friend?",
@@ -59,13 +59,13 @@ const Features1 = () => {
         />
         <div className="content absolute md:w-1/3 top-5 md:top-1/2 left-[58px] transform md:-translate-y-1/2  text-white">
           <SubHeading size="4xl" className="mb-5">
-            2. Safety &<p className="text-secondary">Protection</p>
+            4. Gamification &<p className="text-secondary">Rewards</p>
           </SubHeading>
 
           <Paragraph size="sm">
-            Your safety is our top priority. With GenixDrive, every journey is
-            protected — from real-time tracking to instant alerts, we ensure you
-            and your loved ones are safe wherever the road takes you.
+            Turn every drive into a rewarding experience with GenixDrive. By
+            blending safety with fun, GenixDrive transforms your everyday
+            journeys into exciting challenges where good driving truly pays off.
           </Paragraph>
 
           <StoreActionsButtons />
@@ -78,10 +78,8 @@ const Features1 = () => {
           className="mb-10"
           paraText="GenixDrive by AiGenix (Private) Limited is a smart telematics solution designed to make driving safer and more intelligent. It monitors driving habits, provides safety scores."
         >
-          <p>
-            Key Highlights of
-            <span className="text-secondary"> Safety & Protection</span>
-          </p>
+          Key Highlights of Key Highlights of{" "}
+          <p className="text-secondary">Gamification & Rewards</p>
         </SectionHeading>
 
         {/* ......... */}
@@ -94,35 +92,7 @@ const Features1 = () => {
             />
             <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
           </div>
-          <div className="md:col-span-2 p-10 bg-secondary rounded-2xl flex items-center justify-center">
-            <div>
-              <SubHeading
-                size="4xl"
-                color="white"
-                weight="bold"
-                className="mb-4"
-              >
-                1. Safety Comes First
-              </SubHeading>
-              <Paragraph
-                size="sm"
-                color="white"
-                weight="medium"
-                className="leading-8"
-              >
-                On every journey, safety is the top priority. GenixDrive’s
-                Safety & Protection feature keeps you and your loved ones
-                protected on the road, offering smart alerts and real-time
-                notifications that help prevent risks before they turn into
-                emergencies.
-              </Paragraph>
-            </div>
-          </div>
-        </div>
-
-        {/* .............. */}
-        <div className="grid md:grid-cols-5 gap-5 mt-5">
-          <div className="md:col-span-2  p-10 bg-light-green rounded-2xl flex items-center justify-center">
+          <div className="md:col-span-2 p-10 bg-light-green rounded-2xl flex items-center justify-center">
             <div>
               <SubHeading
                 size="4xl"
@@ -130,7 +100,7 @@ const Features1 = () => {
                 weight="bold"
                 className="mb-4"
               >
-                2. Speed & Driving Alerts
+                1. Making Safe Driving Fun
               </SubHeading>
               <Paragraph
                 size="sm"
@@ -138,11 +108,42 @@ const Features1 = () => {
                 weight="medium"
                 className="leading-8"
               >
-                GenixDrive actively monitors driving behavior and sends instant
-                alerts in case of over-speeding, harsh braking, or risky
-                maneuvers. Parents can keep an eye on teen drivers, while
-                families gain peace of mind knowing their loved ones are driving
-                responsibly.
+                At GenixDrive, we believe safety should never feel like a
+                burden. That’s why we’ve built gamification into every journey.
+                Each time you drive, the app tracks your behavior and transforms
+                it into points, milestones, and achievements. This approach
+                doesn’t just help you stay engaged — it makes safe driving
+                enjoyable, motivating you to keep improving trip after trip.
+              </Paragraph>
+            </div>
+          </div>
+        </div>
+
+        {/* .............. */}
+        <div className="grid md:grid-cols-5 gap-5 mt-5">
+          <div className="md:col-span-2  p-10 bg-secondary rounded-2xl flex items-center justify-center">
+            <div>
+              <SubHeading
+                size="4xl"
+                color="white"
+                weight="bold"
+                className="mb-4"
+              >
+                2. Driving Scores That Pay Off
+              </SubHeading>
+              <Paragraph
+                size="sm"
+                color="white"
+                weight="medium"
+                className="leading-8"
+              >
+                Every driver receives a unique safety score based on factors
+                like speed, acceleration, braking, and cornering. This score
+                reflects how safe and responsible your driving habits are. The
+                higher your score, the more points you earn. Instead of simply
+                tracking performance, GenixDrive turns your efforts into a
+                system that pays off — rewarding you for making safety a
+                priority.
               </Paragraph>
             </div>
           </div>
@@ -165,34 +166,7 @@ const Features1 = () => {
             />
             <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
           </div>
-          <div className="md:col-span-2 p-10 bg-secondary rounded-2xl flex items-center justify-center">
-            <div>
-              <SubHeading
-                size="4xl"
-                color="white"
-                weight="bold"
-                className="mb-4"
-              >
-                3. Geo-Fencing for Added Security
-              </SubHeading>
-              <Paragraph
-                size="sm"
-                color="white"
-                weight="medium"
-                className="leading-8"
-              >
-                Set up safe zones (geo-fences) for your vehicle or family
-                members. Whether it’s your child arriving at school, your car
-                leaving home, or entering an unknown location, you’ll get
-                immediate notifications so you always know what’s happening.
-              </Paragraph>
-            </div>
-          </div>
-        </div>
-
-        {/* .............. */}
-        <div className="grid md:grid-cols-5 gap-5 mt-5">
-          <div className="md:col-span-2  p-10 bg-light-green rounded-2xl flex items-center justify-center">
+          <div className="md:col-span-2 p-10 bg-light-green rounded-2xl flex items-center justify-center">
             <div>
               <SubHeading
                 size="4xl"
@@ -200,7 +174,7 @@ const Features1 = () => {
                 weight="bold"
                 className="mb-4"
               >
-                4. Anti-Theft Protection
+                3. Redeemable Rewards
               </SubHeading>
               <Paragraph
                 size="sm"
@@ -208,10 +182,43 @@ const Features1 = () => {
                 weight="medium"
                 className="leading-8"
               >
-                Your vehicle deserves protection too. With GenixDrive’s
-                anti-theft tools, you’ll be alerted to unusual movements or
-                unauthorized activity. It adds an extra layer of security,
-                helping you protect one of your most valuable assets.
+                Safe driving doesn’t just keep you and your loved ones secure —
+                it also comes with real, tangible benefits. The points you
+                collect can be redeemed for cash, gift vouchers, discount
+                coupons, scratch cards, or exclusive offers. With GenixDrive,
+                every safe decision on the road contributes to something
+                valuable, making it easier to stay motivated and committed to
+                better driving habits.
+              </Paragraph>
+            </div>
+          </div>
+        </div>
+
+        {/* .............. */}
+        <div className="grid md:grid-cols-5 gap-5 mt-5">
+          <div className="md:col-span-2  p-10 bg-secondary rounded-2xl flex items-center justify-center">
+            <div>
+              <SubHeading
+                size="4xl"
+                color="white"
+                weight="bold"
+                className="mb-4"
+              >
+                4. Motivation Through Gamification
+              </SubHeading>
+              <Paragraph
+                size="sm"
+                color="white"
+                weight="medium"
+                className="leading-8"
+              >
+                GenixDrive uses gamified elements like levels, challenges, and
+                achievements to keep you inspired. Whether you’re aiming to beat
+                your personal best, unlock a new badge, or even compare scores
+                with friends, the app transforms driving safety into a challenge
+                you’ll actually look forward to. By blending safety with fun,
+                GenixDrive ensures that the process of becoming a better driver
+                never feels dull.
               </Paragraph>
             </div>
           </div>
@@ -268,4 +275,4 @@ const Features1 = () => {
   );
 };
 
-export default Features1;
+export default Feature3;

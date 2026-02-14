@@ -13,6 +13,9 @@ import AdminDashboard from "../pages/admin/Dashboard";
 import AdminMyTrips from "../pages/admin/MyTrips";
 import AdminAppLayout from "../layouts/AdminAppLayout";
 import AdminSettings from "../pages/admin/Settings";
+import Features1 from "../pages/website/Features1";
+import Features2 from "../pages/website/Features2";
+import Feature3 from "../pages/website/Feature3";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +27,9 @@ const router = createBrowserRouter([
       { path: "/blogs", element: <Blogs /> },
       { path: "/blogs/:id", element: <BlogDetails /> },
       { path: "/features", element: <Features /> },
+      { path: "/features1", element: <Features1 /> },
+      { path: "/features2", element: <Features2 /> },
+      { path: "/features3", element: <Feature3 /> },
     ],
   },
   {

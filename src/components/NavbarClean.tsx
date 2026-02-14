@@ -1,16 +1,18 @@
 import Button from "./Button";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
 import logo2 from "../assets/logo2.png";
 import { Menu, X, ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
 
-const Navbar = () => {
+const NavbarClean = () => {
   const location = useLocation();
   const isHome = location.pathname === "/";
   const isAbout = location.pathname === "/about";
   const [open, setOpen] = useState(false);
   const [featuresOpen, setFeaturesOpen] = useState(false);
+  const [featuresHoverOpen, setFeaturesHoverOpen] = useState(false);
+
   const getLinkClasses = (active: boolean) =>
     `transition-colors ${
       isHome
@@ -21,10 +23,12 @@ const Navbar = () => {
         ? "text-primary"
         : "text-gray-700 hover:text-primary"
     }`;
+
   useEffect(() => {
     setOpen(false);
     setFeaturesOpen(false);
   }, [location.pathname]);
+
   useEffect(() => {
     if (open) document.body.classList.add("overflow-hidden");
     else document.body.classList.remove("overflow-hidden");
@@ -38,14 +42,12 @@ const Navbar = () => {
       }`}
     >
       <div className="flex gap-10 items-center justify-between">
-        {/* Logo Placeholder */}
         <div className="flex items-center gap-2">
           <div className="h-10 w-32 rounded flex items-center justify-center text-sm font-bold tracking-wider">
             <img src={isHome ? logo : logo2} alt="Genix Drive Logo" />
           </div>
         </div>
 
-        {/* Navigation Links */}
         <div className="hidden md:flex items-center gap-8 text-sm">
           <NavLink
             to="/"
@@ -60,7 +62,11 @@ const Navbar = () => {
             About us
           </NavLink>
 
-          <div className="relative group">
+          <div
+            className="relative"
+            onMouseEnter={() => setFeaturesHoverOpen(true)}
+            onMouseLeave={() => setFeaturesHoverOpen(false)}
+          >
             <button
               className={`transition-colors ${
                 isHome
@@ -71,37 +77,42 @@ const Navbar = () => {
               Features
               <ChevronRight className="w-4 h-4" />
             </button>
-            <div className="absolute left-0 top-2 mt-3 w-[560px] bg-white text-black rounded-xl  p-4 z-50 opacity-0 translate-y-2 scale-95 pointer-events-none transition-all duration-200 ease-out group-hover:opacity-100 group-hover:translate-y-0 group-hover:scale-100 group-hover:pointer-events-auto">
-              <div className="grid grid-cols-1 gap-4">
-                <div className="rounded-lg w-full ">
-                  <NavLink
-                    to="/features"
-                    className="block px-4 py-2 text-sm hover:text-primary transition-colors duration-150"
-                  >
-                    Social & Family Connect
-                  </NavLink>
-                  <NavLink
-                    to="/features1"
-                    className="block px-4 py-2 text-sm hover:text-primary transition-colors duration-150"
-                  >
-                    Safety & Protection
-                  </NavLink>
-                  <NavLink
-                    to="/features2"
-                    className="block px-4 py-2 text-sm hover:text-primary transition-colors duration-150"
-                  >
-                    Driving Insights
-                  </NavLink>
-                  <NavLink
-                    to="/features3"
-                    className="block px-4 py-2 text-sm hover:text-primary transition-colors duration-150"
-                  >
-                    Gamification & Rewards
-                  </NavLink>
-                </div>
+            <div
+              className={`absolute left-0 top-full mt-3 w-[420px] bg-white text-black shadow-lg rounded-xl ring-1 ring-black/5 p-4 z-50 transition-all duration-200 ease-out ${
+                featuresHoverOpen
+                  ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
+                  : "opacity-0 translate-y-2 scale-95 pointer-events-none"
+              }`}
+            >
+              <div className="space-y-1">
+                <NavLink
+                  to="/features"
+                  className="block px-4 py-2 text-sm hover:text-primary transition-colors duration-150"
+                >
+                  Social & Family Connect
+                </NavLink>
+                <NavLink
+                  to="/features#safety"
+                  className="block px-4 py-2 text-sm hover:text-primary transition-colors duration-150"
+                >
+                  Safety & Protection
+                </NavLink>
+                <NavLink
+                  to="/features#insights"
+                  className="block px-4 py-2 text-sm hover:text-primary transition-colors duration-150"
+                >
+                  Driving Insights
+                </NavLink>
+                <NavLink
+                  to="/features#rewards"
+                  className="block px-4 py-2 text-sm hover:text-primary transition-colors duration-150"
+                >
+                  Gamification & Rewards
+                </NavLink>
               </div>
             </div>
           </div>
+
           <NavLink
             to="/pricing"
             className={({ isActive }) => getLinkClasses(isActive)}
@@ -117,7 +128,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Auth Button */}
       <div className="action-butto hidden md:flex gap-2">
         <Button size="lg" variant={"primary"}>
           {isHome ? "Sign Up/ Login" : "get started"}
@@ -128,6 +138,7 @@ const Navbar = () => {
           </Button>
         )}
       </div>
+
       <button
         aria-label="Open menu"
         className={`md:hidden inline-flex items-center justify-center rounded-lg p-2 ${
@@ -137,6 +148,7 @@ const Navbar = () => {
       >
         <Menu className="w-7 h-7" />
       </button>
+
       <div
         className={`fixed inset-0 z-50 transition-opacity duration-300 ${
           open ? "opacity-100" : "opacity-0 pointer-events-none"
@@ -168,6 +180,7 @@ const Navbar = () => {
               <X className="w-7 h-7" />
             </button>
           </div>
+
           <div className="px-6">
             <div
               className={`flex flex-col items-start gap-6 text-lg ${
@@ -211,7 +224,7 @@ const Navbar = () => {
               {featuresOpen && (
                 <div className="pl-3 border-l border-black/10 space-y-2">
                   <NavLink
-                    to="/features#social"
+                    to="/features"
                     className={({ isActive }) => getLinkClasses(isActive)}
                     onClick={() => setOpen(false)}
                   >
@@ -222,47 +235,22 @@ const Navbar = () => {
                     className={({ isActive }) => getLinkClasses(isActive)}
                     onClick={() => setOpen(false)}
                   >
-                    Safety Score
+                    Safety & Protection
+                  </NavLink>
+                  <NavLink
+                    to="/features#insights"
+                    className={({ isActive }) => getLinkClasses(isActive)}
+                    onClick={() => setOpen(false)}
+                  >
+                    Driving Insights
                   </NavLink>
                   <NavLink
                     to="/features#rewards"
                     className={({ isActive }) => getLinkClasses(isActive)}
                     onClick={() => setOpen(false)}
                   >
-                    Rewards
+                    Gamification & Rewards
                   </NavLink>
-                  <div className="pt-2">
-                    <span
-                      className={`text-xs ${
-                        isHome ? "text-white/80" : "text-gray-500"
-                      }`}
-                    >
-                      Safety
-                    </span>
-                    <div className="mt-2 space-y-2">
-                      <NavLink
-                        to="/features#alerts"
-                        className={({ isActive }) => getLinkClasses(isActive)}
-                        onClick={() => setOpen(false)}
-                      >
-                        Speeding Alerts
-                      </NavLink>
-                      <NavLink
-                        to="/features#behavior"
-                        className={({ isActive }) => getLinkClasses(isActive)}
-                        onClick={() => setOpen(false)}
-                      >
-                        Driving Behavior
-                      </NavLink>
-                      <NavLink
-                        to="/features#trips"
-                        className={({ isActive }) => getLinkClasses(isActive)}
-                        onClick={() => setOpen(false)}
-                      >
-                        Trip Reports
-                      </NavLink>
-                    </div>
-                  </div>
                 </div>
               )}
               <NavLink
@@ -280,6 +268,7 @@ const Navbar = () => {
                 Blogs
               </NavLink>
             </div>
+
             <div className="mt-8 flex flex-col items-stretch gap-4">
               <Button size="lg" variant={isHome ? "primary" : "secondary"}>
                 {isHome ? "Sign Up/ Login" : "get started"}
@@ -297,4 +286,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarClean;
