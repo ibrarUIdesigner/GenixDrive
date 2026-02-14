@@ -2,6 +2,7 @@ import { Star } from "lucide-react";
 import img1 from "../assets/brings1.jpg";
 import img2 from "../assets/brings2.jpg";
 import img3 from "../assets/brings3.png";
+import blueStr from "../assets/bluestr.png";
 import SubHeading from "./sharedui/Subheading";
 import Paragraph from "./sharedui/Paragraph";
 
@@ -9,7 +10,7 @@ const BenefitsSection = () => {
   const items = [
     {
       image: img1,
-      title: "Enhanced Safety & Peace Of Mind",
+      title: "Enhanced Safety & Peace of Mind",
       description:
         "With instant alerts, geo-fencing, and family location sharing, GenixDrive ensures drivers and loved ones stay protected on every journey.",
     },
@@ -31,11 +32,19 @@ const BenefitsSection = () => {
     <section className="bg-gray-100 text-black font-cairo py-[116px] px-[58px]">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-center gap-4 mb-10">
-          <Star className="w-6 h-6 text-secondary" />
-          <h2 className="text-3xl md:text-4xl font-bold text-center">
-            Here’s What GenixDrive Brings to You
-          </h2>
-          <Star className="w-6 h-6 text-secondary" />
+          <SubHeading
+            color="dark"
+            weight="bold"
+            size="4xl"
+            className="mb-2 text-center"
+          >
+            Here’s What GenixDrive
+            <div className="flex items-center justify-center gap-5">
+              <img src={blueStr} alt="" />
+              <p>Brings to You</p>
+              <img src={blueStr} alt="" />
+            </div>
+          </SubHeading>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -1,4 +1,6 @@
 import centerMobile from "../assets/homeMobile.png";
+import grenStr from "../assets/grnstr.png";
+
 import Button from "./Button";
 import StoreActionsButtons from "./web/StoreActionsButtons";
 
@@ -17,10 +19,19 @@ const Hero = () => {
       <div className="container mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-start w-full relative z-30">
         {/* Left Content */}
         <div className="md:col-span-5 flex flex-col gap-5 relative z-10">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight md:leading-[1.1] text-center md:text-left">
-            Drive Smart <br />
-            Stay Safe. <br />
-            Feel <span className="text-light-green">Close.</span>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight md:leading-[1.1] text-center md:text-left ">
+            <p className="relative inline-block text-white/60">
+              Drive Smart
+              <img
+                className="absolute left-full -bottom-3"
+                src={grenStr}
+                alt=""
+              />
+            </p>
+            <p>
+              Stay Safe. <br />
+              Feel <span className="text-light-green">Close.</span>
+            </p>
           </h1>
 
           <div className="hidden md:flex flex-wrap gap-4 mt-4 justify-center md:justify-start">

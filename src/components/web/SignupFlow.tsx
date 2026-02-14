@@ -6,25 +6,28 @@ import step1 from "../../assets/signup/1.png";
 import step2 from "../../assets/signup/2.png";
 import step3 from "../../assets/signup/3.png";
 import step4 from "../../assets/signup/4.png";
+import cric from "../../assets/circ.png";
+
+import SectionHeading from "./SectionHeading";
 
 const SignupFlow = () => {
   return (
     <section className="bg-white text-black font-cairo p-[70px] md:p-[135px]">
-      <div className="section-heading text-center">
-        <SubHeading size="4xl" color="dark">
-          Sign-up Process
-        </SubHeading>
-        <Paragraph
-          size="base"
-          color="default"
-          weight="medium"
-          className="leading-5"
-        >
-          Get started in minutes download the app or use our optional device,
+      <SectionHeading
+        paraText="Get started in minutes download the app or use our optional device,
           and begin protecting your loved ones with smart monitoring and peace
-          of mind.
-        </Paragraph>
-      </div>
+          of mind."
+      >
+        Sign-up
+        <div className="inline-block relative ml-5 p-2">
+          <p>Process</p>
+          <img
+            src={cric}
+            alt="circle"
+            className="absolute left-1/2 top-1/2 -translate-1/2 w-full"
+          />
+        </div>
+      </SectionHeading>
       <div className="mt-[70px]">
         <Switch />
 
