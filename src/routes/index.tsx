@@ -12,6 +12,7 @@ import AdminSignup from "../pages/admin/Signup";
 import AdminDashboard from "../pages/admin/Dashboard";
 import AdminMyTrips from "../pages/admin/MyTrips";
 import AdminAppLayout from "../layouts/AdminAppLayout";
+import AdminSettings from "../pages/admin/Settings";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,7 @@ const router = createBrowserRouter([
     children: [
       { path: "dashboard", element: <AdminDashboard /> },
       { path: "my-trips", element: <AdminMyTrips /> },
+      { path: "settings", element: <AdminSettings /> },
     ],
   },
 ]);

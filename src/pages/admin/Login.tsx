@@ -3,6 +3,7 @@ import ab1 from "../../assets/ab1.jpg";
 import { Eye, EyeOff, Mail, Lock } from "lucide-react";
 import Button from "../../components/Button";
 import SubHeading from "../../components/sharedui/Subheading";
+import { TextField } from "../../components/sharedui/Input";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -18,33 +19,29 @@ const Login = () => {
               Login to access your GenixDrive account
             </p>
             <form className="space-y-4">
-              <div className="relative">
-                <Mail className="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="w-full pl-10 rounded-lg border border-gray-300 px-4 py-3 outline-none focus:ring-2 focus:ring-primary"
-                />
-              </div>
-              <div className="relative">
-                <Lock className="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-                <input
-                  type={showPassword ? "text" : "password"}
-                  placeholder="Password"
-                  className="w-full pl-10 pr-10 rounded-lg border border-gray-300 px-4 py-3 outline-none focus:ring-2 focus:ring-primary"
-                />
-                <button
-                  type="button"
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500"
-                  onClick={() => setShowPassword((v) => !v)}
-                >
-                  {showPassword ? (
-                    <EyeOff className="w-5 h-5" />
-                  ) : (
-                    <Eye className="w-5 h-5" />
-                  )}
-                </button>
-              </div>
+              <TextField
+                type="email"
+                placeholder="Email"
+                leftIcon={<Mail className="w-5 h-5" />}
+              />
+              <TextField
+                type={showPassword ? "text" : "password"}
+                placeholder="Password"
+                leftIcon={<Lock className="w-5 h-5" />}
+                rightIcon={
+                  <button
+                    type="button"
+                    className="text-gray-500"
+                    onClick={() => setShowPassword((v) => !v)}
+                  >
+                    {showPassword ? (
+                      <EyeOff className="w-5 h-5" />
+                    ) : (
+                      <Eye className="w-5 h-5" />
+                    )}
+                  </button>
+                }
+              />
               <div className="flex items-center justify-between">
                 <label className="flex items-center gap-2 text-sm text-gray-600">
                   <input type="checkbox" className="rounded border-gray-300" />
