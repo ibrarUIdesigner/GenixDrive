@@ -106,6 +106,12 @@ const Navbar = () => {
             to="/pricing"
             className={({ isActive }) => getLinkClasses(isActive)}
           >
+            Pricing
+          </NavLink>
+          <NavLink
+            to="/demo"
+            className={({ isActive }) => getLinkClasses(isActive)}
+          >
             Demo
           </NavLink>
           <NavLink
