@@ -97,6 +97,9 @@ button{
 .foooter .flex{
   justify-content: center;
 }
+.build-container button{
+  margin: auto;
+}
 }
 @media screen and (max-width: 450px) {
  .padding-50{

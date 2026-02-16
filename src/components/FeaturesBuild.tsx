@@ -44,7 +44,7 @@ const FeaturesBuild = () => {
         </div>
         {/* Feature1 */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 items-center mb-20">
-          <div className="flex flex-col gap-4 ">
+          <div className="build-container order-1 md:order-0 text-center md:text-left flex flex-col gap-4 ">
             <SubHeading color="white" weight="bold" size="3xl">
               Social & Family
               <p>Connect</p>
@@ -57,7 +57,7 @@ const FeaturesBuild = () => {
             </Paragraph>
             <Button size="lg">Learn More</Button>
           </div>
-          <div className="relative  order-1 lg:order-none">
+          <div className="relative order-0 md:order-1   lg:order-none">
             <img src={grystr} className="absolute -left-20" alt="" />
             <div className="w-full h-[220px]  md:w-[539px] md:h-[440px]  rounded-2xl">
               <img
@@ -70,7 +70,7 @@ const FeaturesBuild = () => {
         </div>
         {/* Feature2 */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 items-center mb-20">
-          <div className="relative order-1 lg:order-0">
+          <div className="relative order-0 md:order-1 lg:order-0">
             <div className=" w-full h-[220px]  md:w-[539px] md:h-[440px] bg-white/50 rounded-2xl"></div>
             <div className="rounded-2xl w-full h-[220px] absolute top-4 left-4 md:w-[539px] md:h-[440px] overflow-hidden ">
               <img
@@ -80,7 +80,7 @@ const FeaturesBuild = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="build-container text-center md:text-left flex flex-col gap-4">
             <SubHeading color="white" weight="bold" size="3xl">
               Gamification &<p>Rewards</p>
             </SubHeading>
@@ -95,7 +95,7 @@ const FeaturesBuild = () => {
         </div>
         {/* Feature3 */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 items-center mb-20">
-          <div className="flex flex-col gap-4">
+          <div className="build-container order-1 md:order-0 text-center md:text-left flex flex-col gap-4">
             <SubHeading color="white" weight="bold" size="3xl">
               Safety & Protection
             </SubHeading>
@@ -107,7 +107,7 @@ const FeaturesBuild = () => {
             </Paragraph>
             <Button size="lg">Learn More</Button>
           </div>
-          <div className="relative order-1 lg:order-none">
+          <div className="relative  lg:order-none">
             <img className="absolute -right-10 -top-10" src={grystr} />
             <div className="w-full h-[220px]  md:w-[539px] md:h-[440px]  rounded-2xl">
               <img
@@ -120,7 +120,7 @@ const FeaturesBuild = () => {
         </div>
         {/* Feature4 */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 items-center mb-20">
-          <div className="relative order-1 lg:order-none">
+          <div className="relative order-0 md:order-1 lg:order-none">
             <div className="w-full h-[220px]  md:w-[539px] md:h-[440px]  rounded-2xl">
               <img
                 src={feature4}
@@ -129,7 +129,7 @@ const FeaturesBuild = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="build-container  text-center md:text-left flex flex-col gap-4">
             <SubHeading color="white" weight="bold" size="3xl">
               Organize meetups
             </SubHeading>
@@ -144,7 +144,7 @@ const FeaturesBuild = () => {
         </div>
         {/* Feature5 */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 items-center mb-20">
-          <div className="flex flex-col gap-4">
+          <div className="build-container order-1 md:order-0 text-center md:text-left flex flex-col gap-4">
             <SubHeading color="white" weight="bold" size="3xl">
               Place notifications
             </SubHeading>
@@ -158,7 +158,7 @@ const FeaturesBuild = () => {
 
             <Button size="lg">Learn More</Button>
           </div>
-          <div className="relative order-1 lg:order-none">
+          <div className="relative  lg:order-none">
             <div className="w-full h-[220px]  md:w-[539px] md:h-[440px]  rounded-2xl">
               <img
                 src={feature5}
@@ -171,7 +171,7 @@ const FeaturesBuild = () => {
 
         {/* Feature6 */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 items-center mb-20">
-          <div className="relative order-1 lg:order-none">
+          <div className="relative order-0 md:order-1 lg:order-none">
             <div className="w-full h-[220px]  md:w-[539px] md:h-[440px]  rounded-2xl">
               <img
                 src={feature6}
@@ -180,7 +180,7 @@ const FeaturesBuild = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="build-container text-center md:text-left flex flex-col gap-4">
             <SubHeading color="white" weight="bold" size="3xl">
               Smart Vehicle Care
             </SubHeading>
@@ -194,7 +194,7 @@ const FeaturesBuild = () => {
         </div>
         {/* Feature7 */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 items-center mb-20">
-          <div className="flex flex-col gap-4">
+          <div className="build-container order-1 md:order-0 text-center md:text-left flex flex-col gap-4">
             <SubHeading color="white" weight="bold" size="3xl">
               Driving Insights
             </SubHeading>
@@ -207,7 +207,7 @@ const FeaturesBuild = () => {
 
             <Button size="lg">Learn More</Button>
           </div>
-          <div className="relative order-1 lg:order-none">
+          <div className="relative  lg:order-none">
             <div className="w-full h-[220px]  md:w-[539px] md:h-[440px]  rounded-2xl">
               <img
                 src={feature7}
@@ -219,7 +219,7 @@ const FeaturesBuild = () => {
         </div>
         {/* Feature8 */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 items-center mb-20">
-          <div className="relative order-1 lg:order-none">
+          <div className="relative order-0 md:order-1 lg:order-none">
             <div className="w-full h-[220px]  md:w-[539px] md:h-[440px]  rounded-2xl">
               <img
                 src={feature8}
@@ -228,7 +228,7 @@ const FeaturesBuild = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="build-container text-center md:text-left flex flex-col gap-4">
             <SubHeading color="white" weight="bold" size="3xl">
               Device Tracking
             </SubHeading>
