@@ -13,7 +13,7 @@ const SectionHeading = ({
 }: SectionHeadingProps) => {
   return (
     <div
-      className={`section-heading text-center mb-[150px] md:w-1/2 m-auto ${className}`}
+      className={`section-heading text-center mb:[50px] md:mb-[150px] md:w-1/2 m-auto ${className}`}
     >
       <SubHeading size="4xl" color="dark" className="mb-4">
         {children}

@@ -7,7 +7,9 @@ interface StoreActionsButtonsProps {
 }
 const StoreActionsButtons = ({ className = "" }: StoreActionsButtonsProps) => {
   return (
-    <div className={`actions flex items-center  gap-3 mt-10 ${className}`}>
+    <div
+      className={`actions flex items-center justify-center md:justify-start gap-3 mt-10 ${className}`}
+    >
       <div
         className={`${
           className == "!block" ? "mb-5" : "mb-auto"
