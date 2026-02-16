@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import frame from "../../assets/7th sec copy.png";
 import frameMobile from "../../assets/FrameMobile.png";
 
@@ -44,21 +45,37 @@ const Features2 = () => {
   return (
     <div>
       {/* BANNER */}
-      <section className="banner h-screen overflow-hidden relative">
+      <motion.section
+        className="banner h-screen overflow-hidden relative"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      >
         {/* Desktop Image */}
-        <img
+        <motion.img
           src={frame}
           alt="Features banner"
           className="hidden md:block absolute top-0 left-0 h-full w-full object-cover"
+          initial={{ scale: 1.08, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         />
 
         {/* Mobile Image */}
-        <img
+        <motion.img
           src={frameMobile}
           alt="Features banner"
           className="block md:hidden absolute top-0 left-0 h-full w-full object-cover"
+          initial={{ scale: 1.1, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         />
-        <div className="content absolute md:w-1/3 top-5 md:top-1/2 left-[58px] transform md:-translate-y-1/2  text-white">
+        <motion.div
+          className="content absolute md:w-1/3 top-5 md:top-1/2 left-[58px] transform md:-translate-y-1/2  text-white"
+          initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+        >
           <SubHeading size="4xl" className="mb-5">
             3. Driving
             <p className="text-secondary">Insights</p>
@@ -72,11 +89,17 @@ const Features2 = () => {
           </Paragraph>
 
           <StoreActionsButtons />
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
 
       {/* FEATURE */}
-      <section className="features px-[56px] py-[120px] bg-white">
+      <motion.section
+        className="features px-[56px] py-[120px] bg-white"
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.15 }}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      >
         <SectionHeading
           className="mb-10"
           paraText="GenixDrive by AiGenix (Private) Limited is a smart telematics solution designed to make driving safer and more intelligent. It monitors driving habits, provides safety scores."
@@ -88,12 +111,20 @@ const Features2 = () => {
         </SectionHeading>
 
         {/* ......... */}
-        <div className="grid md:grid-cols-5 gap-5">
+        <motion.div
+          className="grid md:grid-cols-5 gap-5"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6 }}
+        >
           <div className="md:col-span-3 p-5 h-[400px] md:h-auto  bg-secondary rounded-2xl overflow-hidden z-10 relative">
-            <img
+            <motion.img
               className="absolute top-0 left-0 w-full h-full object-cover"
               src={kf1}
               alt=""
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.5 }}
             />
             <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
           </div>
@@ -121,10 +152,16 @@ const Features2 = () => {
               </Paragraph>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* .............. */}
-        <div className="grid md:grid-cols-5 gap-5 mt-5">
+        <motion.div
+          className="grid md:grid-cols-5 gap-5 mt-5"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6 }}
+        >
           <div className="md:col-span-2  p-10 bg-secondary rounded-2xl flex items-center justify-center">
             <div>
               <SubHeading
@@ -150,21 +187,31 @@ const Features2 = () => {
             </div>
           </div>
           <div className="md:col-span-3 h-[400px] md:h-auto p-5 bg-light-green rounded-2xl relative overflow-hidden">
-            <img
+            <motion.img
               className="absolute top-0 left-0 w-full h-full object-cover"
               src={kf2}
               alt=""
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.5 }}
             />
           </div>
-        </div>
+        </motion.div>
 
         {/* ......... */}
-        <div className="grid md:grid-cols-5 gap-5 mt-5">
+        <motion.div
+          className="grid md:grid-cols-5 gap-5 mt-5"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6 }}
+        >
           <div className="md:col-span-3 p-5 h-[400px] md:h-auto  bg-secondary rounded-2xl overflow-hidden z-10 relative">
-            <img
+            <motion.img
               className="absolute top-0 left-0 w-full h-full object-cover"
               src={kf3}
               alt=""
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.5 }}
             />
             <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
             <div className="absolute bottom-0 left-0 w-full  p-5  z-10">
@@ -209,10 +256,16 @@ const Features2 = () => {
               </Paragraph>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* .............. */}
-        <div className="grid md:grid-cols-5 gap-5 mt-5">
+        <motion.div
+          className="grid md:grid-cols-5 gap-5 mt-5"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6 }}
+        >
           <div className="md:col-span-2  p-10 bg-secondary rounded-2xl flex items-center justify-center">
             <div>
               <SubHeading
@@ -238,17 +291,25 @@ const Features2 = () => {
             </div>
           </div>
           <div className="md:col-span-3 h-[400px] md:h-auto p-5 bg-light-green rounded-2xl relative overflow-hidden">
-            <img
+            <motion.img
               className="absolute top-0 left-0 w-full h-full object-cover"
               src={kf4}
               alt=""
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.5 }}
             />
           </div>
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
 
       {/* FAQs */}
-      <section className="faqs bg-surface-light px-[56px] py-[120px]">
+      <motion.section
+        className="faqs bg-surface-light px-[56px] py-[120px]"
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.15 }}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      >
         <SectionHeading paraText="Choose a plan that fits your driving lifestyle and enjoy all the safety, connectivity, and performance features GenixDrive has to offer.">
           Frequently Asked <p className="text-secondary">Questions</p>
         </SectionHeading>
@@ -257,11 +318,13 @@ const Features2 = () => {
           {faqs.map((item, i) => {
             const active = open === i;
             return (
-              <button
+              <motion.button
                 key={i}
                 className="w-full text-left relative bg-white rounded-2xl p-6 md:p-8 shadow-sm ring-1 ring-black/5 hover:shadow-md transition-all"
                 onClick={() => setOpen(active ? null : i)}
                 aria-expanded={active}
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.995 }}
               >
                 {/* <span className="absolute left-6 top-6 w-6 h-1 bg-primary rounded-full"></span> */}
                 <span
@@ -281,11 +344,11 @@ const Features2 = () => {
                     {item.a}
                   </p>
                 )}
-              </button>
+              </motion.button>
             );
           })}
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 };
