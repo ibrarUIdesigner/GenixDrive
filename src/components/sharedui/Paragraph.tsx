@@ -41,6 +41,7 @@ const Paragraph = ({
   color = "default",
   weight = "normal",
   className = "",
+  style,
   ...rest
 }: TextProps) => {
   const classes = `
@@ -51,7 +52,11 @@ const Paragraph = ({
   `;
 
   return (
-    <p className={classes.trim()} {...rest}>
+    <p
+      className={classes.trim()}
+      style={{ fontFamily: "'DM Sans', sans-serif", ...style }}
+      {...rest}
+    >
       {children}
     </p>
   );

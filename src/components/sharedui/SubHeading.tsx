@@ -43,6 +43,7 @@ const SubHeading = ({
   weight = "bold",
   color = "default",
   className = "",
+  style,
   ...rest
 }: SubHeadingProps) => {
   const classes = `
@@ -53,7 +54,11 @@ const SubHeading = ({
   `;
 
   return (
-    <h3 className={classes.trim()} {...rest}>
+    <h3
+      className={classes.trim()}
+      style={{ fontFamily: "'Poppins', sans-serif", ...style }}
+      {...rest}
+    >
       {children}
     </h3>
   );

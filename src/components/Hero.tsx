@@ -49,7 +49,7 @@ const Hero = () => {
           variants={item}
         >
           <motion.h1
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight md:leading-[1.1] text-center md:text-left "
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight md:leading-[1.1] text-center md:text-left main-heading"
             variants={item}
           >
             <p className="relative inline-block text-white/60">
