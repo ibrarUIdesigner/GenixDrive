@@ -69,7 +69,7 @@ const Features1 = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         />
         <motion.div
-          className="content absolute md:w-1/3 top-5 md:top-1/2 left-[58px] transform md:-translate-y-1/2  text-white"
+          className="content absolute md:w-1/3 top-5 md:top-1/2 p-2 md:p-0 text-center md:text-left md:left-[58px] transform md:-translate-y-1/2  text-white"
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
@@ -90,7 +90,7 @@ const Features1 = () => {
 
       {/* FEATURE */}
       <motion.section
-        className="features px-[56px] py-[120px] bg-white"
+        className="features px-[56px] py-[120px] bg-white padding-50"
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.15 }}
@@ -281,7 +281,7 @@ const Features1 = () => {
 
       {/* FAQs */}
       <motion.section
-        className="faqs bg-surface-light px-[56px] py-[120px]"
+        className="faqs bg-surface-light px-[56px] py-[120px] padding-50"
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.15 }}

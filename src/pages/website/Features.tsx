@@ -63,7 +63,7 @@ const Features = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         />
         <motion.div
-          className="content absolute md:w-1/3 top-5 md:top-1/2 text-center md:text-left md:left-[58px] transform md:-translate-y-1/2  text-white"
+          className="content absolute md:w-1/3 top-5 md:top-1/2 p-2 md:p-0 text-center md:text-left md:left-[58px] transform md:-translate-y-1/2  text-white"
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
