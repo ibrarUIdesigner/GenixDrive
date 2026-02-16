@@ -1,5 +1,5 @@
 import Button from "./Button";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import logo2 from "../assets/logo2.png";
 import { Menu, X, ChevronRight } from "lucide-react";
@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const isHome = location.pathname === "/";
   const isAbout = location.pathname === "/about";
   const [open, setOpen] = useState(false);
@@ -40,7 +41,10 @@ const Navbar = () => {
       <div className="flex gap-10 items-center justify-between">
         {/* Logo Placeholder */}
         <div className="flex items-center gap-2">
-          <div className="h-10 w-32 rounded flex items-center justify-center text-sm font-bold tracking-wider">
+          <div
+            onClick={() => navigate("/")}
+            className="h-10 w-32 rounded flex items-center justify-center text-sm font-bold tracking-wider"
+          >
             <img src={isHome ? logo : logo2} alt="Genix Drive Logo" />
           </div>
         </div>
@@ -163,6 +167,7 @@ const Navbar = () => {
               src={isHome ? logo : logo2}
               alt="Genix Drive Logo"
               className="h-8"
+              onClick={() => navigate("/")}
             />
             <button
               aria-label="Close menu"
@@ -194,20 +199,14 @@ const Navbar = () => {
               >
                 About us
               </NavLink>
-              <NavLink
-                to="/features"
-                className={({ isActive }) => getLinkClasses(isActive)}
-                onClick={() => setOpen(false)}
-              >
-                Features
-              </NavLink>
+
               <button
-                className={`transition-colors inline-flex items-center justify-between ${
+                className={`transition-colors !text-base flex items-center justify-between ${
                   isHome ? "text-white" : "text-black"
                 }`}
                 onClick={() => setFeaturesOpen((v) => !v)}
               >
-                Explore
+                Features
                 <ChevronRight
                   className={`w-4 h-4 transition-transform ${
                     featuresOpen ? "rotate-90" : ""
@@ -215,60 +214,35 @@ const Navbar = () => {
                 />
               </button>
               {featuresOpen && (
-                <div className="pl-3 border-l border-black/10 space-y-2">
+                <div className="mobileMenu pl-3 border-l border-black/10 space-y-2">
                   <NavLink
-                    to="/features#social"
+                    to="/features"
                     className={({ isActive }) => getLinkClasses(isActive)}
                     onClick={() => setOpen(false)}
                   >
                     Social & Family Connect
                   </NavLink>
                   <NavLink
-                    to="/features#safety"
+                    to="/features1"
                     className={({ isActive }) => getLinkClasses(isActive)}
                     onClick={() => setOpen(false)}
                   >
-                    Safety Score
+                    Safety & Protection
                   </NavLink>
                   <NavLink
-                    to="/features#rewards"
+                    to="/features2"
                     className={({ isActive }) => getLinkClasses(isActive)}
                     onClick={() => setOpen(false)}
                   >
-                    Rewards
+                    Driving Insights
                   </NavLink>
-                  <div className="pt-2">
-                    <span
-                      className={`text-xs ${
-                        isHome ? "text-white/80" : "text-gray-500"
-                      }`}
-                    >
-                      Safety
-                    </span>
-                    <div className="mt-2 space-y-2">
-                      <NavLink
-                        to="/features#alerts"
-                        className={({ isActive }) => getLinkClasses(isActive)}
-                        onClick={() => setOpen(false)}
-                      >
-                        Speeding Alerts
-                      </NavLink>
-                      <NavLink
-                        to="/features#behavior"
-                        className={({ isActive }) => getLinkClasses(isActive)}
-                        onClick={() => setOpen(false)}
-                      >
-                        Driving Behavior
-                      </NavLink>
-                      <NavLink
-                        to="/features#trips"
-                        className={({ isActive }) => getLinkClasses(isActive)}
-                        onClick={() => setOpen(false)}
-                      >
-                        Trip Reports
-                      </NavLink>
-                    </div>
-                  </div>
+                  <NavLink
+                    to="/features3"
+                    className={({ isActive }) => getLinkClasses(isActive)}
+                    onClick={() => setOpen(false)}
+                  >
+                    Gamification & Rewards
+                  </NavLink>
                 </div>
               )}
               <NavLink

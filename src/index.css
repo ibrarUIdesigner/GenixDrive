@@ -100,6 +100,11 @@ button{
 .build-container button{
   margin: auto;
 }
+.mobileMenu a{
+  display: block;
+  padding: 5px 0;
+  font-size: 15px;
+}
 }
 @media screen and (max-width: 450px) {
  .padding-50{
