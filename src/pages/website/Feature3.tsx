@@ -107,7 +107,7 @@ const Feature3 = () => {
 
         {/* ......... */}
         <motion.div
-          className="grid md:grid-cols-5 gap-5"
+          className="grid grid-cols-1 md:grid-cols-5 gap-5"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -152,7 +152,7 @@ const Feature3 = () => {
 
         {/* .............. */}
         <motion.div
-          className="grid md:grid-cols-5 gap-5 mt-5"
+          className="grid grid-cols-1 md:grid-cols-5 gap-5 mt-5"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -197,7 +197,7 @@ const Feature3 = () => {
 
         {/* ......... */}
         <motion.div
-          className="grid md:grid-cols-5 gap-5 mt-5"
+          className="grid grid-cols-1 md:grid-cols-5 gap-5 mt-5"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -243,7 +243,7 @@ const Feature3 = () => {
 
         {/* .............. */}
         <motion.div
-          className="grid md:grid-cols-5 gap-5 mt-5"
+          className="grid grid-cols-1 md:grid-cols-5 gap-5 mt-5"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}

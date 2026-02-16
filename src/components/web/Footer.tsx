@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className="font-cairo bg-primary text-white px-[58px] py-12 rounded-t-[50px]">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-10 justify-between">
-        <div className="space-y-4 col-span-2">
+        <div className="space-y-4 md:col-span-2">
           <div className="h-10 w-32 rounded flex items-center justify-center">
             <img src={logo} alt="Genix Drive Logo" />
           </div>
