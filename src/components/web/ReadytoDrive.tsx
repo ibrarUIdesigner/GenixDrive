@@ -11,9 +11,21 @@ const ReadytoDrive = () => {
   return (
     <section className="bg-white text-black font-cairo p-[70px] md:p-[135px]  ">
       <div className="bg-secondary mb-[130px] md:mb-0 rounded-2xl relative h-[490px] z-10 flex items-start md:items-center">
-        <img src={vector} alt="" className="absolute w-[90%] -translate-x-1/2 z-0 top-0 left-1/2 h-full " />
-        <img src={UnionTop} alt="" className="absolute left-[130px] top-0  " />
-        <img src={UnionDown} alt="" className="absolute right-[15px] bottom-[1px]   " />
+        <img
+          src={vector}
+          alt=""
+          className="absolute w-[90%] -translate-x-1/2 z-0 top-0 left-1/2 h-full "
+        />
+        <img
+          src={UnionTop}
+          alt=""
+          className="hidden md:block absolute left-[130px] top-0  "
+        />
+        <img
+          src={UnionDown}
+          alt=""
+          className="hidden md:block absolute right-[15px] bottom-[1px]   "
+        />
         <div className="content w-full md:w-1/2 p-5 z-10 text-center md:text-left md:px-[130px]">
           <SubHeading className="mb-4" weight="medium" size="4xl" color="white">
             Ready to Drive <p>Smarter?</p>
@@ -23,7 +35,11 @@ const ReadytoDrive = () => {
             trips, receive instant alerts, and stay connected in real-time —
             giving your family the peace of mind they deserve.
           </Paragraph>
-          <Button variant="outline" className="!rounded-full mt-10 bg-white !text-gray-800 hover:bg-white/90" size="lg">
+          <Button
+            variant="outline"
+            className="!rounded-full mt-10 bg-white !text-gray-800 hover:bg-white/90"
+            size="lg"
+          >
             Explore Features
           </Button>
         </div>

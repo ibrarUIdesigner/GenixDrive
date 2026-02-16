@@ -1,6 +1,7 @@
 import { Car, Share2, TrendingUp, HeartHandshake } from "lucide-react";
 import SubHeading from "./sharedui/Subheading";
 import Paragraph from "./sharedui/Paragraph";
+import { motion } from "framer-motion";
 
 const FeaturesStrip = () => {
   const features = [
@@ -48,13 +49,44 @@ const FeaturesStrip = () => {
 
   return (
     <div className="w-full font-cairo">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+      <motion.div
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.15 }}
+        variants={{
+          hidden: { opacity: 0, y: 12 },
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: { staggerChildren: 0.08, delayChildren: 0.1 },
+          },
+        }}
+      >
         {features.map((feature) => (
-          <div
+          <motion.div
             key={feature.id}
-            className={`${feature.bgColor} ${feature.textColor} p-10 lg:p-12 min-h-[400px] flex flex-col justify-center items-start`}
+            variants={{
+              hidden: { opacity: 0, y: 18 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.995 }}
+            transition={{ type: "spring", stiffness: 240, damping: 22 }}
+            className={`group relative ${feature.bgColor} ${feature.textColor} p-10 lg:p-12 min-h-[400px] flex flex-col justify-center items-start l ring-1 ring-black/5 shadow-sm`}
           >
-            <div className={feature.iconColor}>{feature.icon}</div>
+            <div
+              className="pointer-events-none absolute inset-0  opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              style={{
+                background:
+                  "radial-gradient(160px circle at 80% 20%, rgba(0,0,0,0.06), transparent 60%)",
+              }}
+            />
+            <div
+              className={`${feature.iconColor} transition-transform duration-300 group-hover:-translate-y-1`}
+            >
+              {feature.icon}
+            </div>
 
             <SubHeading
               color={feature.textColor === "text-white" ? "white" : "dark"}
@@ -73,9 +105,10 @@ const FeaturesStrip = () => {
             >
               {feature.description}
             </Paragraph>
-          </div>
+            {/* <span className="mt-6 h-1 w-16 rounded-full bg-current/20 transition-all duration-300 group-hover:w-24 group-hover:bg-current/40" /> */}
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

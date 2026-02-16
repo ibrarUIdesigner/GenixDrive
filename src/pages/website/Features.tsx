@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import frame from "../../assets/7th sec copy.png";
 import frameMobile from "../../assets/FrameMobile.png";
 
@@ -43,19 +44,30 @@ const Features = () => {
       {/* BANNER */}
       <section className="banner h-screen overflow-hidden relative">
         {/* Desktop Image */}
-        <img
+        <motion.img
           src={frame}
           alt="Features banner"
           className="hidden md:block absolute top-0 left-0 h-full w-full object-cover"
+          initial={{ scale: 1.08, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         />
 
         {/* Mobile Image */}
-        <img
+        <motion.img
           src={frameMobile}
           alt="Features banner"
           className="block md:hidden absolute top-0 left-0 h-full w-full object-cover"
+          initial={{ scale: 1.1, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         />
-        <div className="content absolute md:w-1/3 top-5 md:top-1/2 left-[58px] transform md:-translate-y-1/2  text-white">
+        <motion.div
+          className="content absolute md:w-1/3 top-5 md:top-1/2 left-[58px] transform md:-translate-y-1/2  text-white"
+          initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+        >
           <SubHeading size="4xl" className="mb-5">
             1. Social & Family
             <p className="text-secondary">Connect</p>
@@ -68,11 +80,25 @@ const Features = () => {
           </Paragraph>
 
           <StoreActionsButtons />
-        </div>
+        </motion.div>
+        <motion.div
+          className="pointer-events-none absolute inset-0"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+        >
+          {/* <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" /> */}
+        </motion.div>
       </section>
 
       {/* FEATURE */}
-      <section className="features px-[56px] py-[120px] bg-white">
+      <motion.section
+        className="features px-[56px] py-[120px] bg-white"
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.15 }}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      >
         <SectionHeading
           className="mb-10"
           paraText="GenixDrive by AiGenix (Private) Limited is a smart telematics solution designed to make driving safer and more intelligent. It monitors driving habits, provides safety scores."
@@ -84,7 +110,13 @@ const Features = () => {
         </SectionHeading>
 
         {/* ......... */}
-        <div className="grid md:grid-cols-5 gap-5">
+        <motion.div
+          className="grid md:grid-cols-5 gap-5"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6 }}
+        >
           <div className="md:col-span-3 p-5 h-[400px] md:h-auto  bg-secondary rounded-2xl overflow-hidden z-10 relative">
             <img
               className="absolute top-0 left-0 w-full h-full object-cover"
@@ -134,10 +166,16 @@ const Features = () => {
               </Paragraph>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* .............. */}
-        <div className="grid md:grid-cols-5 gap-5 mt-5">
+        <motion.div
+          className="grid md:grid-cols-5 gap-5 mt-5"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6 }}
+        >
           <div className="md:col-span-2  p-10 bg-secondary rounded-2xl flex items-center justify-center">
             <div>
               <SubHeading
@@ -171,10 +209,16 @@ const Features = () => {
               alt=""
             />
           </div>
-        </div>
+        </motion.div>
 
         {/* ......... */}
-        <div className="grid md:grid-cols-5 gap-5 mt-5">
+        <motion.div
+          className="grid md:grid-cols-5 gap-5 mt-5"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6 }}
+        >
           <div className="md:col-span-3 p-5 h-[400px] md:h-auto  bg-secondary rounded-2xl overflow-hidden z-10 relative">
             <img
               className="absolute top-0 left-0 w-full h-full object-cover"
@@ -224,10 +268,16 @@ const Features = () => {
               </Paragraph>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* .............. */}
-        <div className="grid md:grid-cols-5 gap-5 mt-5">
+        <motion.div
+          className="grid md:grid-cols-5 gap-5 mt-5"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6 }}
+        >
           <div className="md:col-span-2  p-10 bg-secondary rounded-2xl flex items-center justify-center">
             <div>
               <SubHeading
@@ -261,11 +311,17 @@ const Features = () => {
               alt=""
             />
           </div>
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
 
       {/* FAQs */}
-      <section className="faqs bg-surface-light px-[56px] py-[120px]">
+      <motion.section
+        className="faqs bg-surface-light px-[56px] py-[120px]"
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.15 }}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      >
         <SectionHeading paraText="Choose a plan that fits your driving lifestyle and enjoy all the safety, connectivity, and performance features GenixDrive has to offer.">
           Frequently Asked <p className="text-secondary">Questions</p>
         </SectionHeading>
@@ -302,7 +358,7 @@ const Features = () => {
             );
           })}
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 };

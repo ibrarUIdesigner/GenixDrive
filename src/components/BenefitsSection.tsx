@@ -5,6 +5,7 @@ import img3 from "../assets/brings3.png";
 import blueStr from "../assets/bluestr.png";
 import SubHeading from "./sharedui/Subheading";
 import Paragraph from "./sharedui/Paragraph";
+import { motion } from "framer-motion";
 
 const BenefitsSection = () => {
   const items = [
@@ -29,9 +30,21 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <section className="bg-gray-100 text-black font-cairo py-[116px] px-[58px]">
+    <motion.section
+      className="bg-gray-100 text-black font-cairo py-[116px] px-[58px]"
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+    >
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-center justify-center gap-4 mb-10">
+        <motion.div
+          className="flex items-center justify-center gap-4 mb-10"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5 }}
+        >
           <SubHeading
             color="dark"
             weight="bold"
@@ -45,19 +58,39 @@ const BenefitsSection = () => {
               <img src={blueStr} alt="" />
             </div>
           </SubHeading>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: { staggerChildren: 0.08, delayChildren: 0.1 },
+            },
+          }}
+        >
           {items.map((item, idx) => (
-            <div
+            <motion.article
               key={idx}
-              className="rounded-xl overflow-hidden bg-white border border-surface-light shadow-sm"
+              variants={{
+                hidden: { opacity: 0, y: 18 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              whileHover={{ y: -6, scale: 1.01 }}
+              whileTap={{ scale: 0.995 }}
+              transition={{ type: "spring", stiffness: 240, damping: 22 }}
+              className="group rounded-xl overflow-hidden bg-white border border-surface-light shadow-sm"
             >
               <div className="w-[428px] max-w-full h-[428px] bg-black/5 rounded-[17.09px] overflow-hidden mx-auto">
-                <img
+                <motion.img
                   src={item.image}
                   alt={item.title}
                   className="w-full h-full object-cover"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
                 />
               </div>
               <div className="p-6">
@@ -79,11 +112,11 @@ const BenefitsSection = () => {
                   {item.description}
                 </Paragraph>
               </div>
-            </div>
+            </motion.article>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
