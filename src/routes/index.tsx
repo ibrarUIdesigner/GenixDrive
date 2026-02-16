@@ -17,6 +17,7 @@ import Features1 from "../pages/website/Features1";
 import Features2 from "../pages/website/Features2";
 import Feature3 from "../pages/website/Feature3";
 import Demo from "../pages/website/Demo";
+import DrivingScore from "../pages/admin/DrivingScore";
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,7 @@ const router = createBrowserRouter([
       { path: "dashboard", element: <AdminDashboard /> },
       { path: "my-trips", element: <AdminMyTrips /> },
       { path: "settings", element: <AdminSettings /> },
+      { path: "driving-score", element: <DrivingScore /> },
     ],
   },
 ]);

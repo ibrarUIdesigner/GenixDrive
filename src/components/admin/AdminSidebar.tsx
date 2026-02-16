@@ -7,6 +7,7 @@ const AdminSidebar = () => {
   const location = useLocation();
   const isDashboard = location.pathname.endsWith("/admin/dashboard");
   const isMyTrips = location.pathname.endsWith("/admin/my-trips");
+  const isDrivingScore = location.pathname.endsWith("/admin/driving-score");
   const isSettings = location.pathname.endsWith("/admin/settings");
   return (
     <aside className="bg-white md:h-screen md:sticky md:top-0 p-6 md:p-8 border-r border-gray-100 md:col-span-2">
@@ -44,13 +45,20 @@ const AdminSidebar = () => {
           <Map className="w-5 h-5" />
           <span>My Trips</span>
         </Link>
-        <a
-          className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-700 hover:text-secondary"
-          href="#"
+        <Link
+          to="/admin/driving-score"
+          className={`relative flex items-center gap-3 rounded-lg px-3 py-2 ${
+            isDrivingScore
+              ? "text-secondary"
+              : "text-gray-700 hover:text-secondary"
+          }`}
         >
+          {isDrivingScore && (
+            <span className="absolute -left-2 top-1/2 -translate-y-1/2 w-2 h-10 bg-primary rounded-full"></span>
+          )}
           <Gauge className="w-5 h-5" />
           <span>Driving Score</span>
-        </a>
+        </Link>
         <Link
           to="/admin/settings"
           className={`relative flex items-center gap-3 rounded-lg px-3 py-2 ${
