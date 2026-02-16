@@ -24,7 +24,7 @@ const Demo = () => {
         {/* <img src={demo1} className="absolute " />
         <img src={demo2} className="absolute " /> */}
         {/* SIGNUO */}
-        <section className="demo px-[56px] py-[120px] bg-white">
+        <section className="demo px-[56px] py-[120px] bg-white padding-50">
           <SectionHeading
             className="mb-10"
             paraText="Start your journey with a quick signup and optional smart device installation."
@@ -41,7 +41,7 @@ const Demo = () => {
           </div>
         </section>
         {/* SIGNUO */}
-        <section className="demo px-[56px] py-[120px] bg-white">
+        <section className="demo px-[56px] py-[120px] bg-white padding-50">
           <SectionHeading paraText="Stay connected with real-time location sharing & place alerts.">
             <div className="flex items-center justify-center gap-5">
               <img src={blueStr} alt="" />
@@ -55,7 +55,7 @@ const Demo = () => {
           </div>
         </section>
         {/* START DRIVINF */}
-        <section className="demo px-[56px] py-[120px] bg-white">
+        <section className="demo px-[56px] py-[120px] bg-white padding-50">
           <SectionHeading paraText="Your driving behavior is analyzed in real-time for safety insights.">
             <div className="flex items-center justify-center gap-5">
               <img src={blueStr} alt="" />
@@ -69,7 +69,7 @@ const Demo = () => {
           </div>
         </section>
         {/* REWARDS*/}
-        <section className="demo px-[56px] py-[120px] bg-white">
+        <section className="demo px-[56px] py-[120px] bg-white padding-50">
           <SectionHeading paraText="Earn rewards for every safe and responsible move you make on the road. GenixDrive recognizes your good driving habits by awarding points that can be redeemed for exciting vouchers, discounts, and exclusive offers—turning safety into a rewarding experience.">
             <div className="flex items-center justify-center gap-5">
               <img src={blueStr} alt="" />

@@ -10,7 +10,7 @@ import Button from "../Button";
 const ReadytoDrive = () => {
   return (
     <section className="bg-white text-black font-cairo p-[70px] md:p-[135px] padding-50">
-      <div className="bg-secondary mb-[130px] md:mb-0 rounded-2xl relative h-[490px] z-10 flex items-start md:items-center">
+      <div className="bg-secondary mb-[130px] md:mb-0 rounded-2xl relative h-[670px] md:h-[490px] z-10 flex items-start md:items-center ready-to-driver-cotnainer">
         <img
           src={vector}
           alt=""

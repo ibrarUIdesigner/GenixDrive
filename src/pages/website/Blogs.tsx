@@ -107,7 +107,7 @@ const Blogs = () => {
 
       {/* BLOGS SECTION */}
       <section className="bg-white price-cards px-[56px] py-[120px] padding-50">
-        <div className="col-span-3 p-5  bg-secondary rounded-2xl overflow-hidden z-10 relative h-[490px] mb-10">
+        <div className="col-span-3 p-5  bg-secondary rounded-2xl overflow-hidden z-10 relative h-[490px] mb-10 blog-banner-details">
           <img
             className="absolute top-0 left-0 w-full h-full object-cover"
             src={BlogBanner}

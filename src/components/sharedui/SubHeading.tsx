@@ -47,6 +47,7 @@ const SubHeading = ({
   ...rest
 }: SubHeadingProps) => {
   const classes = `
+    sub-heading
     ${sizeMap[size]}
     ${weightMap[weight]}
     ${colorMap[color]}

@@ -17,14 +17,14 @@ import SubHeading from "./sharedui/Subheading";
 
 const FeaturesBuild = () => {
   return (
-    <section className="bg-secondary text-white font-cairo  py-[116px] px-[58px] relative overflow-hidden">
+    <section className="bg-secondary text-white font-cairo padding-50 py-[116px] px-[58px] relative overflow-hidden">
       <img
         src={path}
         className="absolute top-0 right-0 opacity-50 h-[200px]"
         alt=""
       />
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col items-center text-center mb-[150px]">
+        <div className="flex flex-col items-center text-center mb:[50px] md:mb-[150px]">
           <SubHeading
             color="white"
             weight="bold"

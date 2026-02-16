@@ -31,7 +31,7 @@ const BenefitsSection = () => {
 
   return (
     <motion.section
-      className="bg-gray-100 text-black font-cairo py-[116px] px-[58px]"
+      className="bg-gray-100 text-black font-cairo padding-50 py-[116px] px-[58px]"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}

@@ -12,7 +12,7 @@ import SectionHeading from "./SectionHeading";
 
 const SignupFlow = () => {
   return (
-    <section className="bg-white text-black font-cairo p-[70px] md:p-[135px]">
+    <section className="bg-white text-black font-cairo p-[70px] md:p-[135px] padding-50">
       <SectionHeading
         paraText="Get started in minutes download the app or use our optional device,
           and begin protecting your loved ones with smart monitoring and peace

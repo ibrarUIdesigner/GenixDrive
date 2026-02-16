@@ -53,7 +53,7 @@ const Home = () => {
       <FeaturesBuild />
       <SignupFlow />
       {/* BLOGS */}
-      <section className="px-[56px] py-[120px] bg-surface-light">
+      <section className="px-[56px] py-[120px] bg-surface-light padding-50">
         <div className="max-w-7xl mx-auto">
           <SectionHeading
             className="mb-20"
