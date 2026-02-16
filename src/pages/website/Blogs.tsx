@@ -102,11 +102,11 @@ const Blogs = () => {
     <div className="blogs">
       {/* BANNER */}
       <div className="banner">
-        <img src={frame} alt="Pricing banner"  className="w-full"/>
+        <img src={frame} alt="Pricing banner" className="w-full" />
       </div>
 
       {/* BLOGS SECTION */}
-      <section className="bg-white price-cards px-[56px] py-[120px]">
+      <section className="bg-white price-cards px-[56px] py-[120px] padding-50">
         <div className="col-span-3 p-5  bg-secondary rounded-2xl overflow-hidden z-10 relative h-[490px] mb-10">
           <img
             className="absolute top-0 left-0 w-full h-full object-cover"
@@ -124,7 +124,8 @@ const Blogs = () => {
               weight="bold"
               className="mt-5 mb-5"
             >
-              GenixDrive – Turning Everyday Journeys <p>into Safer, Smarter Experiences</p>
+              GenixDrive – Turning Everyday Journeys{" "}
+              <p>into Safer, Smarter Experiences</p>
             </SubHeading>
             <div className="flex items-center gap-2 items-center">
               <img

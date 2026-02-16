@@ -94,7 +94,7 @@ const BlogDetails = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <section className="blog-details px-[56px] py-[120px]">
+      <section className="blog-details px-[56px] py-[120px] padding-50">
         <div className="blog-details-conta">
           <SubHeading size="2xl" color="dark" className="mb-1">
             How GenixDrive is Redefining Family Safety and Smarter Driving in
@@ -171,7 +171,7 @@ const BlogDetails = () => {
         </div>
       </section>
 
-      <section className="px-[56px] py-[120px]">
+      <section className="px-[56px] py-[120px] padding-50">
         <SubHeading size="2xl" color="dark" className="mb-5">
           Related Blogs
         </SubHeading>

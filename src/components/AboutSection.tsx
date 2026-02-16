@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const AboutSection = ({ bg }: { bg: string }) => {
   return (
     <motion.section
-      className={`bg-${bg} text-black font-cairo p-[70px] md:p-[135px]`}
+      className={`bg-${bg} text-black font-cairo p-[70px] md:p-[135px] padding-50`}
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}

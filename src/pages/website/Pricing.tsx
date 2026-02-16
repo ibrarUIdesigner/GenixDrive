@@ -16,11 +16,11 @@ const Pricing = () => {
   return (
     <div className="pricing">
       <div className="banner">
-        <img src={frame} alt="Pricing banner" className="w-full"/>
+        <img src={frame} alt="Pricing banner" className="w-full" />
       </div>
 
       {/* PRICE CARDS SECTION */}
-      <section className="bg-white price-cards px-[56px] py-[120px]">
+      <section className="bg-white price-cards px-[56px] py-[120px] padding-50">
         <div className="section-heading text-center mb-[150px] md:w-1/2 m-auto">
           <SubHeading size="4xl" color="dark" className="mb-4">
             <p>
@@ -42,7 +42,7 @@ const Pricing = () => {
 
         {/* cARDS */}
         <div>
-          <div className="card-container md:w-[500px] relative bg-light-green p-5 rounded-2xl block m-auto">
+          <div className="card-container w-full md:w-[500px] relative bg-light-green p-5 rounded-2xl block m-auto">
             <div className="text-right">
               <div className="price bg-gray-700 inline-block p-2 rounded-full mb-4 ">
                 <span className="text-white text-sm">$19.99/month</span>
@@ -98,7 +98,7 @@ const Pricing = () => {
       </section>
 
       {/* SECTION */}
-      <section className="bg-surface-light  px-[56px] py-[120px]">
+      <section className="bg-surface-light  px-[56px] py-[120px] padding-50">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 items-center">
           <div className="relative order-1 lg:order-none">
             <div className="w-full h-[220px]  md:w-[539px] md:h-[440px] bg-secondary rounded-2xl"></div>

@@ -22,7 +22,7 @@ const About = () => {
       <AboutHero />
 
       {/* SECTION2 */}
-      <section className="bg-surface-light px-[56px] py-[120px]">
+      <section className="bg-surface-light px-[56px] py-[120px] padding-50">
         <SectionHeading
           paraText="We are shifting our approach towards a cleaner, more visual
             experience prioritizing impactful screens over heavy text. Excessive
@@ -121,8 +121,8 @@ const About = () => {
       </section>
 
       {/* SECTION4 */}
-      <section className="px-[56px] py-[120px]">
-        <div className="section-heading text-center mb-[150px] w-1/2 m-auto">
+      <section className="px-[56px] py-[120px] padding-50">
+        <div className="section-heading text-center mb-[50px] md:mb-[150px] w-full md:w-1/2 m-auto">
           <SubHeading size="4xl" color="dark" className="mb-4">
             Key Features That
             <p className="text-primary">Drive the Difference</p>
