@@ -132,10 +132,9 @@ const Dashboard = () => {
 
       <div className="mt-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          <InfoCard>
-            <SubHeading size="xl" weight="bold">
-              Active Plan
-              <p>GenixDrive Premium</p>
+          <InfoCard title="Active Plan">
+            <SubHeading size="lg" weight="bold">
+              GenixDrive Premium
             </SubHeading>
             <div className="mt-2">
               <Badge variant="success">Active</Badge>

@@ -1,3 +1,5 @@
+import SubHeading from "./Subheading";
+
 interface Column {
   title: string;
   align?: "left" | "center" | "right";
@@ -18,7 +20,9 @@ const SimpleTable = ({ title, columns, rows, footer }: SimpleTableProps) => {
   return (
     <div className="bg-white rounded-2xl shadow-sm ring-1 ring-black/5 p-5">
       {title && (
-        <h3 className="text-base font-bold text-gray-900 mb-4">{title}</h3>
+        <SubHeading size="lg" weight="bold" className="mb-4">
+          {title}
+        </SubHeading>
       )}
       <div className="rounded-xl ring-1 ring-black/5 overflow-hidden">
         <table className="w-full">
