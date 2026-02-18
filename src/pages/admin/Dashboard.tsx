@@ -7,6 +7,7 @@ import Badge from "../../components/sharedui/Badge";
 import SimpleTable from "../../components/sharedui/SimpleTable";
 import Button from "../../components/Button";
 import SubHeading from "../../components/sharedui/Subheading";
+import masterCArd from "../../assets/masterCArd.png";
 
 const Dashboard = () => {
   const stages = [
@@ -66,8 +67,12 @@ const Dashboard = () => {
 
           <InfoCard title="Payment Method">
             <div className="flex items-center gap-3">
-              <span className="inline-flex items-center justify-center w-8 h-6 rounded bg-orange-100 ring-1 ring-orange-200">
-                <span className="block w-3 h-3 rounded-full bg-orange-400"></span>
+              <span className="inline-flex items-center justify-center w-8 h-6 rounded shadow-md">
+                <img
+                  src={masterCArd}
+                  alt="MasterCard"
+                  className="w-8 h-6 object-contain"
+                />
               </span>
               <p className="font-medium tracking-wider">**** **** **** 4242</p>
             </div>
