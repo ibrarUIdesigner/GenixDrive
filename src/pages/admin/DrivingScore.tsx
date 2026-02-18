@@ -92,7 +92,7 @@ const DrivingScore = () => {
   };
 
   return (
-    <div className="p-6 md:p-10">
+    <div className="">
       <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm ring-1 ring-black/5">
         <h1 className="text-2xl md:text-3xl font-black text-gray-900">
           Driving Score
@@ -100,15 +100,24 @@ const DrivingScore = () => {
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="rounded-2xl ring-1 ring-black/10 p-4">
             <p className="text-xs text-gray-500 mb-2">7 DAYS</p>
-            <ReactECharts option={gauge(60, "#22C55E")} style={{ height: 220 }} />
+            <ReactECharts
+              option={gauge(60, "#22C55E")}
+              style={{ height: 220 }}
+            />
           </div>
           <div className="rounded-2xl ring-1 ring-black/10 p-4">
             <p className="text-xs text-gray-500 mb-2">30 DAYS</p>
-            <ReactECharts option={gauge(40, "#F59E0B")} style={{ height: 220 }} />
+            <ReactECharts
+              option={gauge(40, "#F59E0B")}
+              style={{ height: 220 }}
+            />
           </div>
           <div className="rounded-2xl ring-1 ring-black/10 p-4">
             <p className="text-xs text-gray-500 mb-2">365 DAYS</p>
-            <ReactECharts option={gauge(20, "#EF4444")} style={{ height: 220 }} />
+            <ReactECharts
+              option={gauge(20, "#EF4444")}
+              style={{ height: 220 }}
+            />
           </div>
         </div>
 

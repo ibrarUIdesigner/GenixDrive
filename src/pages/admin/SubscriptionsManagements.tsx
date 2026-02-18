@@ -10,7 +10,7 @@ import masterCArd from "../../assets/masterCArd.png";
 
 const SubscriptionsManagements = () => {
   return (
-    <div className="p-6 md:p-8">
+    <div className="">
       <SubHeading className="mb-6" size="2xl" weight="bold">
         Active Plan Summary
       </SubHeading>

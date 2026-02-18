@@ -37,7 +37,7 @@ const Dashboard = () => {
       ? "text-primary"
       : "text-red-500";
   return (
-    <div className="p-6 md:p-8">
+    <div className="">
       <div className="space-y-6">
         <AlertBanner
           message="Your last payment failed. Please update your billing info"
