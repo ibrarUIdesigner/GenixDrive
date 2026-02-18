@@ -14,16 +14,17 @@ import blog6 from "../../assets/blogs/6.jpg";
 import SubHeading from "../../components/sharedui/Subheading";
 import Paragraph from "../../components/sharedui/Paragraph";
 import ReadytoDrive from "../../components/web/ReadytoDrive";
+import { ArrowDown } from "lucide-react";
 
 const BlogsRecords = [
   {
     blogImg: blog1,
-    category: "Telematics",
-    title: "Smart Driving with Connected Vehicles",
+    category: "Social & Family Connect",
+    title: "What Makes GenixDrive Different",
     description:
       "Discover how telematics technology improves vehicle safety, efficiency, and real-time monitoring for modern drivers.",
     user: {
-      userName: "Awais Khan",
+      userName: "Olivia Rhye",
       userImg:
         "https://img.freepik.com/free-photo/front-view-business-woman-suit_23-2148603018.jpg?semt=ais_hybrid&w=740&q=80",
       date: "2026-02-10",
@@ -31,12 +32,12 @@ const BlogsRecords = [
   },
   {
     blogImg: blog2,
-    category: "Maintenance",
-    title: "5 Tips to Keep Your Car in Top Shape",
+    category: "Safety & Protection",
+    title: "What Makes GenixDrive Different",
     description:
       "Regular maintenance ensures long vehicle life. Learn simple steps to prevent breakdowns and reduce repair costs.",
     user: {
-      userName: "Awais Khan",
+      userName: "Phoenix Baker",
       userImg:
         "https://img.freepik.com/free-photo/portrait-smiling-businesswoman-posing_23-2148603020.jpg?semt=ais_hybrid&w=740&q=80",
       date: "2026-02-08",
@@ -44,12 +45,12 @@ const BlogsRecords = [
   },
   {
     blogImg: blog3,
-    category: "Safety",
-    title: "How GPS Tracking Enhances Security",
+    category: "Driving Insights",
+    title: "What Makes GenixDrive Different",
     description:
       "GPS tracking helps monitor vehicle location and ensures safety for families and fleet managers alike.",
     user: {
-      userName: "Awais Khan",
+      userName: "Lana Steiner",
       userImg:
         "https://img.freepik.com/free-photo/portrait-smiling-businesswoman-posing_23-2148603021.jpg?semt=ais_hybrid&w=740&q=80",
       date: "2026-02-06",
@@ -57,12 +58,12 @@ const BlogsRecords = [
   },
   {
     blogImg: blog4,
-    category: "Technology",
-    title: "The Future of AI in Automobiles",
+    category: "Driving Insights",
+    title: "What Makes GenixDrive Different",
     description:
       "AI-powered insights are transforming driving experiences with predictive analytics and smart alerts.",
     user: {
-      userName: "Awais Khan",
+      userName: "Alec Whitten",
       userImg:
         "https://img.freepik.com/free-photo/portrait-smiling-businesswoman-posing_23-2148603022.jpg?semt=ais_hybrid&w=740&q=80",
       date: "2026-02-05",
@@ -70,12 +71,12 @@ const BlogsRecords = [
   },
   {
     blogImg: blog5,
-    category: "Lifestyle",
-    title: "Road Trips Made Safer & Smarter",
+    category: "Social & Family Connect",
+    title: "What Makes GenixDrive Different",
     description:
       "Use connected apps and vehicle data to plan efficient and enjoyable road trips with your loved ones.",
     user: {
-      userName: "Awais Khan",
+      userName: "Demi WIlkinson",
       userImg:
         "https://img.freepik.com/free-photo/portrait-smiling-businesswoman-posing_23-2148603023.jpg?semt=ais_hybrid&w=740&q=80",
       date: "2026-02-03",
@@ -83,12 +84,12 @@ const BlogsRecords = [
   },
   {
     blogImg: blog6,
-    category: "Innovation",
-    title: "Electric Vehicles & Smart Monitoring",
+    category: "Gamification & Rewards",
+    title: "What Makes GenixDrive Different",
     description:
       "Learn how monitoring tools help optimize battery usage and performance in modern electric vehicles.",
     user: {
-      userName: "Awais Khan",
+      userName: "Candice Wu",
       userImg:
         "https://img.freepik.com/free-photo/portrait-smiling-businesswoman-posing_23-2148603024.jpg?semt=ais_hybrid&w=740&q=80",
       date: "2026-02-01",
@@ -191,6 +192,13 @@ const Blogs = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-10 text-center">
+          <span className="inline-block cursor-pointer text-primary p-4 bg-surface-light">
+            <ArrowDown className="inline-block" size={18} />
+            View More Blogs
+          </span>
         </div>
       </section>
 
