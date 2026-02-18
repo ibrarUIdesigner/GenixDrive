@@ -14,7 +14,7 @@ const AdminSidebar = () => {
   return (
     <aside className="bg-white md:h-screen md:sticky md:top-0 p-6 md:p-8 border-r border-gray-100 md:col-span-2">
       <div className="flex flex-col items-center gap-2 border-b border-gray-100 pb-10">
-        <img src={ab1} alt="" className="w-20 h-20 rounded-full object-cover" />
+        <img src={ab1} alt="" className="w-16 h-16 rounded-full object-cover" />
         <p className="text-sm font-semibold text-gray-900">Michael White</p>
         <a href="#" className="text-primary text-xs">
           Profile
