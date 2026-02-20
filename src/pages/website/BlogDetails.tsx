@@ -1,5 +1,4 @@
-import React from "react";
-import SubHeading from "../../components/sharedui/Subheading";
+import SubHeading from "../../components/sharedui/SubHeading";
 import Paragraph from "../../components/sharedui/Paragraph";
 import { useNavigate } from "react-router-dom";
 

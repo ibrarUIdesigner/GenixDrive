@@ -1,7 +1,8 @@
 import { Car, Share2, TrendingUp, HeartHandshake } from "lucide-react";
-import SubHeading from "./sharedui/Subheading";
+
 import Paragraph from "./sharedui/Paragraph";
 import { motion } from "framer-motion";
+import SubHeading from "./sharedui/SubHeading";
 
 const FeaturesStrip = () => {
   const features = [

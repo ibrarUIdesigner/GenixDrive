@@ -1,9 +1,8 @@
-import { Star } from "lucide-react";
 import img1 from "../assets/brings1.jpg";
 import img2 from "../assets/brings2.jpg";
 import img3 from "../assets/brings3.png";
 import blueStr from "../assets/bluestr.png";
-import SubHeading from "./sharedui/Subheading";
+import SubHeading from "./sharedui/SubHeading";
 import Paragraph from "./sharedui/Paragraph";
 import { motion } from "framer-motion";
 

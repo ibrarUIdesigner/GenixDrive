@@ -1,4 +1,3 @@
-import React from "react";
 import frame from "../../assets/frame2.png";
 import BlogBanner from "../../assets/blogbaner.jpg";
 import userPlaceHolder from "../../assets/userPlaceHolder.png";
@@ -11,7 +10,7 @@ import blog3 from "../../assets/blogs/3.jpg";
 import blog4 from "../../assets/blogs/4.jpg";
 import blog5 from "../../assets/blogs/5.jpg";
 import blog6 from "../../assets/blogs/6.jpg";
-import SubHeading from "../../components/sharedui/Subheading";
+import SubHeading from "../../components/sharedui/SubHeading";
 import Paragraph from "../../components/sharedui/Paragraph";
 import ReadytoDrive from "../../components/web/ReadytoDrive";
 import { ArrowDown } from "lucide-react";

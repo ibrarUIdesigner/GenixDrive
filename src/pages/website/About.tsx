@@ -1,7 +1,6 @@
-import React from "react";
 import AboutHero from "../../components/AboutHero";
 import AboutSection from "../../components/AboutSection";
-import SubHeading from "../../components/sharedui/Subheading";
+import SubHeading from "../../components/sharedui/SubHeading";
 import Paragraph from "../../components/sharedui/Paragraph";
 
 import ab1 from "../../assets/ab1.jpg";

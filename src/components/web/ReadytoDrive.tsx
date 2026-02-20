@@ -1,9 +1,8 @@
-import React from "react";
 import vector from "../../assets/Vector 77.png";
 import screen from "../../assets/screen 3.png";
 import UnionTop from "../../assets/Union-up.png";
 import UnionDown from "../../assets/Union-down.png";
-import SubHeading from "../sharedui/Subheading";
+import SubHeading from "../sharedui/SubHeading";
 import Paragraph from "../sharedui/Paragraph";
 import Button from "../Button";
 

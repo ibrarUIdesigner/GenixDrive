@@ -1,16 +1,4 @@
-import React from "react";
-import SectionHeading from "../../components/web/SectionHeading";
-
-import sigup from "../../assets/sign1.png";
-import fami from "../../assets/q.png";
-import drv from "../../assets/q2.png";
-import rwsd from "../../assets/q3.png";
-import blueStr from "../../assets/grnstr.png";
-
-import demo1 from "../../assets/demo1.png";
-import demo2 from "../../assets/demo2.png";
-
-import SubHeading from "../../components/sharedui/Subheading";
+import SubHeading from "../../components/sharedui/SubHeading";
 import Paragraph from "../../components/sharedui/Paragraph";
 import ReadytoDrive from "../../components/web/ReadytoDrive";
 
@@ -20,7 +8,7 @@ import { motion } from "framer-motion";
 
 import frame from "../../assets/7th sec copy.png";
 import frameMobile from "../../assets/FrameMobile.png";
-import StoreActionsButtons from "../../components/web/StoreActionsButtons";
+// import StoreActionsButtons from "../../components/web/StoreActionsButtons";
 import Button from "../../components/Button";
 
 const Demo = () => {

@@ -1,10 +1,9 @@
-import React from "react";
 import TripRow from "../../components/admin/TripRow";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 
 const MyTrips = () => {
-  const location = useLocation();
-  const isMyTrips = location.pathname.endsWith("/admin/my-trips");
+  // const location = useLocation();
+  // const isMyTrips = location.pathname.endsWith("/admin/my-trips");
   const trips = [
     {
       score: 72,

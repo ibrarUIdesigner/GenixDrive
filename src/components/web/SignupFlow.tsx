@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import SubHeading from "../sharedui/Subheading";
+import { useState } from "react";
+import SubHeading from "../sharedui/SubHeading";
 import Paragraph from "../sharedui/Paragraph";
 
 import step1 from "../../assets/signup/1.png";

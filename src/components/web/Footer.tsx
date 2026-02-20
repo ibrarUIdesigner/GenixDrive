@@ -1,5 +1,4 @@
-import React from "react";
-import SubHeading from "../sharedui/Subheading";
+import SubHeading from "../sharedui/SubHeading";
 import Paragraph from "../sharedui/Paragraph";
 import { Linkedin, Youtube, Twitter } from "lucide-react";
 import logo from "../../assets/logo.png";

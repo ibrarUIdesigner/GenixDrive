@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ab1 from "../../assets/ab1.jpg";
 import { Eye, EyeOff, Mail, Lock } from "lucide-react";
 import Button from "../../components/Button";
-import SubHeading from "../../components/sharedui/Subheading";
+import SubHeading from "../../components/sharedui/SubHeading";
 import { TextField } from "../../components/sharedui/Input";
 
 const Login = () => {

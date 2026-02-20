@@ -1,4 +1,3 @@
-import React from "react";
 import Hero from "../../components/Hero";
 import FeaturesStrip from "../../components/FeaturesStrip";
 import AboutSection from "../../components/AboutSection";
@@ -11,8 +10,9 @@ import cric from "../../assets/circ.png";
 
 import blog1 from "../../assets/blogs/1.jpg";
 import blog2 from "../../assets/blogs/2.png";
-import SubHeading from "../../components/sharedui/Subheading";
+import SubHeading from "../../components/sharedui/SubHeading";
 import Paragraph from "../../components/sharedui/Paragraph";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const BlogsRecords = [
@@ -43,6 +43,8 @@ const Home = () => {
       },
     },
   ];
+
+  const navigate = useNavigate();
 
   return (
     <div className="bg-primary">

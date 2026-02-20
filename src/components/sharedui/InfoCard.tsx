@@ -1,4 +1,4 @@
-import SubHeading from "./Subheading";
+import SubHeading from "./SubHeading";
 
 interface InfoCardProps {
   title?: string;

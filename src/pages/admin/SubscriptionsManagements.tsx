@@ -1,11 +1,10 @@
-import React from "react";
 import InfoCard from "../../components/sharedui/InfoCard";
 import Badge from "../../components/sharedui/Badge";
 import AlertBanner from "../../components/sharedui/AlertBanner";
 import SimpleTable from "../../components/sharedui/SimpleTable";
 import Button from "../../components/Button";
 import { Download } from "lucide-react";
-import SubHeading from "../../components/sharedui/Subheading";
+import SubHeading from "../../components/sharedui/SubHeading";
 import masterCArd from "../../assets/masterCArd.png";
 
 const SubscriptionsManagements = () => {

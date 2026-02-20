@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import frame from "../../assets/7th sec copy.png";
 import frameMobile from "../../assets/FrameMobile.png";
 
-import SubHeading from "../../components/sharedui/Subheading";
+import SubHeading from "../../components/sharedui/SubHeading";
 import Paragraph from "../../components/sharedui/Paragraph";
 import StoreActionsButtons from "../../components/web/StoreActionsButtons";
 import SectionHeading from "../../components/web/SectionHeading";

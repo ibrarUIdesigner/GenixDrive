@@ -1,41 +1,14 @@
 import { MapPin, Phone, Smartphone } from "lucide-react";
-import React from "react";
 import { Link } from "react-router-dom";
 import AlertBanner from "../../components/sharedui/AlertBanner";
 import InfoCard from "../../components/sharedui/InfoCard";
 import Badge from "../../components/sharedui/Badge";
 import SimpleTable from "../../components/sharedui/SimpleTable";
 import Button from "../../components/Button";
-import SubHeading from "../../components/sharedui/Subheading";
+import SubHeading from "../../components/sharedui/SubHeading";
 import masterCArd from "../../assets/masterCArd.png";
 
 const Dashboard = () => {
-  const stages = [
-    { name: "Order Placed", date: "28 Oct • 02:15 PM", status: "Completed" },
-    {
-      name: "Payment Confirmed",
-      date: "28 Oct • 02:17 PM",
-      status: "Completed",
-    },
-    {
-      name: "Processing / Packaging",
-      date: "29 Oct • 10:10 AM",
-      status: "Completed",
-    },
-    { name: "Shipped", date: "30 Oct • 08:35 PM", status: "Completed" },
-    {
-      name: "Out for Delivery",
-      date: "03 Nov • 09:22 AM",
-      status: "In Progress",
-    },
-    { name: "Delivered", date: "Pending", status: "Waiting" },
-  ];
-  const statusClass = (s: string) =>
-    s === "Completed"
-      ? "text-green-600"
-      : s === "In Progress"
-      ? "text-primary"
-      : "text-red-500";
   return (
     <div className="">
       <div className="space-y-6">

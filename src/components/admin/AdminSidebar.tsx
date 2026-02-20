@@ -1,13 +1,12 @@
-import React from "react";
 import ab1 from "../../assets/ab1.jpg";
-import { Home, Map, Gauge, Settings, CreditCard, IdCard } from "lucide-react";
+import { Home, Settings, CreditCard } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const AdminSidebar = () => {
   const location = useLocation();
   const isDashboard = location.pathname.endsWith("/admin/dashboard");
-  const isMyTrips = location.pathname.endsWith("/admin/my-trips");
-  const isDrivingScore = location.pathname.endsWith("/admin/driving-score");
+  // const isMyTrips = location.pathname.endsWith("/admin/my-trips");
+  // const isDrivingScore = location.pathname.endsWith("/admin/driving-score");
   const isSettings = location.pathname.endsWith("/admin/settings");
   const isSubscriptions = location.pathname.endsWith("/admin/subscriptions");
   // const isSubscriptions = location.pathname.endsWith("/admin/subscriptions");

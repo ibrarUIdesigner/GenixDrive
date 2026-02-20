@@ -1,6 +1,5 @@
-import React from "react";
 import frame from "../../assets/frame.png";
-import SubHeading from "../../components/sharedui/Subheading";
+import SubHeading from "../../components/sharedui/SubHeading";
 import Paragraph from "../../components/sharedui/Paragraph";
 import {
   CircleCheck,

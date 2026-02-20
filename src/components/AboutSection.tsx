@@ -1,8 +1,8 @@
-import centerMobile from "../assets/HomeCenterMobile.png";
+// import centerMobile from "../assets/HomeCenterMobile.png";
 import ill from "../assets/ill.jpg";
 import ill2 from "../assets/about2nd.png";
 import Paragraph from "./sharedui/Paragraph";
-import SubHeading from "./sharedui/Subheading";
+import SubHeading from "./sharedui/SubHeading";
 import { motion } from "framer-motion";
 
 const AboutSection = ({ bg }: { bg: string }) => {

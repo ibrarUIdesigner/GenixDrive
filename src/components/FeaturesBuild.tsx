@@ -10,10 +10,9 @@ import feature7 from "../assets/fs/7.png";
 import feature8 from "../assets/fs/8.png";
 import path from "../assets/path.png";
 import grystr from "../assets/grystr.png";
-import grnstr from "../assets/grnstr.png";
 import Button from "./Button";
 import Paragraph from "./sharedui/Paragraph";
-import SubHeading from "./sharedui/Subheading";
+import SubHeading from "./sharedui/SubHeading";
 
 const FeaturesBuild = () => {
   return (

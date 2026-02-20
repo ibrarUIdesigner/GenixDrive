@@ -1,5 +1,5 @@
 import Button from "./Button";
-import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import logo2 from "../assets/logo2.png";
 import { Menu, X, ChevronRight } from "lucide-react";
