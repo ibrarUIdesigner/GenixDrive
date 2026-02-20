@@ -36,7 +36,7 @@ const AdminSidebar = () => {
           <span className="font-medium">Dashboard</span>
         </Link>
 
-        <Link
+        {/* <Link
           to="/admin/my-trips"
           className={`text-sm relative flex items-center gap-3 rounded-lg px-3 py-2 ${
             isMyTrips ? "text-secondary" : "text-gray-700 hover:text-secondary"
@@ -47,8 +47,8 @@ const AdminSidebar = () => {
           )}
           <Map size={18} />
           <span>My Trips</span>
-        </Link>
-        <Link
+        </Link> */}
+        {/* <Link
           to="/admin/driving-score"
           className={`text-sm relative flex items-center gap-3 rounded-lg px-3 py-2 ${
             isDrivingScore
@@ -61,7 +61,7 @@ const AdminSidebar = () => {
           )}
           <Gauge size={18} />
           <span>Driving Score</span>
-        </Link>
+        </Link> */}
         <Link
           to="/admin/settings"
           className={`text-sm relative flex items-center gap-3 rounded-lg px-3 py-2 ${
