@@ -3,7 +3,7 @@ import SubHeading from "../sharedui/SubHeading";
 import Paragraph from "../sharedui/Paragraph";
 
 import step1 from "../../assets/signup/1.png";
-import step2 from "../../assets/signup/2.png";
+import step2 from "../../assets/deviceInstall.png";
 import step3 from "../../assets/signup/3.png";
 import step4 from "../../assets/signup/4.png";
 import cric from "../../assets/circ.png";
@@ -24,23 +24,26 @@ const SignupFlow = () => {
           <img
             src={cric}
             alt="circle"
-            className="absolute left-1/2 top-1/2 -translate-1/2 w-full"
+            className="absolute left-1/2 top-1/2 -translate-1/2 w-full "
           />
         </div>
       </SectionHeading>
       <div className="mt-[70px]">
         <Switch />
 
-        <div className="steps grid grid-cols-1 md:grid-cols-2 gap-10 mt-[76px]">
+        <div className="steps sigup-flows flex items-center flex-wrap justify-center gap-10 mt-[76px]">
           {/* STEP1 */}
-          <div className="step-container relative p-10 rounded-2xl bg-surface-light border overflow-hidden">
+          <div className="w-[400px] h-full  step-container relative p-10 rounded-2xl bg-surface-light border overflow-hidden">
             <div className="step-details">
               <SubHeading
                 size="2xl"
                 weight="black"
-                className="uppercase text-purple-700 mb-2"
+                className="uppercase text-secondary mb-2"
               >
                 step 1
+              </SubHeading>
+              <SubHeading size="lg" weight="bold" className="mb-2">
+                Download the app & Sign up
               </SubHeading>
               <Paragraph
                 size="sm"
@@ -54,19 +57,22 @@ const SignupFlow = () => {
               <img
                 src={step1}
                 alt="step 1"
-                className="w-full h-[200px] mt-[50px]"
+                className="w-full h-[200px] mt-[50px] object-contain"
               />
             </div>
           </div>
           {/* STEP2 */}
-          <div className="step-container relative p-10 rounded-2xl bg-surface-light border">
+          <div className="w-[400px] h-full step-container relative p-10 rounded-2xl bg-surface-light border">
             <div className="step-details">
               <SubHeading
                 size="2xl"
                 weight="black"
-                className="uppercase text-purple-700 mb-2"
+                className="uppercase text-secondary mb-2"
               >
                 step 2
+              </SubHeading>
+              <SubHeading size="lg" weight="bold" className="mb-2">
+                Order a Device
               </SubHeading>
               <Paragraph
                 size="sm"
@@ -74,25 +80,29 @@ const SignupFlow = () => {
                 weight="medium"
                 className="leading-5"
               >
-                First, download the GenixDrive app from the Google Play Store or
-                App Store.
+                Order the GenixDrive device to unlock live vehicle tracking,
+                real-time safety alerts, and advanced driving insights. Install
+                it, connect to the app, and start monitoring instantly.
               </Paragraph>
               <img
-                src={step2}
+                src={step3}
                 alt="step 2"
-                className="w-full h-[200px] object-cover mt-[50px] "
+                className="w-full h-[200px] mt-[50px] object-contain"
               />
             </div>
           </div>
           {/* STEP3 */}
-          <div className="step-container relative   p-10 rounded-2xl bg-surface-light border">
+          <div className="w-[400px]  step-container relative   p-10 rounded-2xl bg-surface-light border">
             <div className="step-details">
               <SubHeading
                 size="2xl"
                 weight="black"
-                className="uppercase text-purple-700 mb-2"
+                className="uppercase text-secondary mb-2"
               >
                 step 3
+              </SubHeading>
+              <SubHeading size="lg" weight="bold" className="mb-2">
+                Device Installation
               </SubHeading>
               <Paragraph
                 size="sm"
@@ -100,25 +110,30 @@ const SignupFlow = () => {
                 weight="medium"
                 className="leading-5"
               >
-                First, download the GenixDrive app from the Google Play Store or
-                App Store.
+                Once your order is confirmed, a certified GenixDrive technician
+                will visit your location to professionally install the device in
+                your car. We ensure a seamless setup so you’re ready to hit the
+                road safely.
               </Paragraph>
               <img
-                src={step3}
+                src={step2}
                 alt="step 3"
-                className="w-full h-[200px] object-cover mt-[50px] "
+                className="w-full h-[200px]  mt-[50px] object-contain"
               />
             </div>
           </div>
           {/* STEP4 */}
-          <div className="step-container p-10 relative rounded-2xl bg-surface-light border overflow-hidden">
+          <div className="w-[400px]  step-container p-10 relative rounded-2xl bg-surface-light border overflow-hidden">
             <div className="step-details">
               <SubHeading
                 size="2xl"
                 weight="black"
-                className="uppercase text-purple-700 mb-2"
+                className="uppercase text-secondary mb-2"
               >
                 step 4
+              </SubHeading>
+              <SubHeading size="lg" weight="bold" className="mb-2">
+                Start monitoring your score
               </SubHeading>
               <Paragraph
                 size="sm"
@@ -126,13 +141,13 @@ const SignupFlow = () => {
                 weight="medium"
                 className="leading-5"
               >
-                First, download the GenixDrive app from the Google Play Store or
-                App Store.
+                Once everything is set up, you can monitor driving behavior,
+                receive safety alerts, and track your family’s safety.
               </Paragraph>
               <img
                 src={step4}
                 alt="step 4"
-                className="w-full h-[200px] object-cover mt-[50px] "
+                className="w-full h-[200px]  mt-[50px] object-contain"
               />
             </div>
           </div>

@@ -23,7 +23,7 @@ const Home = () => {
       description:
         "Discover how telematics technology improves vehicle safety, efficiency, and real-time monitoring for modern drivers.",
       user: {
-        userName: "Awais Khan",
+        userName: "Onur Eren",
         userImg:
           "https://img.freepik.com/free-photo/front-view-business-woman-suit_23-2148603018.jpg?semt=ais_hybrid&w=740&q=80",
         date: "2026-02-10",
@@ -36,7 +36,7 @@ const Home = () => {
       description:
         "Regular maintenance ensures long vehicle life. Learn simple steps to prevent breakdowns and reduce repair costs.",
       user: {
-        userName: "Awais Khan",
+        userName: "Onur Eren",
         userImg:
           "https://img.freepik.com/free-photo/portrait-smiling-businesswoman-posing_23-2148603020.jpg?semt=ais_hybrid&w=740&q=80",
         date: "2026-02-08",
@@ -51,7 +51,7 @@ const Home = () => {
       <Hero />
       <FeaturesStrip />
       <AboutSection bg="white" />
-      <BenefitsSection />
+      {/* <BenefitsSection /> */}
       <FeaturesBuild />
       <SignupFlow />
       {/* BLOGS */}

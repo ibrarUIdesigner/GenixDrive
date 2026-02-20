@@ -31,8 +31,9 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  font-family: "Poppins", sans-serif;
+  
 }
+html  * {font-family: "DM Sans", sans-serif;}
 
 button{
  font-family: "Inter", sans-serif;
@@ -60,6 +61,26 @@ button{
 .main-heading{
   font-family: "Poppins", sans-serif;
 }
+.sub-heading * {
+  font-family: "Poppins", sans-serif;
+}
+
+.sigup-flows .step-container{
+  height: 490px;
+}
+
+.hero-banner-right .divider{
+  width: 3px;
+  height: 29px;
+  background-color: #CACACA;
+}
+.hero-banner-right{
+  font-family: "Inter", sans-serif;
+}
+.footer0actions div{
+  margin-bottom: 10px;
+}
+
 
 @media screen and (max-width: 600px) {
  .padding-50{
@@ -104,6 +125,12 @@ button{
   display: block;
   padding: 5px 0;
   font-size: 15px;
+}
+
+.sigup-flows .step-container{
+  width: 100%;
+  height: auto;
+  padding: 30px;
 }
 }
 @media screen and (max-width: 450px) {

@@ -36,10 +36,10 @@ const ReadytoDrive = () => {
           </Paragraph>
           <Button
             variant="outline"
-            className="!rounded-full mt-10 bg-white !text-gray-800 hover:bg-white/90"
+            className="!rounded-full !max-w-[270px] mt-10 bg-white !text-gray-800 hover:bg-white/90"
             size="lg"
           >
-            Explore Features
+            Experince Demo Now
           </Button>
         </div>
         <img
