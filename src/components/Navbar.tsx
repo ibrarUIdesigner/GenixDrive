@@ -38,93 +38,88 @@ const Navbar = () => {
         isHome ? "bg-primary text-white" : "bg-white text-black shadow-sm"
       }`}
     >
-      <div className="flex gap-10 items-center justify-between">
-        {/* Logo Placeholder */}
-        <div className="flex items-center gap-2">
-          <div
-            onClick={() => navigate("/")}
-            className="h-10 w-32 rounded flex items-center justify-center text-sm font-bold tracking-wider"
-          >
-            <img src={isHome ? logo : logo2} alt="Genix Drive Logo" />
-          </div>
+      {/* Logo Placeholder */}
+      <div className="flex items-center gap-2">
+        <div
+          onClick={() => navigate("/")}
+          className="h-10 w-32 rounded flex items-center justify-center text-sm font-bold tracking-wider"
+        >
+          <img src={isHome ? logo : logo2} alt="Genix Drive Logo" />
         </div>
+      </div>
 
-        {/* Navigation Links */}
-        <div className="hidden md:flex items-center gap-8 text-sm">
-          <NavLink
-            to="/"
-            className={({ isActive }) => getLinkClasses(isActive)}
-          >
-            Home
-          </NavLink>
-          <NavLink
-            to="/about"
-            className={({ isActive }) => getLinkClasses(isActive)}
-          >
-            About us
-          </NavLink>
+      {/* Navigation Links */}
+      <div className="hidden md:flex items-center gap-8 text-sm">
+        <NavLink to="/" className={({ isActive }) => getLinkClasses(isActive)}>
+          Home
+        </NavLink>
+        <NavLink
+          to="/about"
+          className={({ isActive }) => getLinkClasses(isActive)}
+        >
+          About us
+        </NavLink>
 
-          <div className="relative group">
-            <button
-              className={`transition-colors ${
-                isHome
-                  ? "text-white hover:text-light-green"
-                  : "text-gray-700 hover:text-primary"
-              } inline-flex items-center gap-1`}
-            >
-              Features
-              <ChevronRight className="w-4 h-4" />
-            </button>
-            <div className="absolute left-0 top-2 mt-3 w-[560px] bg-white text-black rounded-xl  p-4 z-50 opacity-0 translate-y-2 scale-95 pointer-events-none transition-all duration-200 ease-out group-hover:opacity-100 group-hover:translate-y-0 group-hover:scale-100 group-hover:pointer-events-auto">
-              <div className="grid grid-cols-1 gap-4">
-                <div className="rounded-lg w-full ">
-                  <NavLink
-                    to="/features"
-                    className="block px-4 py-2 text-sm hover:text-primary transition-colors duration-150"
-                  >
-                    Social & Family Connect
-                  </NavLink>
-                  <NavLink
-                    to="/features1"
-                    className="block px-4 py-2 text-sm hover:text-primary transition-colors duration-150"
-                  >
-                    Safety & Protection
-                  </NavLink>
-                  <NavLink
-                    to="/features2"
-                    className="block px-4 py-2 text-sm hover:text-primary transition-colors duration-150"
-                  >
-                    Driving Insights
-                  </NavLink>
-                  <NavLink
-                    to="/features3"
-                    className="block px-4 py-2 text-sm hover:text-primary transition-colors duration-150"
-                  >
-                    Gamification & Rewards
-                  </NavLink>
-                </div>
+        <div className="relative group">
+          <button
+            className={`transition-colors ${
+              isHome
+                ? "text-white hover:text-light-green"
+                : "text-gray-700 hover:text-primary"
+            } inline-flex items-center gap-1`}
+          >
+            Features
+            <ChevronRight className="w-4 h-4" />
+          </button>
+          <div className="absolute left-0 top-2 mt-3 w-[560px] bg-white text-black rounded-xl  p-4 z-50 opacity-0 translate-y-2 scale-95 pointer-events-none transition-all duration-200 ease-out group-hover:opacity-100 group-hover:translate-y-0 group-hover:scale-100 group-hover:pointer-events-auto">
+            <div className="grid grid-cols-1 gap-4">
+              <div className="rounded-lg w-full ">
+                <NavLink
+                  to="/features"
+                  className="block px-4 py-2 text-sm hover:text-primary transition-colors duration-150"
+                >
+                  Social & Family Connect
+                </NavLink>
+                <NavLink
+                  to="/features1"
+                  className="block px-4 py-2 text-sm hover:text-primary transition-colors duration-150"
+                >
+                  Safety & Protection
+                </NavLink>
+                <NavLink
+                  to="/features2"
+                  className="block px-4 py-2 text-sm hover:text-primary transition-colors duration-150"
+                >
+                  Driving Insights
+                </NavLink>
+                <NavLink
+                  to="/features3"
+                  className="block px-4 py-2 text-sm hover:text-primary transition-colors duration-150"
+                >
+                  Gamification & Rewards
+                </NavLink>
               </div>
             </div>
           </div>
-          <NavLink
-            to="/pricing"
-            className={({ isActive }) => getLinkClasses(isActive)}
-          >
-            Pricing
-          </NavLink>
-          <NavLink
-            to="/demo"
-            className={({ isActive }) => getLinkClasses(isActive)}
-          >
-            Demo
-          </NavLink>
-          <NavLink
-            to="/blogs"
-            className={({ isActive }) => getLinkClasses(isActive)}
-          >
-            Blogs
-          </NavLink>
         </div>
+        <NavLink
+          to="/pricing"
+          className={({ isActive }) => getLinkClasses(isActive)}
+        >
+          Pricing
+        </NavLink>
+        <NavLink
+          to="/demo"
+          className={({ isActive }) => getLinkClasses(isActive)}
+        >
+          Demo
+        </NavLink>
+        <NavLink
+          to="/blogs"
+          className={({ isActive }) => getLinkClasses(isActive)}
+        >
+          Blogs
+        </NavLink>
       </div>
 
       {/* Auth Button */}

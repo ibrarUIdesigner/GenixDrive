@@ -5,6 +5,8 @@ import blueStr from "../assets/bluestr.png";
 import SubHeading from "./sharedui/SubHeading";
 import Paragraph from "./sharedui/Paragraph";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ArrowRightIcon } from "lucide-react";
 
 const BenefitsSection = () => {
   const items = [
@@ -110,6 +112,14 @@ const BenefitsSection = () => {
                 >
                   {item.description}
                 </Paragraph>
+
+                <Link
+                  to="#"
+                  className="flex gap-1.5 items-center mt-4 text-sm font-medium text-secondary font-bold uppercase underline transition-colors duration-200 ease-in-out"
+                >
+                  <span>Read More</span>
+                  <ArrowRightIcon size={18} />
+                </Link>
               </div>
             </motion.article>
           ))}

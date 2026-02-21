@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Autoplay } from "swiper/modules";
-// import "swiper/css";
-// import "swiper/css/effect-coverflow";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
 
 // Importing images for the slider
 import img1 from "../assets/slider/1.jpg";

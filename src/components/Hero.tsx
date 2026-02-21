@@ -45,7 +45,7 @@ const Hero = () => {
       >
         {/* Left Content */}
         <motion.div
-          className="md:col-span-5 flex flex-col gap-5 relative z-10"
+          className="md:col-span-4 flex flex-col gap-5 relative z-10"
           variants={item}
         >
           <motion.h1
@@ -55,7 +55,7 @@ const Hero = () => {
             <p className="relative inline-block text-white/60">
               Drive Smart
               <img
-                className="absolute left-full -bottom-3"
+                className="absolute left-full bottom-[70px]"
                 src={grenStr}
                 alt=""
               />
@@ -71,10 +71,7 @@ const Hero = () => {
             variants={item}
           >
             <Button variant="primary" size="md">
-              Get Started For Free
-            </Button>
-            <Button variant="outline" size="md">
-              Explore Features
+              Get Started
             </Button>
           </motion.div>
           {/* <div className="w-12 h-[1px] bg-white rotate-90 absolute -left-0 -bottom-[45px]"></div> */}
@@ -108,7 +105,7 @@ const Hero = () => {
         </motion.div>
 
         {/* Spacer for Center Image */}
-        <div className="hidden lg:block md:col-span-3"></div>
+        <div className="hidden lg:block md:col-span-4"></div>
 
         {/* Right Content */}
         <motion.div
@@ -116,20 +113,21 @@ const Hero = () => {
           variants={item}
         >
           <motion.div
-            className="flex justify-center md:justify-start gap-12 lg:gap-16"
+            className="flex items-center hero-banner-right justify-center md:justify-start gap-12 lg:gap-16"
             variants={item}
           >
             <div>
-              <p className="text-xs md:text-sm text-light-purple mb-1">
+              <p className="text-xs label md:text-sm text-light-purple mb-1">
                 Active Users
               </p>
-              <p className="text-2xl md:text-3xl font-bold">10K+</p>
+              <p className="text-2xl value md:text-3xl font-bold">10K+</p>
             </div>
+            <div className="divider"></div>
             <div>
-              <p className="text-xs md:text-sm text-light-purple mb-1">
+              <p className="text-xs label md:text-sm text-light-purple mb-1">
                 Downloads
               </p>
-              <p className="text-2xl md:text-3xl font-bold">50K+</p>
+              <p className="text-2xl value md:text-3xl font-bold">50K+</p>
             </div>
           </motion.div>
 
@@ -141,11 +139,11 @@ const Hero = () => {
             rewards — GenixDrive is your complete driving companion.
           </motion.p>
 
-          <motion.div className="mb-10 md:mb-auto" variants={item}>
-            <p className="text-xs font-bold uppercase mb-4 tracking-widest text-light-purple">
+          <motion.div className="mb-[24px] md:mb-auto" variants={item}>
+            <p className="text-xs font-bold uppercase mb-4 tracking-widest text-white">
               Download Now On:
             </p>
-            <StoreActionsButtons />
+            <StoreActionsButtons className="!mt-0" />
           </motion.div>
         </motion.div>
       </motion.div>

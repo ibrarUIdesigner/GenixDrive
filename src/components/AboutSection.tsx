@@ -1,9 +1,10 @@
 // import centerMobile from "../assets/HomeCenterMobile.png";
-import ill from "../assets/ill.jpg";
+import ill from "../assets/aboutIll.png";
 import ill2 from "../assets/about2nd.png";
 import Paragraph from "./sharedui/Paragraph";
 import SubHeading from "./sharedui/SubHeading";
 import { motion } from "framer-motion";
+import Button from "./Button";
 
 const AboutSection = ({ bg }: { bg: string }) => {
   return (
@@ -33,7 +34,7 @@ const AboutSection = ({ bg }: { bg: string }) => {
           transition={{ duration: 0.6 }}
         >
           <SubHeading color="dark" weight="bold" size="4xl" className="mb-6">
-            What is GenixDrive used for?
+            What is GenixDrive?
           </SubHeading>
           <Paragraph
             color="default"
@@ -50,6 +51,10 @@ const AboutSection = ({ bg }: { bg: string }) => {
             Additionally, GenixDrive makes safe driving a rewarding experience
             with points, vouchers, and other incentives.
           </Paragraph>
+
+          <Button variant="primary" className="mt-[27px]" size="md">
+            Get Started
+          </Button>
         </motion.div>
         <motion.div
           className="lg:col-span-6"
@@ -60,7 +65,7 @@ const AboutSection = ({ bg }: { bg: string }) => {
           transition={{ duration: 0.6 }}
         >
           <motion.div
-            className="hidden md:block relative bg-surface-light rounded-2xl p-8 h-[360px] lg:h-[420px] flex items-center justify-center shadow-sm overflow-hidden"
+            className="hidden md:block "
             whileHover={{ scale: 1.01 }}
             transition={{ type: "spring", stiffness: 220, damping: 18 }}
           >
@@ -70,12 +75,6 @@ const AboutSection = ({ bg }: { bg: string }) => {
               className="h-full w-auto object-contain drop-shadow-xl"
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            />
-
-            <motion.div
-              className="pointer-events-none absolute -right-10 -bottom-10 w-64 h-64 bg-secondary/10 blur-3xl rounded-full"
-              animate={{ x: [0, 8, 0], y: [0, -10, 0] }}
-              transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
             />
           </motion.div>
           <motion.img

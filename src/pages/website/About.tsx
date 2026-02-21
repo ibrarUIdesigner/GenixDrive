@@ -5,6 +5,7 @@ import Paragraph from "../../components/sharedui/Paragraph";
 
 import ab1 from "../../assets/ab1.jpg";
 import ab2 from "../../assets/ab2.png";
+import aboutHeroImg from "../../assets/aboutHero.png";
 
 import kf1 from "../../assets/kf1.png";
 import kf2 from "../../assets/kf2.png";
@@ -13,12 +14,18 @@ import kf4 from "../../assets/kf4.png";
 import kf5 from "../../assets/kf5.png";
 import ReadytoDrive from "../../components/web/ReadytoDrive";
 import SectionHeading from "../../components/web/SectionHeading";
+import BenefitsSection from "../../components/BenefitsSection";
 
 const About = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* About Hero Section (Slider) */}
-      <AboutHero />
+      {/* <AboutHero /> */}
+      <section className="about-hero">
+        <div className="img">
+          <img className="w-full" src={aboutHeroImg} alt="" />
+        </div>
+      </section>
 
       {/* SECTION2 */}
       <section className="bg-surface-light px-[56px] py-[120px] padding-50">
@@ -124,7 +131,7 @@ const About = () => {
         <div className="section-heading text-center mb-[50px] md:mb-[150px] w-full md:w-1/2 m-auto">
           <SubHeading size="4xl" color="dark" className="mb-4">
             Key Features That
-            <p className="text-primary">Drive the Difference</p>
+            <p>Drive the Difference</p>
           </SubHeading>
           <Paragraph
             size="base"
@@ -229,7 +236,8 @@ const About = () => {
 
       {/* Main Content */}
 
-      <AboutSection bg="surface-light" />
+      {/* <AboutSection bg="surface-light" /> */}
+      <BenefitsSection />
 
       <ReadytoDrive />
     </div>
