@@ -61,12 +61,22 @@ button{
 .main-heading{
   font-family: "Poppins", sans-serif;
 }
-.sub-heading * {
+.sub-heading,.sub-heading * {
   font-family: "Poppins", sans-serif;
+ 
+}
+.mainheading{
+ font-size: 48px;
+  font-weight: 600;
 }
 
 .sigup-flows .step-container{
   height: 490px;
+}
+
+.build-container .paragrarh{
+  font-size: 20px !important;
+  font-weight: 400 !important;
 }
 
 .hero-banner-right .divider{
@@ -79,6 +89,115 @@ button{
 }
 .footer0actions div{
   margin-bottom: 10px;
+}
+
+.paratExt p.paragrarh {
+  /* font-size: 24px !important; */
+  font-weight: 300 !important;
+  color: #424242;
+  line-height: 1.5;
+}
+
+
+.step-details .sub-heading.mainclass{
+  font-size: 36px;
+  font-weight: bold;
+}
+.step-details .sub-heading.subcalss{
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.step-details p.text{
+  font-size: 16px !important;
+  color: #747474;
+}
+
+
+.blog-deta h3{
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.blog-deta p{
+  font-size: 16px !important;
+  font-weight: 400;
+}
+
+.blog-deta > strong {
+  font-family: 'Inter', sans-serif;
+}
+.blogsrecords > strong{
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ............... */
+.stri-heading{
+  font-size: 24px !important;
+  font-weight: 600 !important;
+}
+.strip-text {
+  font-size: 16px !important  ;
+  font-weight: 500 !important;
+}
+
+/* .............. */
+.blog-user{
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+.blog-date{
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+.blog-category{
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  background-color: #E9E2FF;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+.blogdetailestext{
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+
+/* ........................ */
+.keyfeaturetext,.riskfreetext{
+  color: #747474;
+  font-size: 16px;
+  font-weight: 400;
+}
+.aboutcontainertext{
+  color: #585858;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+
+.genixdrivetext{
+  font-size: 18px;
+  font-weight: 400;
+  color: #747474;
+}
+
+
+
+
+
+
+
+/* .................. */
+.featuerHerText{
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    color: #4C4C4C;
+    font-weight: 400;
 }
 
 

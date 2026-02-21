@@ -121,7 +121,7 @@ const Blogs = () => {
             <SubHeading
               size="4xl"
               color="white"
-              weight="bold"
+              weight="semibold"
               className="mt-5 mb-5"
             >
               GenixDrive – Turning Everyday Journeys{" "}
@@ -157,7 +157,7 @@ const Blogs = () => {
                   alt=""
                 />
               </div>
-              <div className="blog-deta">
+              <div className="blog-deta blogsrecords">
                 <strong className="text-primary leading-5 mb-3 block">
                   {blog.category}
                 </strong>
@@ -176,13 +176,18 @@ const Blogs = () => {
                     alt=""
                   />
                   <div>
-                    <Paragraph color="default" size="sm" weight="bold">
+                    <Paragraph
+                      color="default"
+                      size="sm"
+                      weight="bold"
+                      className="blog-user"
+                    >
                       {blog.user.userName}
                     </Paragraph>
                     <Paragraph
                       color="muted"
                       size="sm"
-                      className="text-gray-600"
+                      className="text-gray-600 blog-date{"
                     >
                       {blog.user.date}
                     </Paragraph>
@@ -196,7 +201,7 @@ const Blogs = () => {
         <div className="mt-10 text-center">
           <span className="inline-block cursor-pointer text-primary p-4 bg-surface-light">
             <ArrowDown className="inline-block" size={18} />
-            View More Blogs
+            Load more
           </span>
         </div>
       </section>

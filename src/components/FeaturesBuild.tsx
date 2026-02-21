@@ -28,12 +28,12 @@ const FeaturesBuild = () => {
             color="white"
             weight="bold"
             size="4xl"
-            className=" text-center"
+            className="text-center mainheading"
           >
             <div className="relative z-10">
               <p>Features Build for your</p>
               <img
-                className="absolute -z-10 -top-[20px] left-[60px] w-[180px]"
+                className="absolute -z-10 -top-[20px] left-[130px] w-[252px] h-[99px]"
                 src={doodle}
                 alt=""
               />
@@ -44,15 +44,20 @@ const FeaturesBuild = () => {
         {/* Feature1 */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 items-center mb-20">
           <div className="build-container order-1 md:order-0 text-center md:text-left flex flex-col gap-4 ">
-            <SubHeading color="white" weight="bold" size="3xl">
+            <SubHeading className="mainheading" color="white" weight="semibold">
               Social & Family
               <p>Connect</p>
             </SubHeading>
 
-            <Paragraph size="sm" color="white">
-              Feel peace of mind, stay protected, and keep your loved ones just
-              a tap away.GenixDrive gives you the confidence of knowing your
-              loved ones are safe.
+            <Paragraph color="white">
+              <span className="block">
+                Feel peace of mind, stay protected, and keep your loved ones
+                just a tap away.
+              </span>
+              <span className="block">
+                GenixDrive gives you the confidence of knowing your loved ones
+                are safe.
+              </span>
             </Paragraph>
             <Button size="lg">Learn More</Button>
           </div>
@@ -80,14 +85,24 @@ const FeaturesBuild = () => {
             </div>
           </div>
           <div className="build-container text-center md:text-left flex flex-col gap-4">
-            <SubHeading color="white" weight="bold" size="3xl">
+            <SubHeading
+              className="mainheading"
+              color="white"
+              weight="bold"
+              size="3xl"
+            >
               Gamification &<p>Rewards</p>
             </SubHeading>
 
             <Paragraph size="sm" color="white">
-              Always alert. Always watching out for you. Always putting your
-              safety first. GenixDrive becomes your smart digital companion,
-              watching over every mile with consistent protection.
+              <span className="block">
+                Always alert. Always watching out for you. Always putting your
+                safety first.
+              </span>
+              <span className="block">
+                GenixDrive becomes your smart digital companion, watching over
+                every mile with consistent protection.
+              </span>
             </Paragraph>
             <Button size="lg">Learn More</Button>
           </div>
@@ -95,14 +110,24 @@ const FeaturesBuild = () => {
         {/* Feature3 */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 items-center mb-20">
           <div className="build-container order-1 md:order-0 text-center md:text-left flex flex-col gap-4">
-            <SubHeading color="white" weight="bold" size="3xl">
+            <SubHeading
+              className="mainheading"
+              color="white"
+              weight="bold"
+              size="3xl"
+            >
               Safety & Protection
             </SubHeading>
 
             <Paragraph size="sm" color="white">
-              Always alert. Always watching out for you. Always putting your
-              safety first.GenixDrive becomes your smart digital companion,
-              watching over every mile with constant protection.
+              <span className="block">
+                Always alert. Always watching out for you. Always putting your
+                safety first.
+              </span>
+              <span className="block">
+                GenixDrive becomes your smart digital companion, watching over
+                every mile with constant protection.
+              </span>
             </Paragraph>
             <Button size="lg">Learn More</Button>
           </div>
@@ -129,7 +154,12 @@ const FeaturesBuild = () => {
             </div>
           </div>
           <div className="build-container  text-center md:text-left flex flex-col gap-4">
-            <SubHeading color="white" weight="bold" size="3xl">
+            <SubHeading
+              className="mainheading"
+              color="white"
+              weight="bold"
+              size="3xl"
+            >
               Organize meetups
             </SubHeading>
             <Paragraph size="sm" color="white">
@@ -144,7 +174,12 @@ const FeaturesBuild = () => {
         {/* Feature5 */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 items-center mb-20">
           <div className="build-container order-1 md:order-0 text-center md:text-left flex flex-col gap-4">
-            <SubHeading color="white" weight="bold" size="3xl">
+            <SubHeading
+              className="mainheading"
+              color="white"
+              weight="bold"
+              size="3xl"
+            >
               Place notifications
             </SubHeading>
             <Paragraph size="sm" color="white">
@@ -180,7 +215,12 @@ const FeaturesBuild = () => {
             </div>
           </div>
           <div className="build-container text-center md:text-left flex flex-col gap-4">
-            <SubHeading color="white" weight="bold" size="3xl">
+            <SubHeading
+              className="mainheading"
+              color="white"
+              weight="bold"
+              size="3xl"
+            >
               Smart Vehicle Care
             </SubHeading>
             <Paragraph size="sm" color="white">

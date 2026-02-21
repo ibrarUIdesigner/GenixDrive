@@ -4,7 +4,7 @@ type Size = "xs" | "sm" | "base" | "lg" | "xl";
 
 type Color = "white" | "muted" | "primary" | "default";
 
-type Weight = "normal" | "medium" | "semibold" | "bold";
+type Weight = "normal" | "medium" | "semibold" | "bold" | "light";
 
 interface TextProps extends React.HTMLAttributes<HTMLParagraphElement> {
   children: React.ReactNode;
@@ -33,6 +33,7 @@ const weightMap: Record<Weight, string> = {
   medium: "font-medium",
   semibold: "font-semibold",
   bold: "font-bold",
+  light: "font-light",
 };
 
 const Paragraph = ({
@@ -45,6 +46,7 @@ const Paragraph = ({
   ...rest
 }: TextProps) => {
   const classes = `
+  paragrarh
     ${sizeMap[size]}
     ${colorMap[color]}
     ${weightMap[weight]}

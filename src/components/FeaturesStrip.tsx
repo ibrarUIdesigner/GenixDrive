@@ -93,7 +93,7 @@ const FeaturesStrip = () => {
               color={feature.textColor === "text-white" ? "white" : "dark"}
               weight="bold"
               size="2xl"
-              className="mb-6"
+              className="mb-6 stri-heading"
             >
               {feature.title}
             </SubHeading>
@@ -102,7 +102,7 @@ const FeaturesStrip = () => {
               color={feature.textColor === "text-white" ? "white" : "default"}
               weight="medium"
               size="sm"
-              className="leading-relaxed"
+              className="leading-relaxed strip-text"
             >
               {feature.description}
             </Paragraph>

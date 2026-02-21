@@ -8,8 +8,10 @@ import Paragraph from "../../components/sharedui/Paragraph";
 import StoreActionsButtons from "../../components/web/StoreActionsButtons";
 import SectionHeading from "../../components/web/SectionHeading";
 
-import ab1 from "../../assets/ab1.jpg";
-import ab2 from "../../assets/ab2.png";
+import ab1 from "../../assets/keyfeatureB.jpg";
+import ab2 from "../../assets/ff.png";
+import ab3 from "../../assets/ff3.jpg";
+import ab4 from "../../assets/ff4.png";
 const Features = () => {
   const faqs = [
     {
@@ -67,12 +69,12 @@ const Features = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         >
-          <SubHeading size="4xl" className="mb-5">
-            1. Social & Family
+          <SubHeading size="4xl" className="mb-5 mainheading">
+            Social & Family
             <p className="text-secondary">Connect</p>
           </SubHeading>
 
-          <Paragraph size="sm">
+          <Paragraph className="featuerHerText" size="sm">
             tay close to what matters most — your loved ones. With AiGenix
             Social & Family Connect, you can track, share, and ensure your
             family’s safety in real time, no matter where life takes you.
@@ -102,10 +104,8 @@ const Features = () => {
           className="mb-10"
           paraText="GenixDrive by AiGenix (Private) Limited is a smart telematics solution designed to make driving safer and more intelligent. It monitors driving habits, provides safety scores."
         >
-          <p>
-            Key Highlights of <span className="text-secondary">Social</span> &
-            Family <span className="text-secondary">Connect</span>{" "}
-          </p>
+          SOCIAL AND FAMILY CONNECT
+          <p className="text-secondary">- KEY HIGHLIGHTS</p>
         </SectionHeading>
 
         {/* ......... */}
@@ -124,44 +124,45 @@ const Features = () => {
             />
             <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
             <div className="absolute bottom-0 left-0 w-full  p-5  z-10">
-              <SubHeading size="2xl" color="white" weight="medium">
-                About AiGenix (Private) Limited
+              <SubHeading size="lg" color="white" weight="medium">
+                Real-Time School Tracking for Parents
+              </SubHeading>
+              <Paragraph
+                size="sm"
+                color="white"
+                weight="light"
+                className="leading-5"
+              >
+                A mother can easily track her child’s journey to school in real
+                time through GenixDrive, ensuring peace of mind and safety every
+                step of the way.
+              </Paragraph>
+            </div>
+          </div>
+          <div className="md:col-span-2 p-10 bg-secondary rounded-2xl flex items-center justify-center">
+            <div>
+              <SubHeading
+                size="3xl"
+                color="white"
+                weight="semibold"
+                className="mb-4"
+              >
+                1. Always Stay
+                <p>Connected</p>
               </SubHeading>
               <Paragraph
                 size="sm"
                 color="white"
                 weight="medium"
-                className="leading-5"
+                className="leading-5 aboutcontainertext !text-white"
               >
-                AiGenix is a Karachi-based tech company building AI-driven
-                solutions like GenixDrive to make mobility smarter, safer, and
-                more connected.
-              </Paragraph>
-            </div>
-          </div>
-          <div className="md:col-span-2 p-10 bg-light-green rounded-2xl flex items-center justify-center">
-            <div>
-              <SubHeading
-                size="4xl"
-                color="dark"
-                weight="bold"
-                className="mb-4"
-              >
-                What is GenixDrive?
-              </SubHeading>
-              <Paragraph
-                size="sm"
-                color="default"
-                weight="medium"
-                className="leading-8"
-              >
-                GenixDrive is a smart telematics solution developed by AiGenix
-                (Private) Limited, a technology-driven company based in Karachi,
-                Pakistan. Designed for both mobile and in-vehicle devices,
-                GenixDrive tracks and analyzes driving behavior to generate
-                clear safety scores. From speed and braking to cornering and
-                acceleration, it provides drivers with meaningful insights into
-                how responsibly they drive.
+                Life can take your loved ones in different directions, but with
+                GenixDrive, you’re never truly apart. Our Social & Family
+                Connect feature keeps families and friends linked through
+                real-time location sharing. Whether it’s your child on the way
+                to school, your spouse driving home late, or a friend traveling
+                across town — you’ll know they’re safe and exactly where they
+                should be.
               </Paragraph>
             </div>
           </div>
@@ -175,29 +176,28 @@ const Features = () => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="md:col-span-2  p-10 bg-secondary rounded-2xl flex items-center justify-center">
+          <div className="md:col-span-2  p-10 bg-light-green rounded-2xl flex items-center justify-center">
             <div>
               <SubHeading
-                size="4xl"
-                color="white"
-                weight="bold"
+                size="3xl"
+                color="dark"
+                weight="medium"
                 className="mb-4"
               >
-                What is GenixDrive?
+                2. Temporary Friend Tracking
               </SubHeading>
               <Paragraph
                 size="sm"
-                color="white"
+                color="default"
                 weight="medium"
-                className="leading-8"
+                className="leading-5 aboutcontainertext"
               >
-                GenixDrive is a smart telematics solution developed by AiGenix
-                (Private) Limited, a technology-driven company based in Karachi,
-                Pakistan. Designed for both mobile and in-vehicle devices,
-                GenixDrive tracks and analyzes driving behavior to generate
-                clear safety scores. From speed and braking to cornering and
-                acceleration, it provides drivers with meaningful insights into
-                how responsibly they drive.
+                Heading to meet a friend? Or want to make sure they get home
+                safely? With GenixDrive, you can add a friend and track their
+                location for up to 8 hours. This short-term connection is
+                perfect for one-time trips, outings, or times when safety
+                reassurance matters most. After the time expires, tracking ends
+                automatically — giving peace of mind while respecting privacy.
               </Paragraph>
             </div>
           </div>
@@ -221,41 +221,41 @@ const Features = () => {
           <div className="md:col-span-3 p-5 h-[400px] md:h-auto  bg-secondary rounded-2xl overflow-hidden z-10 relative">
             <img
               className="absolute top-0 left-0 w-full h-full object-cover"
-              src={ab1}
+              src={ab3}
               alt=""
             />
             <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
             <div className="absolute bottom-0 left-0 w-full  p-5  z-10">
-              <SubHeading size="2xl" color="white" weight="medium">
-                About AiGenix (Private) Limited
+              <SubHeading size="lg" color="white" weight="medium">
+                Real-Time School Tracking for Parents
+              </SubHeading>
+              <Paragraph
+                size="sm"
+                color="white"
+                weight="light"
+                className="leading-5"
+              >
+                A mother can easily track her child’s journey to school in real
+                time through GenixDrive, ensuring peace of mind and safety every
+                step of the way.
+              </Paragraph>
+            </div>
+          </div>
+          <div className="md:col-span-2 p-10 bg-secondary rounded-2xl flex items-center justify-center">
+            <div>
+              <SubHeading
+                size="3xl"
+                color="white"
+                weight="medium"
+                className="mb-4"
+              >
+                3. Family Safety at the Core
               </SubHeading>
               <Paragraph
                 size="sm"
                 color="white"
                 weight="medium"
-                className="leading-5"
-              >
-                AiGenix is a Karachi-based tech company building AI-driven
-                solutions like GenixDrive to make mobility smarter, safer, and
-                more connected.
-              </Paragraph>
-            </div>
-          </div>
-          <div className="md:col-span-2 p-10 bg-light-green rounded-2xl flex items-center justify-center">
-            <div>
-              <SubHeading
-                size="4xl"
-                color="dark"
-                weight="bold"
-                className="mb-4"
-              >
-                What is GenixDrive?
-              </SubHeading>
-              <Paragraph
-                size="sm"
-                color="default"
-                weight="medium"
-                className="leading-8"
+                className="leading-5 aboutcontainertext !text-white"
               >
                 GenixDrive is a smart telematics solution developed by AiGenix
                 (Private) Limited, a technology-driven company based in Karachi,
@@ -277,36 +277,34 @@ const Features = () => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="md:col-span-2  p-10 bg-secondary rounded-2xl flex items-center justify-center">
+          <div className="md:col-span-2  p-10 bg-light-green rounded-2xl flex items-center justify-center">
             <div>
               <SubHeading
-                size="4xl"
-                color="white"
-                weight="bold"
+                size="3xl"
+                color="dark"
+                weight="medium"
                 className="mb-4"
               >
-                What is GenixDrive?
+                GenixMeet – Smart
+                <p>Group Tracking</p>
+                Made Simple
               </SubHeading>
               <Paragraph
                 size="sm"
-                color="white"
+                color="default"
                 weight="medium"
-                className="leading-8"
+                className="leading-5 aboutcontainertext"
               >
-                GenixDrive is a smart telematics solution developed by AiGenix
-                (Private) Limited, a technology-driven company based in Karachi,
-                Pakistan. Designed for both mobile and in-vehicle devices,
-                GenixDrive tracks and analyzes driving behavior to generate
-                clear safety scores. From speed and braking to cornering and
-                acceleration, it provides drivers with meaningful insights into
-                how responsibly they drive.
+                Meet Location allows users to create a meet, invite
+                participants, and share live location, trip progress, and
+                driving score — all in one place.
               </Paragraph>
             </div>
           </div>
           <div className="md:col-span-3 h-[400px] md:h-auto p-5 bg-light-green rounded-2xl relative overflow-hidden">
             <img
               className="absolute top-0 left-0 w-full h-full object-cover"
-              src={ab2}
+              src={ab4}
               alt=""
             />
           </div>

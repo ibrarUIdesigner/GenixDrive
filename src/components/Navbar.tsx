@@ -19,8 +19,8 @@ const Navbar = () => {
           ? "text-light-green"
           : "text-white hover:text-light-green"
         : active
-        ? "text-primary"
-        : "text-gray-700 hover:text-primary"
+          ? "text-primary"
+          : "text-gray-700 hover:text-primary"
     }`;
   useEffect(() => {
     setOpen(false);
@@ -124,10 +124,14 @@ const Navbar = () => {
 
       {/* Auth Button */}
       <div className="action-butto hidden md:flex gap-2">
-        <Button size="lg" variant={"primary"}>
+        <Button
+          onClick={() => navigate("/admin/signup")}
+          size="lg"
+          variant={"primary"}
+        >
           {isHome ? "Sign Up/ Login" : "get started"}
         </Button>
-        {!isAbout && !isHome && (
+        {!isHome && (
           <Button size="lg" variant={"secondary"}>
             Download Now
           </Button>

@@ -14,6 +14,7 @@ const SignupFlow = () => {
   return (
     <section className="bg-white text-black font-cairo p-[70px] md:p-[135px] padding-50">
       <SectionHeading
+        className="paratExt"
         paraText="Get started in minutes download the app or use our optional device,
           and begin protecting your loved ones with smart monitoring and peace
           of mind."
@@ -24,7 +25,7 @@ const SignupFlow = () => {
           <img
             src={cric}
             alt="circle"
-            className="absolute left-1/2 top-1/2 -translate-1/2 w-full "
+            className="absolute left-1/2 top-1/2 -translate-1/2 w-[241px] h-[102px] "
           />
         </div>
       </SectionHeading>
@@ -38,21 +39,21 @@ const SignupFlow = () => {
               <SubHeading
                 size="2xl"
                 weight="black"
-                className="uppercase text-secondary mb-2"
+                className="uppercase text-secondary mb-2 mainclass"
               >
                 step 1
               </SubHeading>
-              <SubHeading size="lg" weight="bold" className="mb-2">
+              <SubHeading size="lg" weight="bold" className="mb-2 subcalss">
                 Download the app & Sign up
               </SubHeading>
               <Paragraph
                 size="sm"
                 color="default"
-                weight="medium"
-                className="leading-5"
+                weight="light"
+                className="leading-5 text"
               >
                 First, download the GenixDrive app from the Google Play Store or
-                App Store.
+                App Store and sign up through email or phone
               </Paragraph>
               <img
                 src={step1}
@@ -67,18 +68,18 @@ const SignupFlow = () => {
               <SubHeading
                 size="2xl"
                 weight="black"
-                className="uppercase text-secondary mb-2"
+                className="uppercase text-secondary mb-2 mainclass"
               >
                 step 2
               </SubHeading>
-              <SubHeading size="lg" weight="bold" className="mb-2">
+              <SubHeading size="lg" weight="bold" className="mb-2 subcalss">
                 Order a Device
               </SubHeading>
               <Paragraph
                 size="sm"
                 color="default"
                 weight="medium"
-                className="leading-5"
+                className="leading-5 text"
               >
                 Order the GenixDrive device to unlock live vehicle tracking,
                 real-time safety alerts, and advanced driving insights. Install
@@ -97,18 +98,18 @@ const SignupFlow = () => {
               <SubHeading
                 size="2xl"
                 weight="black"
-                className="uppercase text-secondary mb-2"
+                className="uppercase text-secondary mb-2 mainclass"
               >
                 step 3
               </SubHeading>
-              <SubHeading size="lg" weight="bold" className="mb-2">
+              <SubHeading size="lg" weight="bold" className="mb-2 subcalss">
                 Device Installation
               </SubHeading>
               <Paragraph
                 size="sm"
                 color="default"
                 weight="medium"
-                className="leading-5"
+                className="leading-5 text"
               >
                 Once your order is confirmed, a certified GenixDrive technician
                 will visit your location to professionally install the device in
@@ -128,18 +129,18 @@ const SignupFlow = () => {
               <SubHeading
                 size="2xl"
                 weight="black"
-                className="uppercase text-secondary mb-2"
+                className="uppercase text-secondary mb-2 mainclass"
               >
                 step 4
               </SubHeading>
-              <SubHeading size="lg" weight="bold" className="mb-2">
+              <SubHeading size="lg" weight="bold" className="mb-2 subcalss">
                 Start monitoring your score
               </SubHeading>
               <Paragraph
                 size="sm"
                 color="default"
                 weight="medium"
-                className="leading-5"
+                className="leading-5 text"
               >
                 Once everything is set up, you can monitor driving behavior,
                 receive safety alerts, and track your family’s safety.

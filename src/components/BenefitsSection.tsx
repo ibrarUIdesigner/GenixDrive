@@ -32,7 +32,7 @@ const BenefitsSection = () => {
 
   return (
     <motion.section
-      className="bg-gray-100 text-black font-cairo padding-50 py-[116px] px-[58px]"
+      className="bg-surface-light text-black font-cairo padding-50 py-[116px] px-[58px]"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}
@@ -50,7 +50,7 @@ const BenefitsSection = () => {
             color="dark"
             weight="bold"
             size="4xl"
-            className="mb-2 text-center"
+            className="mb-2 text-center mainheading"
           >
             Here’s What GenixDrive
             <div className="flex items-center justify-center gap-5">
@@ -83,7 +83,7 @@ const BenefitsSection = () => {
               whileHover={{ y: -6, scale: 1.01 }}
               whileTap={{ scale: 0.995 }}
               transition={{ type: "spring", stiffness: 240, damping: 22 }}
-              className="group rounded-xl overflow-hidden bg-white border border-surface-light shadow-sm"
+              className="group rounded-xl overflow-hidden "
             >
               <div className="w-[428px] max-w-full h-[428px] bg-black/5 rounded-[17.09px] overflow-hidden mx-auto">
                 <motion.img
@@ -97,7 +97,7 @@ const BenefitsSection = () => {
               <div className="p-6">
                 <SubHeading
                   color="dark"
-                  weight="bold"
+                  weight="semibold"
                   size="xl"
                   className="mb-2"
                 >
@@ -108,7 +108,7 @@ const BenefitsSection = () => {
                   color="default"
                   weight="medium"
                   size="sm"
-                  className="leading-relaxed"
+                  className="leading-relaxed genixdrivetext"
                 >
                   {item.description}
                 </Paragraph>

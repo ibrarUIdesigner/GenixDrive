@@ -19,7 +19,7 @@ const Home = () => {
     {
       blogImg: blog1,
       category: "Telematics",
-      title: "Smart Driving with Connected Vehicles",
+      title: "6 Tools & Resources We Used While Developing AlignUI",
       description:
         "Discover how telematics technology improves vehicle safety, efficiency, and real-time monitoring for modern drivers.",
       user: {
@@ -32,7 +32,7 @@ const Home = () => {
     {
       blogImg: blog2,
       category: "Maintenance",
-      title: "5 Tips to Keep Your Car in Top Shape",
+      title: "Story of AlignUI Design System: From an Idea to the Release",
       description:
         "Regular maintenance ensures long vehicle life. Learn simple steps to prevent breakdowns and reduce repair costs.",
       user: {
@@ -58,7 +58,7 @@ const Home = () => {
       <section className="px-[56px] py-[120px] bg-surface-light padding-50">
         <div className="max-w-7xl mx-auto">
           <SectionHeading
-            className="mb-20"
+            className="mb-20 paratExt"
             paraText="Stay updated with the latest tips, insights, and stories on safe driving, family protection, and smart vehicle care. Our blog is designed to help drivers and families make every journey smarter, safer, and more rewarding."
           >
             From the GenixDrive
@@ -67,7 +67,7 @@ const Home = () => {
               <img
                 src={cric}
                 alt="circle"
-                className="absolute left-1/2 top-1/2 -translate-1/2 w-full"
+                className="absolute left-[70px] top-1/2 -translate-1/2 max-w-[193px] h-[112px]"
               />
             </div>
           </SectionHeading>
@@ -87,7 +87,7 @@ const Home = () => {
                   />
                 </div>
                 <div className="blog-deta">
-                  <strong className="text-primary leading-5 mb-3 block">
+                  <strong className="text-primary leading-5 mb-3 block blog-category">
                     {blog.category}
                   </strong>
                   <SubHeading className="mb-5" size="2xl">
@@ -105,13 +105,18 @@ const Home = () => {
                       alt=""
                     />
                     <div>
-                      <Paragraph color="default" size="sm" weight="bold">
+                      <Paragraph
+                        className="blog-user"
+                        color="default"
+                        size="sm"
+                        weight="bold"
+                      >
                         {blog.user.userName}
                       </Paragraph>
                       <Paragraph
                         color="muted"
                         size="sm"
-                        className="text-gray-600"
+                        className="text-gray-600 blog-date"
                       >
                         {blog.user.date}
                       </Paragraph>
