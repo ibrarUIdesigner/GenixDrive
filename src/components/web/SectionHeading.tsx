@@ -1,5 +1,5 @@
 import React from "react";
-import SubHeading from "../sharedui/Subheading";
+import SubHeading from "../sharedui/SubHeading";
 import Paragraph from "../sharedui/Paragraph";
 interface SectionHeadingProps {
   paraText: React.ReactNode;
