@@ -13,6 +13,8 @@ import kf2 from "../../assets/features/2kf2.png";
 import kf3 from "../../assets/features/22kf3.png";
 import kf4 from "../../assets/features/22kf4.png";
 import FeatureSplitCard from "../../components/web/FeatureGridContainer";
+import { CircleMinus, Headphones, Wallet } from "lucide-react";
+import riskfree from "../../assets/riskfreestar.jpeg";
 const Features1 = () => {
   const faqs = [
     {
@@ -157,6 +159,77 @@ const Features1 = () => {
           textColor="text-dark"
           overlay
         />
+      </motion.section>
+
+      <motion.section className="bg-white  px-[56px] py-[120px] padding-50">
+        <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 items-center">
+          <div className="content">
+            <SubHeading
+              size="4xl"
+              color="dark"
+              className="mainheading mb-[70px]"
+            >
+              Always-On Protection
+            </SubHeading>
+            <div>
+              <p className="flex items-center gap-4 mb-5">
+                <span className="flex justify-center items-center bg-light-green p-5 rounded-2xl">
+                  <Wallet size={18} />
+                </span>
+                <div>
+                  <Paragraph
+                    size="sm"
+                    color="default"
+                    weight="medium"
+                    className="leading-8 featureabouttext"
+                  >
+                    <strong>Background Monitoring:</strong> Safety features run
+                    quietly without disturbing your drive.
+                  </Paragraph>
+                </div>
+              </p>
+              <p className="flex items-center gap-4 mb-5">
+                <span className="flex justify-center items-center bg-light-green p-5 rounded-2xl">
+                  <Headphones size={18} />
+                </span>
+                <div>
+                  <Paragraph
+                    size="sm"
+                    color="default"
+                    weight="medium"
+                    className="leading-8 featureabouttext"
+                  >
+                    <strong>Family Travel Security:</strong> Get updates when
+                    loved ones are on solo trips or late-night drives.
+                  </Paragraph>
+                </div>
+              </p>
+              <p className="flex items-center gap-4 mb-5">
+                <span className="flex justify-center items-center bg-light-green p-5 rounded-2xl">
+                  <CircleMinus size={18} />
+                </span>
+                <div>
+                  <Paragraph
+                    size="sm"
+                    color="default"
+                    weight="medium"
+                    className="leading-8 featureabouttext !text-black"
+                  >
+                    <strong>24/7 Coverage:</strong> Whether short commutes or
+                    long road trips, protection never switches off.
+                  </Paragraph>
+                </div>
+              </p>
+            </div>
+          </div>
+          <div className="img">
+            <img
+              src={riskfree}
+              alt="Drive & Earn"
+              className="w-full h-full  rounded-xl"
+            />
+          </div>
+        </motion.div>
       </motion.section>
 
       {/* FAQs */}

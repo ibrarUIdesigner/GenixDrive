@@ -14,6 +14,9 @@ import kf3 from "../../assets/features/44kf3.png";
 import kf4 from "../../assets/features/4kf4.png";
 import FeatureSplitCard from "../../components/web/FeatureGridContainer";
 
+import { CircleMinus, Headphones, Wallet } from "lucide-react";
+import riskfree from "../../assets/riskfreestar.jpeg";
+
 const Feature3 = () => {
   const faqs = [
     {
@@ -143,6 +146,94 @@ const Feature3 = () => {
           textColor="text-dark"
           overlay
         />
+      </motion.section>
+
+      <motion.section className="bg-white  px-[56px] py-[120px] padding-50">
+        <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 items-center">
+          <div className="content">
+            <SubHeading
+              size="4xl"
+              color="dark"
+              className="mainheading mb-[70px]"
+            >
+              Safer Roads, Bigger Rewards
+            </SubHeading>
+            <div>
+              <p className="flex items-center gap-4 mb-5">
+                <span className="flex justify-center items-center bg-light-green p-5 rounded-2xl">
+                  <Wallet size={18} />
+                </span>
+                <div>
+                  <Paragraph
+                    size="sm"
+                    color="default"
+                    weight="medium"
+                    className="leading-8 featureabouttext"
+                  >
+                    <strong>Earn as you drive:</strong> Collect points every
+                    time you choose safer driving habits.
+                  </Paragraph>
+                </div>
+              </p>
+              <p className="flex items-center gap-4 mb-5">
+                <span className="flex justify-center items-center bg-light-green p-5 rounded-2xl">
+                  <Headphones size={18} />
+                </span>
+                <div>
+                  <Paragraph
+                    size="sm"
+                    color="default"
+                    weight="medium"
+                    className="leading-8 featureabouttext"
+                  >
+                    <strong>Turn safety into savings: </strong>Redeem your
+                    points for rewards that matter most to you.
+                  </Paragraph>
+                </div>
+              </p>
+              <p className="flex items-center gap-4 mb-5">
+                <span className="flex justify-center items-center bg-light-green p-5 rounded-2xl">
+                  <CircleMinus size={18} />
+                </span>
+                <div>
+                  <Paragraph
+                    size="sm"
+                    color="default"
+                    weight="medium"
+                    className="leading-8 featureabouttext !text-black"
+                  >
+                    <strong>Drive better, win more:</strong> The safer your
+                    behavior, the greater the benefits.
+                  </Paragraph>
+                </div>
+              </p>
+              <p className="flex items-center gap-4 mb-5">
+                <span className="flex justify-center items-center bg-light-green p-5 rounded-2xl">
+                  <CircleMinus size={18} />
+                </span>
+                <div>
+                  <Paragraph
+                    size="sm"
+                    color="default"
+                    weight="medium"
+                    className="leading-8 featureabouttext !text-black"
+                  >
+                    <strong>Build a culture of safety:</strong> Encourages
+                    drivers to value safety not just for themselves, but for
+                    everyone on the road.
+                  </Paragraph>
+                </div>
+              </p>
+            </div>
+          </div>
+          <div className="img">
+            <img
+              src={riskfree}
+              alt="Drive & Earn"
+              className="w-full h-full  rounded-xl"
+            />
+          </div>
+        </motion.div>
       </motion.section>
 
       {/* FAQs */}

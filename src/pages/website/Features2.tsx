@@ -13,6 +13,8 @@ import kf2 from "../../assets/features/3kf2.png";
 import kf3 from "../../assets/features/33kf3.png";
 import kf4 from "../../assets/features/3kf4.png";
 import FeatureSplitCard from "../../components/web/FeatureGridContainer";
+import { CircleMinus, Headphones, Wallet } from "lucide-react";
+import riskfree from "../../assets/riskfreestar.jpeg";
 const Features2 = () => {
   const faqs = [
     {
@@ -145,6 +147,93 @@ const Features2 = () => {
           textColor="text-dark"
           overlay
         />
+      </motion.section>
+
+      <motion.section className="bg-white  px-[56px] py-[120px] padding-50">
+        <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 items-center">
+          <div className="content">
+            <SubHeading
+              size="4xl"
+              color="dark"
+              className="mainheading mb-[70px]"
+            >
+              A Safer Future With Every Trip
+            </SubHeading>
+            <div>
+              <p className="flex items-center gap-4 mb-5">
+                <span className="flex justify-center items-center bg-light-green p-5 rounded-2xl">
+                  <Wallet size={18} />
+                </span>
+                <div>
+                  <Paragraph
+                    size="sm"
+                    color="default"
+                    weight="medium"
+                    className="leading-8 featureabouttext"
+                  >
+                    <strong>Build safe habits:</strong> GenixDrive encourages
+                    long-term responsible driving.
+                  </Paragraph>
+                </div>
+              </p>
+              <p className="flex items-center gap-4 mb-5">
+                <span className="flex justify-center items-center bg-light-green p-5 rounded-2xl">
+                  <Headphones size={18} />
+                </span>
+                <div>
+                  <Paragraph
+                    size="sm"
+                    color="default"
+                    weight="medium"
+                    className="leading-8 featureabouttext"
+                  >
+                    <strong>Protect what matters:</strong> Helps safeguard you,
+                    your passengers, and others on the road.
+                  </Paragraph>
+                </div>
+              </p>
+              <p className="flex items-center gap-4 mb-5">
+                <span className="flex justify-center items-center bg-light-green p-5 rounded-2xl">
+                  <CircleMinus size={18} />
+                </span>
+                <div>
+                  <Paragraph
+                    size="sm"
+                    color="default"
+                    weight="medium"
+                    className="leading-8 featureabouttext !text-black"
+                  >
+                    <strong>Smart data use:</strong> Combines smartphones and
+                    telematics devices for accurate insights.
+                  </Paragraph>
+                </div>
+              </p>
+              <p className="flex items-center gap-4 mb-5">
+                <span className="flex justify-center items-center bg-light-green p-5 rounded-2xl">
+                  <CircleMinus size={18} />
+                </span>
+                <div>
+                  <Paragraph
+                    size="sm"
+                    color="default"
+                    weight="medium"
+                    className="leading-8 featureabouttext !text-black"
+                  >
+                    <strong>Reliable feedback:</strong> Provides consistent
+                    safety reports for every journey.
+                  </Paragraph>
+                </div>
+              </p>
+            </div>
+          </div>
+          <div className="img">
+            <img
+              src={riskfree}
+              alt="Drive & Earn"
+              className="w-full h-full  rounded-xl"
+            />
+          </div>
+        </motion.div>
       </motion.section>
 
       {/* FAQs */}

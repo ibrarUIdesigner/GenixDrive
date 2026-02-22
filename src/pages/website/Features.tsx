@@ -12,6 +12,10 @@ import ab1 from "../../assets/keyfeatureB.jpg";
 import ab2 from "../../assets/ff.png";
 import ab3 from "../../assets/ff3.jpg";
 import ab4 from "../../assets/ff4.png";
+
+import riskfree from "../../assets/riskfreestar.jpeg";
+import { CircleMinus, Headphones, Wallet } from "lucide-react";
+
 const Features = () => {
   const faqs = [
     {
@@ -306,6 +310,78 @@ const Features = () => {
               className="absolute top-0 left-0 w-full h-full object-cover"
               src={ab4}
               alt=""
+            />
+          </div>
+        </motion.div>
+      </motion.section>
+
+      <motion.section className="bg-white  px-[56px] py-[120px] padding-50">
+        <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 items-center">
+          <div className="content">
+            <SubHeading
+              size="4xl"
+              color="dark"
+              className="mainheading mb-[70px]"
+            >
+              Smarter <span className="text-secondary">Connections</span> &
+              Alerts
+            </SubHeading>
+            <div>
+              <p className="flex items-center gap-4 mb-5">
+                <span className="flex justify-center items-center bg-light-green p-5 rounded-2xl">
+                  <Wallet size={18} />
+                </span>
+                <div>
+                  <Paragraph
+                    size="sm"
+                    color="default"
+                    weight="medium"
+                    className="leading-8 featureabouttext"
+                  >
+                    Coordinate meet-ups with friends or family directly through
+                    the app.
+                  </Paragraph>
+                </div>
+              </p>
+              <p className="flex items-center gap-4 mb-5">
+                <span className="flex justify-center items-center bg-light-green p-5 rounded-2xl">
+                  <Headphones size={18} />
+                </span>
+                <div>
+                  <Paragraph
+                    size="sm"
+                    color="default"
+                    weight="medium"
+                    className="leading-8 featureabouttext"
+                  >
+                    Receive place-based alerts when someone arrives or leaves a
+                    specific location.
+                  </Paragraph>
+                </div>
+              </p>
+              <p className="flex items-center gap-4 mb-5">
+                <span className="flex justify-center items-center bg-light-green p-5 rounded-2xl">
+                  <CircleMinus size={18} />
+                </span>
+                <div>
+                  <Paragraph
+                    size="sm"
+                    color="default"
+                    weight="medium"
+                    className="leading-8 featureabouttext !text-black"
+                  >
+                    Get instant notifications for critical driving events that
+                    may affect your loved ones.
+                  </Paragraph>
+                </div>
+              </p>
+            </div>
+          </div>
+          <div className="img">
+            <img
+              src={riskfree}
+              alt="Drive & Earn"
+              className="w-full h-full  rounded-xl"
             />
           </div>
         </motion.div>
