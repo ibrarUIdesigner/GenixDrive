@@ -16,6 +16,11 @@ import grnstr from "../../assets/grnstr.png";
 import riskfree from "../../assets/riskfreestar.jpeg";
 import SectionHeading from "../../components/web/SectionHeading";
 
+import cash from "../../assets/icons/cash.jpeg";
+import help from "../../assets/icons/help.jpeg";
+import stop from "../../assets/icons/stop.jpeg";
+import heart from "../../assets/icons/heart.jpeg";
+
 const Pricing = () => {
   return (
     <div className="pricing">
@@ -122,16 +127,21 @@ const Pricing = () => {
             </div>
           </div>
           <div className="flex flex-col gap-4">
-            <SubHeading color="dark" weight="bold" size="3xl">
+            <SubHeading
+              className="mb-[30px] mainheading"
+              color="dark"
+              weight="semibold"
+              size="3xl"
+            >
               Risk free plans
             </SubHeading>
 
             <div>
               <p className="flex items-center gap-4 mb-5">
-                <span className="flex justify-center items-center bg-light-green p-5 rounded-2xl">
-                  <Wallet size={18} />
+                <span className="flex justify-center items-center bg-light-green max-w-[70px] h-[70px] flex-1 rounded-2xl">
+                  <img src={cash} alt="" />
                 </span>
-                <div>
+                <div className="flex-2">
                   <SubHeading color="dark" weight="medium" size="xl">
                     14-Day Money Back Guarantee
                   </SubHeading>
@@ -147,10 +157,10 @@ const Pricing = () => {
                 </div>
               </p>
               <p className="flex items-center gap-4 mb-5">
-                <span className="flex justify-center items-center bg-light-green p-5 rounded-2xl">
-                  <Headphones size={18} />
+                <span className="flex justify-center items-center bg-light-green max-w-[70px] h-[70px] flex-1 rounded-2xl">
+                  <img src={help} alt="" />
                 </span>
-                <div>
+                <div className="flex-2">
                   <SubHeading color="dark" weight="medium" size="xl">
                     24/7 Fast Support
                   </SubHeading>
@@ -166,10 +176,10 @@ const Pricing = () => {
                 </div>
               </p>
               <p className="flex items-center gap-4 mb-5">
-                <span className="flex justify-center items-center bg-light-green p-5 rounded-2xl">
-                  <CircleMinus size={18} />
+                <span className="flex justify-center items-center bg-light-green max-w-[70px] h-[70px] flex-1 rounded-2xl">
+                  <img src={stop} alt="" />
                 </span>
-                <div>
+                <div className="flex-2">
                   <SubHeading color="dark" weight="medium" size="xl">
                     Cancel Anytime
                   </SubHeading>
@@ -185,10 +195,10 @@ const Pricing = () => {
                 </div>
               </p>
               <p className="flex items-center gap-4 mb-5">
-                <span className="flex justify-center items-center bg-light-green p-5 rounded-2xl">
-                  <Heart size={18} />
+                <span className="flex justify-center items-center bg-light-green max-w-[70px] h-[70px] flex-1 rounded-2xl">
+                  <img src={heart} alt="" />
                 </span>
-                <div>
+                <div className="flex-2">
                   <SubHeading color="dark" weight="medium" size="xl">
                     Secure & Private Purchase
                   </SubHeading>

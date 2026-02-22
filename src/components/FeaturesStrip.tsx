@@ -4,11 +4,16 @@ import Paragraph from "./sharedui/Paragraph";
 import { motion } from "framer-motion";
 import SubHeading from "./sharedui/SubHeading";
 
+import icon1 from "../assets/icons/h1.png";
+import icon2 from "../assets/icons/h2.png";
+import icon3 from "../assets/icons/h3.png";
+import icon4 from "../assets/icons/h4.png";
+
 const FeaturesStrip = () => {
   const features = [
     {
       id: 1,
-      icon: <Car className="w-10 h-10 mb-6" />,
+      icon: icon1,
       title: "Smarter Driving",
       description:
         "Understand yours and your loved ones driving behavior with safety scores and smart insights calculated based on driving events.",
@@ -18,7 +23,7 @@ const FeaturesStrip = () => {
     },
     {
       id: 2,
-      icon: <Share2 className="w-10 h-10 mb-6" />,
+      icon: icon2,
       title: "Seamless Meetups",
       description:
         "Create Genix meetups, chat instantly with your group, and be informed about everyone in real time using the live race screen.",
@@ -28,7 +33,7 @@ const FeaturesStrip = () => {
     },
     {
       id: 3,
-      icon: <TrendingUp className="w-10 h-10 mb-6" />,
+      icon: icon3,
       title: "Earn As You Drive",
       description:
         "Safe driving turns into real rewards — collect points, redeem perks, and enjoy benefits every time you drive.",
@@ -38,7 +43,7 @@ const FeaturesStrip = () => {
     },
     {
       id: 4,
-      icon: <HeartHandshake className="w-10 h-10 mb-6" />,
+      icon: icon4,
       title: "Always Connected",
       description:
         "Stay linked with real-time location sharing and trip updates that keep your loved ones close, informed, and protected.",
@@ -83,17 +88,13 @@ const FeaturesStrip = () => {
                   "radial-gradient(160px circle at 80% 20%, rgba(0,0,0,0.06), transparent 60%)",
               }}
             />
-            <div
-              className={`${feature.iconColor} transition-transform duration-300 group-hover:-translate-y-1`}
-            >
-              {feature.icon}
-            </div>
+            <img src={feature.icon ?? ""} alt="" />
 
             <SubHeading
               color={feature.textColor === "text-white" ? "white" : "dark"}
               weight="bold"
               size="2xl"
-              className="mb-6 stri-heading"
+              className="mb-6 stri-heading mt-[50px]"
             >
               {feature.title}
             </SubHeading>

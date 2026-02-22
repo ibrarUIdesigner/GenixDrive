@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import frame from "../../assets/7th sec copy.png";
+import frame from "../../assets/featursabot/b1.png";
 import frameMobile from "../../assets/FrameMobile.png";
 
 import SubHeading from "../../components/sharedui/SubHeading";
@@ -14,7 +14,11 @@ import kf3 from "../../assets/features/22kf3.png";
 import kf4 from "../../assets/features/22kf4.png";
 import FeatureSplitCard from "../../components/web/FeatureGridContainer";
 import { CircleMinus, Headphones, Wallet } from "lucide-react";
-import riskfree from "../../assets/riskfreestar.jpeg";
+import riskfree from "../../assets/featursabot/2.png";
+
+import icon1 from "../../assets/icons/2.png";
+import icon2 from "../../assets/icons/1.png";
+import icon3 from "../../assets/icons/3.png";
 const Features1 = () => {
   const faqs = [
     {
@@ -173,10 +177,10 @@ const Features1 = () => {
             </SubHeading>
             <div>
               <p className="flex items-center gap-4 mb-5">
-                <span className="flex justify-center items-center bg-light-green p-5 rounded-2xl">
-                  <Wallet size={18} />
+                <span className="flex justify-center items-center bg-light-green max-w-[70px] h-[70px] flex-1 rounded-2xl">
+                  <img src={icon1} />
                 </span>
-                <div>
+                <div className="flex-2">
                   <Paragraph
                     size="sm"
                     color="default"
@@ -189,10 +193,10 @@ const Features1 = () => {
                 </div>
               </p>
               <p className="flex items-center gap-4 mb-5">
-                <span className="flex justify-center items-center bg-light-green p-5 rounded-2xl">
-                  <Headphones size={18} />
+                <span className="flex justify-center items-center bg-light-green max-w-[70px] h-[70px] flex-1 rounded-2xl">
+                  <img src={icon2} />
                 </span>
-                <div>
+                <div className="flex-2">
                   <Paragraph
                     size="sm"
                     color="default"
@@ -205,10 +209,10 @@ const Features1 = () => {
                 </div>
               </p>
               <p className="flex items-center gap-4 mb-5">
-                <span className="flex justify-center items-center bg-light-green p-5 rounded-2xl">
-                  <CircleMinus size={18} />
+                <span className="flex justify-center items-center bg-light-green max-w-[70px] h-[70px] flex-1 rounded-2xl">
+                  <img src={icon3} />
                 </span>
-                <div>
+                <div className="flex-2">
                   <Paragraph
                     size="sm"
                     color="default"

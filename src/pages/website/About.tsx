@@ -237,8 +237,8 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-6 gap-5 mt-5">
-          <div></div>
+        <div className=" grid grid-cols-1 md:grid-cols-6 gap-5 mt-5">
+          <div className="hidden md:block"></div>
           <div className="key-feature-container col-span-2  text-center bg-surface-light rounded-2xl p-5 border border-gray-200">
             <SubHeading
               weight="medium"
@@ -283,7 +283,7 @@ const About = () => {
               <img className="m-auto block" src={kf4} alt="" />
             </div>
           </div>
-          <div></div>
+          <div className="hidden md:block"></div>
         </div>
 
         <div className="text-center mt-[80px]">
