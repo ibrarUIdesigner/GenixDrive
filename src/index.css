@@ -259,6 +259,49 @@ button{
   height: auto;
   padding: 30px;
 }
+
+.doodle{
+      width: 130px;
+    height: 50px;
+    left: 20px;
+    /* top: -20px; */
+    transform: translateY(-50%);
+    top: 50%;
+}
+.signdoodle{
+  width: 130px;
+  height: 60px;
+}
+.blogdoodle{
+  width: 90px;
+  height: 50px;
+  left: 40px;
+}
+.step-details .sub-heading.mainclass{
+  font-size: 23px;
+}
+.step-details .sub-heading.subcalss{
+  font-size: 15px;
+}
+.step-details p.text{
+  font-size: 12px !important;
+}
+.mainheading{
+  font-size: 24px;
+}
+.build-container .paragrarh{
+  font-size: 14px !important;
+}
+.strip-text{
+  font-size: 14px !important;
+}
+p.paragrarh{
+  font-size: 14px !important;
+}
+
+.blog-deta h3{
+  font-size: 16px;
+}
 }
 @media screen and (max-width: 450px) {
  .padding-50{

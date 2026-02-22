@@ -33,7 +33,7 @@ const FeaturesBuild = () => {
             <div className="relative z-10">
               <p>Features Build for your</p>
               <img
-                className="absolute -z-10 -top-[20px] left-[130px] w-[252px] h-[99px]"
+                className="absolute doodle -z-10 -top-[20px] left-[130px] w-[252px] h-[99px]"
                 src={doodle}
                 alt=""
               />

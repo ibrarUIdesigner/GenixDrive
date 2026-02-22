@@ -67,7 +67,7 @@ const Home = () => {
               <img
                 src={cric}
                 alt="circle"
-                className="absolute left-[70px] top-1/2 -translate-1/2 max-w-[193px] h-[112px]"
+                className="absolute left-[70px] blogdoodle top-1/2 -translate-1/2 max-w-[193px] h-[112px]"
               />
             </div>
           </SectionHeading>
@@ -81,7 +81,7 @@ const Home = () => {
               >
                 <div className="blog-img mb-4">
                   <img
-                    className="w-full h-[240px] object-cover rounded-2xl"
+                    className="w-full h-[240px]  object-cover rounded-2xl"
                     src={blog.blogImg}
                     alt=""
                   />

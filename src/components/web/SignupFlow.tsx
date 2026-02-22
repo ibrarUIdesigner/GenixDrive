@@ -25,7 +25,7 @@ const SignupFlow = () => {
           <img
             src={cric}
             alt="circle"
-            className="absolute left-1/2 top-1/2 -translate-1/2 w-[241px] h-[102px] "
+            className="absolute left-1/2 top-1/2 signdoodle -translate-1/2 w-[241px] h-[102px] "
           />
         </div>
       </SectionHeading>
