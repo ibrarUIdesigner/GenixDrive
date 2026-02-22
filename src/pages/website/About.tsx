@@ -64,13 +64,13 @@ const About = () => {
             />
             <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
             <div className="absolute bottom-0 left-0 w-full  p-5  z-10">
-              <SubHeading size="3xl" color="white" weight="medium">
+              <SubHeading size="lg" color="white" weight="medium">
                 About AiGenix (Private) Limited
               </SubHeading>
               <Paragraph
                 size="sm"
                 color="white"
-                weight="medium"
+                weight="light"
                 className="leading-5"
               >
                 AiGenix is a Karachi-based tech company building AI-driven
@@ -82,7 +82,7 @@ const About = () => {
           <div className="md:col-span-2 p-10 bg-light-green rounded-2xl flex items-center justify-center">
             <div>
               <SubHeading
-                size="4xl"
+                size="3xl"
                 color="dark"
                 weight="semibold"
                 className="mb-4"

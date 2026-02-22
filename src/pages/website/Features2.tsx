@@ -8,10 +8,11 @@ import Paragraph from "../../components/sharedui/Paragraph";
 import StoreActionsButtons from "../../components/web/StoreActionsButtons";
 import SectionHeading from "../../components/web/SectionHeading";
 
-import kf1 from "../../assets/features/3kf1.png";
+import kf1 from "../../assets/features/33kf2.png";
 import kf2 from "../../assets/features/3kf2.png";
-import kf3 from "../../assets/features/3kf3.png";
+import kf3 from "../../assets/features/33kf3.png";
 import kf4 from "../../assets/features/3kf4.png";
+import FeatureSplitCard from "../../components/web/FeatureGridContainer";
 const Features2 = () => {
   const faqs = [
     {
@@ -75,11 +76,11 @@ const Features2 = () => {
           transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         >
           <SubHeading size="4xl" className="mb-5 mainheading">
-            3. Driving
-            <p className="text-secondary">Insights</p>
+            Driving
+            <span className="text-secondary">Insights</span>
           </SubHeading>
 
-          <Paragraph size="sm">
+          <Paragraph size="sm" className="featuerHerText">
             Drive smarter, safer, and more confidently with GenixDrive. By
             transforming your driving data into meaningful insights, GenixDrive
             helps you understand your habits, improve safety, and protect what
@@ -102,202 +103,48 @@ const Features2 = () => {
           className="mb-10"
           paraText="GenixDrive by AiGenix (Private) Limited is a smart telematics solution designed to make driving safer and more intelligent. It monitors driving habits, provides safety scores."
         >
-          <p>
-            Key Highlights of{" "}
-            <span className="text-secondary">Driving Insights</span> &
-          </p>
+          Driving Insights
+          <p className="text-secondary">- KEY HIGHLIGHTS</p>
         </SectionHeading>
 
         {/* ......... */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-5 gap-5"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="md:col-span-3 p-5 h-[400px] md:h-auto  bg-secondary rounded-2xl overflow-hidden z-10 relative">
-            <motion.img
-              className="absolute top-0 left-0 w-full h-full object-cover"
-              src={kf1}
-              alt=""
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.5 }}
-            />
-            <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
-          </div>
-          <div className="md:col-span-2 p-10 bg-light-green rounded-2xl flex items-center justify-center">
-            <div>
-              <SubHeading
-                size="3xl"
-                color="dark"
-                weight="bold"
-                className="mb-4"
-              >
-                1. Turning Data Into Safer Journeys
-              </SubHeading>
-              <Paragraph
-                size="sm"
-                color="default"
-                weight="medium"
-                className="leading-8"
-              >
-                GenixDrive transforms telematics data into practical safety
-                insights. By analyzing speed, braking, acceleration, and
-                cornering, it reveals patterns that affect your safety on the
-                road. These insights help you make smarter driving choices and
-                create a habit of safer mobility every day.
-              </Paragraph>
-            </div>
-          </div>
-        </motion.div>
+        <FeatureSplitCard
+          title="1. Turning Data Into Safer Journeys"
+          image={kf1}
+          description="GenixDrive transforms telematics data into practical safety insights. By analyzing speed, braking, acceleration, and cornering, it reveals patterns that affect your safety on the road. These insights help you make smarter driving choices and create a habit of safer mobility every day."
+          overlay
+        />
 
         {/* .............. */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-5 gap-5 mt-5"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="md:col-span-2  p-10 bg-secondary rounded-2xl flex items-center justify-center">
-            <div>
-              <SubHeading
-                size="3xl"
-                color="white"
-                weight="bold"
-                className="mb-4"
-              >
-                2. Safety Scoring on Every Trip
-              </SubHeading>
-              <Paragraph
-                size="sm"
-                color="white"
-                weight="medium"
-                className="leading-8"
-              >
-                Every journey is tracked and scored with safety as the priority.
-                The score reflects how responsibly you handle your vehicle,
-                showing where you’re doing well and where improvement is needed.
-                Over time, these scores encourage safer driving and reduce the
-                risk of accidents.
-              </Paragraph>
-            </div>
-          </div>
-          <div className="md:col-span-3 h-[400px] md:h-auto p-5 bg-light-green rounded-2xl relative overflow-hidden">
-            <motion.img
-              className="absolute top-0 left-0 w-full h-full object-cover"
-              src={kf2}
-              alt=""
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.5 }}
-            />
-          </div>
-        </motion.div>
+        <FeatureSplitCard
+          title="2. Safety Scoring on Every Trip"
+          image={kf2}
+          description="Every journey is tracked and scored with safety as the priority. The score reflects how responsibly you handle your vehicle, showing where you’re doing well and where improvement is needed. Over time, these scores encourage safer driving and reduce the risk of accidents."
+          reverse
+          containerBg="bg-light-green"
+          textColor="text-dark"
+          overlay
+        />
 
         {/* ......... */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-5 gap-5 mt-5"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="md:col-span-3 p-5 h-[400px] md:h-auto  bg-secondary rounded-2xl overflow-hidden z-10 relative">
-            <motion.img
-              className="absolute top-0 left-0 w-full h-full object-cover"
-              src={kf3}
-              alt=""
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.5 }}
-            />
-            <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
-            <div className="absolute bottom-0 left-0 w-full  p-5  z-10">
-              <SubHeading size="2xl" color="white" weight="medium">
-                3. Spotting Risky Behaviors
-              </SubHeading>
-              <Paragraph
-                size="sm"
-                color="white"
-                weight="medium"
-                className="leading-5"
-              >
-                Many unsafe habits go unnoticed while driving, but GenixDrive
-                brings them to light. The app highlights risky events like
-                over-speeding, sudden braking, or harsh cornering, making you
-                aware of potential dangers. By identifying these patterns, it
-                empowers you to drive more responsibly.
-              </Paragraph>
-            </div>
-          </div>
-          <div className="md:col-span-2 p-10 bg-light-green rounded-2xl flex items-center justify-center">
-            <div>
-              <SubHeading
-                size="3xl"
-                color="dark"
-                weight="bold"
-                className="mb-4"
-              >
-                3. Spotting Risky Behaviors
-              </SubHeading>
-              <Paragraph
-                size="sm"
-                color="default"
-                weight="medium"
-                className="leading-8"
-              >
-                Many unsafe habits go unnoticed while driving, but GenixDrive
-                brings them to light. The app highlights risky events like
-                over-speeding, sudden braking, or harsh cornering, making you
-                aware of potential dangers. By identifying these patterns, it
-                empowers you to drive more responsibly.
-              </Paragraph>
-            </div>
-          </div>
-        </motion.div>
+
+        <FeatureSplitCard
+          title="3. Spotting Risky Behaviors"
+          image={kf3}
+          description="Many unsafe habits go unnoticed while driving, but GenixDrive brings them to light. The app highlights risky events like over-speeding, sudden braking, or harsh cornering, making you aware of potential dangers. By identifying these patterns, it empowers you to drive more responsibly."
+          overlay
+        />
 
         {/* .............. */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-5 gap-5 mt-5"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="md:col-span-2  p-10 bg-secondary rounded-2xl flex items-center justify-center">
-            <div>
-              <SubHeading
-                size="3xl"
-                color="white"
-                weight="bold"
-                className="mb-4"
-              >
-                4. Insights for Every Vehicle
-              </SubHeading>
-              <Paragraph
-                size="sm"
-                color="white"
-                weight="medium"
-                className="leading-8"
-              >
-                Safety should never depend on the type of vehicle you’re using.
-                GenixDrive works with both motorcycles and cars, tailoring its
-                analysis to give accurate safety feedback for each trip. Whether
-                two wheels or four, you’ll always know how safe your driving
-                really is.
-              </Paragraph>
-            </div>
-          </div>
-          <div className="md:col-span-3 h-[400px] md:h-auto p-5 bg-light-green rounded-2xl relative overflow-hidden">
-            <motion.img
-              className="absolute top-0 left-0 w-full h-full object-cover"
-              src={kf4}
-              alt=""
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.5 }}
-            />
-          </div>
-        </motion.div>
+        <FeatureSplitCard
+          title="4. Insights for Every Vehicle"
+          image={kf4}
+          description="Safety should never depend on the type of vehicle you’re using. GenixDrive works with both motorcycles and cars, tailoring its analysis to give accurate safety feedback for each trip. Whether two wheels or four, you’ll always know how safe your driving really is."
+          reverse
+          containerBg="bg-light-green"
+          textColor="text-dark"
+          overlay
+        />
       </motion.section>
 
       {/* FAQs */}

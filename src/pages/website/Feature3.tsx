@@ -10,8 +10,9 @@ import SectionHeading from "../../components/web/SectionHeading";
 
 import kf1 from "../../assets/features/4kf1.png";
 import kf2 from "../../assets/features/4kf2.png";
-import kf3 from "../../assets/features/4kf3.png";
+import kf3 from "../../assets/features/44kf3.png";
 import kf4 from "../../assets/features/4kf4.png";
+import FeatureSplitCard from "../../components/web/FeatureGridContainer";
 
 const Feature3 = () => {
   const faqs = [
@@ -76,10 +77,10 @@ const Feature3 = () => {
           transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         >
           <SubHeading size="4xl" className="mb-5 mainheading">
-            4. Gamification &<p className="text-secondary">Rewards</p>
+            Gamification &<p className="text-secondary">Rewards</p>
           </SubHeading>
 
-          <Paragraph size="sm">
+          <Paragraph size="sm" className="featuerHerText">
             Turn every drive into a rewarding experience with GenixDrive. By
             blending safety with fun, GenixDrive transforms your everyday
             journeys into exciting challenges where good driving truly pays off.
@@ -98,193 +99,50 @@ const Feature3 = () => {
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       >
         <SectionHeading
-          className="mb-10"
+          className="mb-10 uppercase"
           paraText="GenixDrive by AiGenix (Private) Limited is a smart telematics solution designed to make driving safer and more intelligent. It monitors driving habits, provides safety scores."
         >
-          Key Highlights of Key Highlights of{" "}
-          <p className="text-secondary">Gamification & Rewards</p>
+          Gamification & Rewards
+          <p className="text-secondary">- KEY HIGHLIGHTS</p>
         </SectionHeading>
 
         {/* ......... */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-5 gap-5"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="md:col-span-3 p-5 h-[400px] md:h-auto  bg-secondary rounded-2xl overflow-hidden z-10 relative">
-            <motion.img
-              className="absolute top-0 left-0 w-full h-full object-cover"
-              src={kf1}
-              alt=""
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.5 }}
-            />
-            <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
-          </div>
-          <div className="md:col-span-2 p-10 bg-light-green rounded-2xl flex items-center justify-center">
-            <div>
-              <SubHeading
-                size="3xl"
-                color="dark"
-                weight="bold"
-                className="mb-4"
-              >
-                1. Making Safe Driving Fun
-              </SubHeading>
-              <Paragraph
-                size="sm"
-                color="default"
-                weight="medium"
-                className="leading-8"
-              >
-                At GenixDrive, we believe safety should never feel like a
-                burden. That’s why we’ve built gamification into every journey.
-                Each time you drive, the app tracks your behavior and transforms
-                it into points, milestones, and achievements. This approach
-                doesn’t just help you stay engaged — it makes safe driving
-                enjoyable, motivating you to keep improving trip after trip.
-              </Paragraph>
-            </div>
-          </div>
-        </motion.div>
+        <FeatureSplitCard
+          title="1. Making Safe Driving Fun"
+          image={kf1}
+          description="At GenixDrive, we believe safety should never feel like a burden. That’s why we’ve built gamification into every journey. Each time you drive, the app tracks your behavior and transforms it into points, milestones, and achievements. This approach doesn’t just help you stay engaged — it makes safe driving enjoyable, motivating you to keep improving trip after trip."
+          overlay
+        />
 
         {/* .............. */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-5 gap-5 mt-5"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="md:col-span-2  p-10 bg-secondary rounded-2xl flex items-center justify-center">
-            <div>
-              <SubHeading
-                size="3xl"
-                color="white"
-                weight="bold"
-                className="mb-4"
-              >
-                2. Driving Scores That Pay Off
-              </SubHeading>
-              <Paragraph
-                size="sm"
-                color="white"
-                weight="medium"
-                className="leading-8"
-              >
-                Every driver receives a unique safety score based on factors
-                like speed, acceleration, braking, and cornering. This score
-                reflects how safe and responsible your driving habits are. The
-                higher your score, the more points you earn. Instead of simply
-                tracking performance, GenixDrive turns your efforts into a
-                system that pays off — rewarding you for making safety a
-                priority.
-              </Paragraph>
-            </div>
-          </div>
-          <div className="md:col-span-3 h-[400px] md:h-auto p-5 bg-light-green rounded-2xl relative overflow-hidden">
-            <motion.img
-              className="absolute top-0 left-0 w-full h-full object-cover"
-              src={kf2}
-              alt=""
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.5 }}
-            />
-          </div>
-        </motion.div>
+        <FeatureSplitCard
+          title="2. Driving Scores That Pay Off"
+          image={kf2}
+          description="Every driver receives a unique safety score based on factors like speed, acceleration, braking, and cornering. This score reflects how safe and responsible your driving habits are. The higher your score, the more points you earn. Instead of simply tracking performance, GenixDrive turns your efforts into a system that pays off — rewarding you for making safety a priority."
+          reverse
+          containerBg="bg-light-green"
+          textColor="text-dark"
+          overlay
+        />
 
         {/* ......... */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-5 gap-5 mt-5"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="md:col-span-3 p-5 h-[400px] md:h-auto  bg-secondary rounded-2xl overflow-hidden z-10 relative">
-            <motion.img
-              className="absolute top-0 left-0 w-full h-full object-cover"
-              src={kf3}
-              alt=""
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.5 }}
-            />
-            <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
-          </div>
-          <div className="md:col-span-2 p-10 bg-light-green rounded-2xl flex items-center justify-center">
-            <div>
-              <SubHeading
-                size="3xl"
-                color="dark"
-                weight="bold"
-                className="mb-4"
-              >
-                3. Redeemable Rewards
-              </SubHeading>
-              <Paragraph
-                size="sm"
-                color="default"
-                weight="medium"
-                className="leading-8"
-              >
-                Safe driving doesn’t just keep you and your loved ones secure —
-                it also comes with real, tangible benefits. The points you
-                collect can be redeemed for cash, gift vouchers, discount
-                coupons, scratch cards, or exclusive offers. With GenixDrive,
-                every safe decision on the road contributes to something
-                valuable, making it easier to stay motivated and committed to
-                better driving habits.
-              </Paragraph>
-            </div>
-          </div>
-        </motion.div>
+        <FeatureSplitCard
+          title="3. Redeemable Rewards"
+          image={kf3}
+          description="Safe driving doesn’t just keep you and your loved ones secure — it also comes with real, tangible benefits. The points you collect can be redeemed for cash, gift vouchers, discount coupons, scratch cards, or exclusive offers. With GenixDrive, every safe decision on the road contributes to something valuable, making it easier to stay motivated and committed to better driving habits."
+          overlay
+        />
 
         {/* .............. */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-5 gap-5 mt-5"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="md:col-span-2  p-10 bg-secondary rounded-2xl flex items-center justify-center">
-            <div>
-              <SubHeading
-                size="3xl"
-                color="white"
-                weight="bold"
-                className="mb-4"
-              >
-                4. Motivation Through Gamification
-              </SubHeading>
-              <Paragraph
-                size="sm"
-                color="white"
-                weight="medium"
-                className="leading-8"
-              >
-                GenixDrive uses gamified elements like levels, challenges, and
-                achievements to keep you inspired. Whether you’re aiming to beat
-                your personal best, unlock a new badge, or even compare scores
-                with friends, the app transforms driving safety into a challenge
-                you’ll actually look forward to. By blending safety with fun,
-                GenixDrive ensures that the process of becoming a better driver
-                never feels dull.
-              </Paragraph>
-            </div>
-          </div>
-          <div className="md:col-span-3 h-[400px] md:h-auto p-5 bg-light-green rounded-2xl relative overflow-hidden">
-            <motion.img
-              className="absolute top-0 left-0 w-full h-full object-cover"
-              src={kf4}
-              alt=""
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.5 }}
-            />
-          </div>
-        </motion.div>
+        <FeatureSplitCard
+          title="4. Motivation Through Gamification"
+          image={kf4}
+          description="GenixDrive uses gamified elements like levels, challenges, and achievements to keep you inspired. Whether you’re aiming to beat your personal best, unlock a new badge, or even compare scores with friends, the app transforms driving safety into a challenge you’ll actually look forward to. By blending safety with fun, GenixDrive ensures that the process of becoming a better driver never feels dull."
+          reverse
+          containerBg="bg-light-green"
+          textColor="text-dark"
+          overlay
+        />
       </motion.section>
 
       {/* FAQs */}
