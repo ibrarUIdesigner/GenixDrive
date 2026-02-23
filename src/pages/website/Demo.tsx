@@ -42,7 +42,7 @@ const Demo = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         >
-          <SubHeading size="4xl" className="mb-5">
+          <SubHeading size="4xl" className="mb-5 mainheading">
             Experience GenixDrive
             <p className="text-gray-500">in Action</p>
           </SubHeading>

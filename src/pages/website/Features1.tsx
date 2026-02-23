@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import frame from "../../assets/7th sec copy.png";
+import frame from "../../assets/featursabot/b1.png";
 import frameMobile from "../../assets/FrameMobile.png";
 
 import SubHeading from "../../components/sharedui/SubHeading";
@@ -8,10 +8,17 @@ import Paragraph from "../../components/sharedui/Paragraph";
 import StoreActionsButtons from "../../components/web/StoreActionsButtons";
 import SectionHeading from "../../components/web/SectionHeading";
 
-import kf1 from "../../assets/features/2kf1.jpg";
+import kf1 from "../../assets/features/22kf1.png";
 import kf2 from "../../assets/features/2kf2.png";
-import kf3 from "../../assets/features/2kf3.png";
-import kf4 from "../../assets/features/2kf4.png";
+import kf3 from "../../assets/features/22kf3.png";
+import kf4 from "../../assets/features/22kf4.png";
+import FeatureSplitCard from "../../components/web/FeatureGridContainer";
+import { CircleMinus, Headphones, Wallet } from "lucide-react";
+import riskfree from "../../assets/featursabot/2.png";
+
+import icon1 from "../../assets/icons/2.png";
+import icon2 from "../../assets/icons/1.png";
+import icon3 from "../../assets/icons/3.png";
 const Features1 = () => {
   const faqs = [
     {
@@ -74,11 +81,11 @@ const Features1 = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         >
-          <SubHeading size="4xl" className="mb-3">
-            2. Safety &<p className="text-secondary inline">Protection</p>
+          <SubHeading size="4xl" className="mb-3 mainheading">
+            Safety &<p className="text-secondary inline">Protection</p>
           </SubHeading>
 
-          <Paragraph size="sm">
+          <Paragraph size="sm" className="featuerHerText">
             Your safety is our top priority. With GenixDrive, every journey is
             protected — from real-time tracking to instant alerts, we ensure you
             and your loved ones are safe wherever the road takes you.
@@ -97,183 +104,133 @@ const Features1 = () => {
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       >
         <SectionHeading
-          className="mb-10"
+          className="mb-10 uppercase"
           paraText="GenixDrive by AiGenix (Private) Limited is a smart telematics solution designed to make driving safer and more intelligent. It monitors driving habits, provides safety scores."
         >
-          <p>
-            Key Highlights of
-            <span className="text-secondary"> Safety & Protection</span>
-          </p>
+          Safety & Protection
+          <p className="text-secondary">- KEY HIGHLIGHTS</p>
         </SectionHeading>
 
         {/* ......... */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-5 gap-5"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="md:col-span-3 p-5 h-[400px] md:h-auto bg-secondary rounded-2xl overflow-hidden z-10 relative">
-            <motion.img
-              className="absolute top-0 left-0 w-full h-full object-cover"
-              src={kf1}
-              alt=""
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.5 }}
-            />
-            <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
-          </div>
-          <div className="md:col-span-2 p-10 bg-secondary rounded-2xl flex items-center justify-center">
-            <div>
-              <SubHeading
-                size="4xl"
-                color="white"
-                weight="bold"
-                className="mb-4"
-              >
-                1. Safety Comes First
-              </SubHeading>
-              <Paragraph
-                size="sm"
-                color="white"
-                weight="medium"
-                className="leading-8"
-              >
-                On every journey, safety is the top priority. GenixDrive’s
+
+        <FeatureSplitCard
+          title="1. Safety Comes First"
+          image={kf1}
+          description="On every journey, safety is the top priority. GenixDrive’s
                 Safety & Protection feature keeps you and your loved ones
                 protected on the road, offering smart alerts and real-time
                 notifications that help prevent risks before they turn into
-                emergencies.
-              </Paragraph>
-            </div>
-          </div>
-        </motion.div>
+                emergencies."
+          overlay
+        />
 
         {/* .............. */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-5 gap-5 mt-5"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="md:col-span-2  p-10 bg-light-green rounded-2xl flex items-center justify-center">
-            <div>
-              <SubHeading
-                size="4xl"
-                color="dark"
-                weight="bold"
-                className="mb-4"
-              >
-                2. Speed & Driving Alerts
-              </SubHeading>
-              <Paragraph
-                size="sm"
-                color="default"
-                weight="medium"
-                className="leading-8"
-              >
-                GenixDrive actively monitors driving behavior and sends instant
+        <FeatureSplitCard
+          title="2. Speed & Driving Alerts"
+          image={kf2}
+          description="GenixDrive actively monitors driving behavior and sends instant
                 alerts in case of over-speeding, harsh braking, or risky
                 maneuvers. Parents can keep an eye on teen drivers, while
                 families gain peace of mind knowing their loved ones are driving
-                responsibly.
-              </Paragraph>
-            </div>
-          </div>
-          <div className="md:col-span-3 h-[400px] md:h-auto p-5 bg-light-green rounded-2xl relative overflow-hidden">
-            <motion.img
-              className="absolute top-0 left-0 w-full h-full object-cover"
-              src={kf2}
-              alt=""
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.5 }}
-            />
-          </div>
-        </motion.div>
+                responsibly."
+          reverse
+          containerBg="bg-light-green"
+          textColor="text-dark"
+          overlay
+        />
 
         {/* ......... */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-5 gap-5 mt-5"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="md:col-span-3 p-5 h-[400px] md:h-auto bg-secondary rounded-2xl overflow-hidden z-10 relative">
-            <motion.img
-              className="absolute top-0 left-0 w-full h-full object-cover"
-              src={kf3}
-              alt=""
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.5 }}
-            />
-            <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
-          </div>
-          <div className="md:col-span-2 p-10 bg-secondary rounded-2xl flex items-center justify-center">
-            <div>
-              <SubHeading
-                size="4xl"
-                color="white"
-                weight="bold"
-                className="mb-4"
-              >
-                3. Geo-Fencing for Added Security
-              </SubHeading>
-              <Paragraph
-                size="sm"
-                color="white"
-                weight="medium"
-                className="leading-8"
-              >
-                Set up safe zones (geo-fences) for your vehicle or family
+
+        <FeatureSplitCard
+          title="3. Geo-Fencing for Added Security"
+          image={kf3}
+          description="Set up safe zones (geo-fences) for your vehicle or family
                 members. Whether it’s your child arriving at school, your car
                 leaving home, or entering an unknown location, you’ll get
-                immediate notifications so you always know what’s happening.
-              </Paragraph>
-            </div>
-          </div>
-        </motion.div>
+                immediate notifications so you always know what’s happening."
+        />
 
         {/* .............. */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-5 gap-5 mt-5"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="md:col-span-2  p-10 bg-light-green rounded-2xl flex items-center justify-center">
-            <div>
-              <SubHeading
-                size="4xl"
-                color="dark"
-                weight="bold"
-                className="mb-4"
-              >
-                4. Anti-Theft Protection
-              </SubHeading>
-              <Paragraph
-                size="sm"
-                color="default"
-                weight="medium"
-                className="leading-8"
-              >
-                Your vehicle deserves protection too. With GenixDrive’s
+        <FeatureSplitCard
+          title=" 4. Anti-Theft Protection"
+          image={kf4}
+          description=" Your vehicle deserves protection too. With GenixDrive’s
                 anti-theft tools, you’ll be alerted to unusual movements or
                 unauthorized activity. It adds an extra layer of security,
-                helping you protect one of your most valuable assets.
-              </Paragraph>
+                helping you protect one of your most valuable assets."
+          reverse
+          containerBg="bg-light-green"
+          textColor="text-dark"
+          overlay
+        />
+      </motion.section>
+
+      <motion.section className="bg-white  px-[56px] py-[120px] padding-50">
+        <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 items-center">
+          <div className="content">
+            <SubHeading
+              size="4xl"
+              color="dark"
+              className="mainheading mb-[70px]"
+            >
+              Always-On Protection
+            </SubHeading>
+            <div>
+              <p className="flex items-center gap-4 mb-5">
+                <span className="flex justify-center items-center bg-light-green max-w-[70px] h-[70px] flex-1 rounded-2xl">
+                  <img src={icon1} />
+                </span>
+                <div className="flex-2">
+                  <Paragraph
+                    size="sm"
+                    color="default"
+                    weight="medium"
+                    className="leading-8 featureabouttext"
+                  >
+                    <strong>Background Monitoring:</strong> Safety features run
+                    quietly without disturbing your drive.
+                  </Paragraph>
+                </div>
+              </p>
+              <p className="flex items-center gap-4 mb-5">
+                <span className="flex justify-center items-center bg-light-green max-w-[70px] h-[70px] flex-1 rounded-2xl">
+                  <img src={icon2} />
+                </span>
+                <div className="flex-2">
+                  <Paragraph
+                    size="sm"
+                    color="default"
+                    weight="medium"
+                    className="leading-8 featureabouttext"
+                  >
+                    <strong>Family Travel Security:</strong> Get updates when
+                    loved ones are on solo trips or late-night drives.
+                  </Paragraph>
+                </div>
+              </p>
+              <p className="flex items-center gap-4 mb-5">
+                <span className="flex justify-center items-center bg-light-green max-w-[70px] h-[70px] flex-1 rounded-2xl">
+                  <img src={icon3} />
+                </span>
+                <div className="flex-2">
+                  <Paragraph
+                    size="sm"
+                    color="default"
+                    weight="medium"
+                    className="leading-8 featureabouttext !text-black"
+                  >
+                    <strong>24/7 Coverage:</strong> Whether short commutes or
+                    long road trips, protection never switches off.
+                  </Paragraph>
+                </div>
+              </p>
             </div>
           </div>
-          <div className="md:col-span-3 h-[400px] md:h-auto p-5 bg-light-green rounded-2xl relative overflow-hidden">
-            <motion.img
-              className="absolute top-0 left-0 w-full h-full object-cover"
-              src={kf4}
-              alt=""
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.5 }}
+          <div className="img">
+            <img
+              src={riskfree}
+              alt="Drive & Earn"
+              className="w-full h-full  rounded-xl"
             />
           </div>
         </motion.div>

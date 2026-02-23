@@ -38,9 +38,9 @@ const AboutSection = ({ bg }: { bg: string }) => {
           </SubHeading>
           <Paragraph
             color="default"
-            weight="medium"
+            weight="light"
             size="base"
-            className="leading-8"
+            className="leading-8 !text-justify"
           >
             GenixDrive is a smart driving companion designed to make every
             journey safer, smarter, and more rewarding. It uses advanced

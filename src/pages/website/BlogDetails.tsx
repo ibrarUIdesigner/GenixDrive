@@ -96,7 +96,7 @@ const BlogDetails = () => {
     <div>
       <section className="blog-details px-[56px] py-[120px] padding-50">
         <div className="blog-details-conta">
-          <SubHeading size="2xl" color="dark" className="mb-1">
+          <SubHeading size="2xl" color="dark" className="mb-1 mainheading">
             How GenixDrive is Redefining Family Safety and Smarter Driving in
             Pakistan
           </SubHeading>
@@ -127,7 +127,7 @@ const BlogDetails = () => {
               color="default"
               size="sm"
               weight="medium"
-              className="leading-relaxed"
+              className="leading-relaxed blogdetailestext"
             >
               In today’s fast-paced world, staying connected and safe on the
               road has become more important than ever. That’s where GenixDrive
@@ -208,13 +208,18 @@ const BlogDetails = () => {
                     alt=""
                   />
                   <div>
-                    <Paragraph color="default" size="sm" weight="bold">
+                    <Paragraph
+                      color="default"
+                      size="sm"
+                      weight="bold"
+                      className="blog-user"
+                    >
                       {blog.user.userName}
                     </Paragraph>
                     <Paragraph
                       color="muted"
                       size="sm"
-                      className="text-gray-600"
+                      className="text-gray-600 blog-date{"
                     >
                       {blog.user.date}
                     </Paragraph>
