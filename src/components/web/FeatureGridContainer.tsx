@@ -34,7 +34,7 @@ const FeatureSplitCard: React.FC<FeatureSplitCardProps> = ({
       <div
         className={`${
           reverse ? "md:col-span-2" : "md:col-span-2 md:order-2"
-        } p-10 ${containerBg} rounded-2xl flex items-center justify-center`}
+        } p-5 md:p-10 ${containerBg} rounded-2xl flex items-center justify-center`}
       >
         <div>
           <h3 className={`text-3xl font-medium  mb-4 ${textColor}`}>{title}</h3>

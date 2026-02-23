@@ -53,7 +53,7 @@ const BenefitsSection = () => {
             className="mb-2 text-center mainheading"
           >
             Here’s What GenixDrive
-            <div className="flex items-center justify-center gap-5">
+            <div className="flex items-center justify-center gap-5 section-heading">
               <img src={blueStr} alt="" />
               <p>Brings to You</p>
               <img src={blueStr} alt="" />

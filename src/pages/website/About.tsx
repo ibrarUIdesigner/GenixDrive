@@ -1,5 +1,5 @@
-import AboutHero from "../../components/AboutHero";
-import AboutSection from "../../components/AboutSection";
+// import AboutHero from "../../components/AboutHero";
+// import AboutSection from "../../components/AboutSection";
 import SubHeading from "../../components/sharedui/SubHeading";
 import Paragraph from "../../components/sharedui/Paragraph";
 
@@ -36,7 +36,7 @@ const About = () => {
       {/* SECTION2 */}
       <section className="bg-surface-light px-[56px] py-[120px] padding-50">
         <SectionHeading
-          className="relative paratExt"
+          className="relative paratExt section-heading mb-5 md:mb-2"
           paraText="We are shifting our approach towards a cleaner, more visual
             experience prioritizing impactful screens over heavy text. Excessive
             content can overwhelm users and clutter the interface, diluting the
@@ -79,7 +79,7 @@ const About = () => {
               </Paragraph>
             </div>
           </div>
-          <div className="md:col-span-2 p-10 bg-light-green rounded-2xl flex items-center justify-center">
+          <div className="md:col-span-2 p-5 md:p-10 bg-light-green rounded-2xl flex items-center justify-center">
             <div>
               <SubHeading
                 size="3xl"
@@ -106,7 +106,7 @@ const About = () => {
           </div>
         </div>
         <div className="grid md:grid-cols-5 gap-5 mt-5">
-          <div className="md:col-span-2  p-10 bg-secondary rounded-2xl flex items-center justify-center">
+          <div className="md:col-span-2 p-5 md:p-10 bg-secondary rounded-2xl flex items-center justify-center">
             <div>
               <SubHeading
                 size="3xl"
@@ -150,7 +150,7 @@ const About = () => {
             className="mb-4 mainheading relative"
           >
             <img
-              className="absolute w-[358px] h-[90px] left-[60px] -top-[30px]"
+              className="absolute doodle w-[358px] h-[90px] left-[60px] -top-[30px]"
               src={kfborder}
               alt=""
             />

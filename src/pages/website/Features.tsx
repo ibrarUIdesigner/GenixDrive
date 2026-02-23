@@ -65,7 +65,7 @@ const Features = () => {
         <motion.img
           src={frameMobile}
           alt="Features banner"
-          className="block md:hidden absolute top-0 left-0 h-full w-full object-cover"
+          className="block md:hidden absolute top-0 left-0 h-full w-full object-cover featurebanner"
           initial={{ scale: 1.1, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -146,7 +146,7 @@ const Features = () => {
               </Paragraph>
             </div>
           </div>
-          <div className="md:col-span-2 p-10 bg-secondary rounded-2xl flex items-center justify-center">
+          <div className="md:col-span-2 p-5 md:p-10 bg-secondary rounded-2xl flex items-center justify-center">
             <div>
               <SubHeading
                 size="3xl"
@@ -183,7 +183,7 @@ const Features = () => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="md:col-span-2  p-10 bg-light-green rounded-2xl flex items-center justify-center">
+          <div className="md:col-span-2 p-5  md:p-10 bg-light-green rounded-2xl flex items-center justify-center">
             <div>
               <SubHeading
                 size="3xl"
@@ -248,7 +248,7 @@ const Features = () => {
               </Paragraph>
             </div>
           </div>
-          <div className="md:col-span-2 p-10 bg-secondary rounded-2xl flex items-center justify-center">
+          <div className="md:col-span-2 p-5 md:p-10 bg-secondary rounded-2xl flex items-center justify-center">
             <div>
               <SubHeading
                 size="3xl"
@@ -284,7 +284,7 @@ const Features = () => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="md:col-span-2  p-10 bg-light-green rounded-2xl flex items-center justify-center">
+          <div className="md:col-span-2 p-5  md:p-10 bg-light-green rounded-2xl flex items-center justify-center">
             <div>
               <SubHeading
                 size="3xl"
@@ -329,7 +329,7 @@ const Features = () => {
               Smarter <span className="text-secondary">Connections</span> &
               Alerts
             </SubHeading>
-            <div>
+            <div className="featureabout">
               <p className="flex items-center gap-4 mb-5">
                 <span className="flex justify-center max-w-[70px] h-[70px] flex-1 items-center bg-light-green rounded-2xl">
                   <img src={icon1} alt="" />

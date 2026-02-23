@@ -79,7 +79,7 @@ const FeaturesStrip = () => {
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.995 }}
             transition={{ type: "spring", stiffness: 240, damping: 22 }}
-            className={`group relative ${feature.bgColor} ${feature.textColor} p-10 lg:p-12 min-h-[400px] flex flex-col justify-center items-start l ring-1 ring-black/5 shadow-sm`}
+            className={`group stripcontainer relative ${feature.bgColor} ${feature.textColor} p-10 lg:p-12 min-h-[400px] flex flex-col justify-center items-start l ring-1 ring-black/5 shadow-sm`}
           >
             <div
               className="pointer-events-none absolute inset-0  opacity-0 group-hover:opacity-100 transition-opacity duration-300"

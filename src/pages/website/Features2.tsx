@@ -70,7 +70,7 @@ const Features2 = () => {
         <motion.img
           src={frameMobile}
           alt="Features banner"
-          className="block md:hidden absolute top-0 left-0 h-full w-full object-cover"
+          className="block md:hidden absolute top-0 left-0 h-full w-full object-cover featurebanner"
           initial={{ scale: 1.1, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -163,7 +163,7 @@ const Features2 = () => {
             >
               A Safer Future With Every Trip
             </SubHeading>
-            <div>
+            <div className="featureabout">
               <p className="flex items-center gap-4 mb-5">
                 <span className="flex justify-center items-center bg-light-green max-w-[70px] h-[70px] flex-1 rounded-2xl">
                   <img src={icon1} alt="" />
