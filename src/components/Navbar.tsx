@@ -249,6 +249,13 @@ const Navbar = () => {
                 className={({ isActive }) => getLinkClasses(isActive)}
                 onClick={() => setOpen(false)}
               >
+                Pricing
+              </NavLink>
+              <NavLink
+                to="/demo"
+                className={({ isActive }) => getLinkClasses(isActive)}
+                onClick={() => setOpen(false)}
+              >
                 Demo
               </NavLink>
               <NavLink

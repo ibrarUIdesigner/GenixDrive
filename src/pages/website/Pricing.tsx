@@ -1,16 +1,9 @@
 import frame from "../../assets/frame.png";
 import SubHeading from "../../components/sharedui/SubHeading";
 import Paragraph from "../../components/sharedui/Paragraph";
-import {
-  CircleCheck,
-  CircleMinus,
-  Headphones,
-  Heart,
-  Wallet,
-} from "lucide-react";
+import { CircleCheck } from "lucide-react";
 import Button from "../../components/Button";
 import ReadytoDrive from "../../components/web/ReadytoDrive";
-import feature2 from "../../assets/features/2.png";
 
 import grnstr from "../../assets/grnstr.png";
 import riskfree from "../../assets/riskfreestar.jpeg";
@@ -136,7 +129,7 @@ const Pricing = () => {
               Risk free plans
             </SubHeading>
 
-            <div>
+            <div className="featureabout">
               <p className="flex items-center gap-4 mb-5">
                 <span className="flex justify-center items-center bg-light-green max-w-[70px] h-[70px] flex-1 rounded-2xl">
                   <img src={cash} alt="" />
