@@ -78,7 +78,7 @@ const SignupFlow = () => {
               <Paragraph
                 size="sm"
                 color="default"
-                weight="medium"
+                weight="light"
                 className="leading-5 text"
               >
                 Order the GenixDrive device to unlock live vehicle tracking,
@@ -108,7 +108,7 @@ const SignupFlow = () => {
               <Paragraph
                 size="sm"
                 color="default"
-                weight="medium"
+                weight="light"
                 className="leading-5 text"
               >
                 Once your order is confirmed, a certified GenixDrive technician
@@ -139,7 +139,7 @@ const SignupFlow = () => {
               <Paragraph
                 size="sm"
                 color="default"
-                weight="medium"
+                weight="light"
                 className="leading-5 text"
               >
                 Once everything is set up, you can monitor driving behavior,
