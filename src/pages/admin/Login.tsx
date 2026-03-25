@@ -1,12 +1,79 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import ab1 from "../../assets/ab1.jpg";
 import { Eye, EyeOff, Mail, Lock } from "lucide-react";
 import Button from "../../components/Button";
 import SubHeading from "../../components/sharedui/SubHeading";
 import { TextField } from "../../components/sharedui/Input";
+import axios, { AxiosError } from "axios";
+// https://aigenix-api-app-services.three-shelves.com/auth/login
+
+//? INTERFACE
+interface LoginResponse {
+  accessToken: string;
+  refreshToken?: string;
+  user?: {
+    id: string;
+    email: string;
+  };
+}
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+  //? STATES
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string>("");
+
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    // Basic validation
+    if (!email || !password) {
+      setError("Email and password are required");
+      return;
+    }
+
+    try {
+      setLoading(true);
+      setError("");
+
+      const response = await axios.post<LoginResponse>(
+        "https://aigenix-api-app-services.three-shelves.com/auth/login",
+        {
+          email,
+          password,
+        },
+      );
+
+      // ✅ Success
+      const data = response.data;
+
+      // Store token (choose your strategy)
+      // localStorage.setItem("accessToken", data.accessToken);
+
+      console.log("Login Success:", data);
+
+      // TODO: redirect user
+      // navigate("/dashboard");
+    } catch (err) {
+      // ✅ Handle errors properly
+      const error = err as AxiosError<any>;
+
+      if (error.response) {
+        // Server responded with error
+        setError(error.response.data?.message || "Login failed");
+      } else if (error.request) {
+        // No response from server
+        setError("No response from server. Please try again.");
+      } else {
+        // Something else
+        setError("Something went wrong");
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <section className="px-6 py-12 md:py-20 font-cairo">
       <div className="container mx-auto">
@@ -23,11 +90,15 @@ const Login = () => {
                 type="email"
                 placeholder="Email"
                 leftIcon={<Mail className="w-5 h-5" />}
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
               />
               <TextField
                 type={showPassword ? "text" : "password"}
                 placeholder="Password"
                 leftIcon={<Lock className="w-5 h-5" />}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 rightIcon={
                   <button
                     type="button"
@@ -42,6 +113,7 @@ const Login = () => {
                   </button>
                 }
               />
+              {error && <p className="text-red-500 text-sm">{error}</p>}
               <div className="flex items-center justify-between">
                 <label className="flex items-center gap-2 text-sm text-gray-600">
                   <input type="checkbox" className="rounded border-gray-300" />
@@ -56,8 +128,11 @@ const Login = () => {
                 variant="secondary"
                 isFullBtn={true}
                 className="w-full"
+                onClick={handleLogin}
+                type="button"
+                disabled={loading}
               >
-                Login
+                {loading ? "Logging in..." : "Login"}
               </Button>
               <p className="text-center text-sm text-gray-600">
                 Don't have an account?{" "}
