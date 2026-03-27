@@ -1,20 +1,22 @@
 import React, { useState } from "react";
 import ab1 from "../../assets/ab1.jpg";
-import { Eye, EyeOff, Mail, Lock } from "lucide-react";
+import { Eye, EyeOff, Mail, Lock, Phone } from "lucide-react";
 import Button from "../../components/Button";
 import SubHeading from "../../components/sharedui/SubHeading";
 import { TextField } from "../../components/sharedui/Input";
 import axios, { AxiosError } from "axios";
 // https://aigenix-api-app-services.three-shelves.com/auth/login
+import { useNavigate } from "react-router-dom";
 
 //? INTERFACE
 interface LoginResponse {
-  accessToken: string;
-  refreshToken?: string;
-  user?: {
-    id: string;
-    email: string;
+  success: boolean;
+
+  data?: {
+    subscription: string;
+    token: string;
   };
+  msg?: string;
 }
 
 const Login = () => {
@@ -25,6 +27,8 @@ const Login = () => {
 
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
+
+  const navigate = useNavigate();
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -44,6 +48,11 @@ const Login = () => {
           email,
           password,
         },
+        {
+          headers: {
+            "x-account-id": "aigenix-uat",
+          },
+        },
       );
 
       // ✅ Success
@@ -55,7 +64,9 @@ const Login = () => {
       console.log("Login Success:", data);
 
       // TODO: redirect user
-      // navigate("/dashboard");
+      if (data.success) {
+        navigate("/admin/dashboard");
+      }
     } catch (err) {
       // ✅ Handle errors properly
       const error = err as AxiosError<any>;
@@ -89,7 +100,7 @@ const Login = () => {
               <TextField
                 type="email"
                 placeholder="Email"
-                leftIcon={<Mail className="w-5 h-5" />}
+                leftIcon={<Phone className="w-5 h-5" />}
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
               />

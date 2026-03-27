@@ -19,6 +19,10 @@ import Feature3 from "../pages/website/Feature3";
 import Demo from "../pages/website/Demo";
 import DrivingScore from "../pages/admin/DrivingScore";
 import SubscriptionsManagements from "../pages/admin/SubscriptionsManagements";
+import GenerateUsername from "../pages/admin/GenerateUsername";
+import VerifyUsername from "../pages/admin/VerifyUsername";
+import GenerateOTP from "../pages/admin/GenerateOTP";
+import VerifyOTP from "../pages/admin/VerifyOTP";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +46,10 @@ const router = createBrowserRouter([
     children: [
       { path: "login", element: <AdminLogin /> },
       { path: "signup", element: <AdminSignup /> },
+      { path: "generate-username", element: <GenerateUsername /> },
+      { path: "verify-username", element: <VerifyUsername /> },
+      { path: "generate-otp", element: <GenerateOTP /> },
+      { path: "verify-otp", element: <VerifyOTP /> },
     ],
   },
   {

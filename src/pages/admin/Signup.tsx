@@ -5,6 +5,8 @@ import { Eye, EyeOff, Mail, Phone, User, Lock } from "lucide-react";
 import Button from "../../components/Button";
 import SubHeading from "../../components/sharedui/SubHeading";
 import { TextField } from "../../components/sharedui/Input";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 interface SignupPayload {
   email: string;
@@ -20,16 +22,19 @@ interface SignupPayload {
 }
 
 interface SignupResponse {
-  message: string;
+  msg: string;
   user?: {
     id: string;
     email: string;
   };
+  success?: boolean;
 }
 
 const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
+
+  const navigate = useNavigate();
 
   const [form, setForm] = useState<SignupPayload>({
     email: "",
@@ -88,7 +93,7 @@ const Signup = () => {
       );
 
       // ✅ Success
-      setSuccess(response.data.message || "Signup successful");
+      setSuccess(response.data?.msg || "Signup successful");
 
       // Optional: clear form
       setForm({
@@ -103,6 +108,15 @@ const Signup = () => {
         tracking: true,
         status: "active",
       });
+
+      if (response.data.success) {
+        toast.success(response.data.msg);
+        setTimeout(() => {
+          navigate("/admin/login");
+        }, 2000);
+      } else {
+        toast.error(response.data.msg);
+      }
 
       console.log("Signup Success:", response.data);
     } catch (err) {
@@ -158,6 +172,8 @@ const Signup = () => {
                 onChange={handleChange}
                 name="lastName"
               />
+            </div>
+            <div>
               <TextField
                 placeholder="User Name"
                 leftIcon={<User className="w-5 h-5" />}
@@ -254,6 +270,12 @@ const Signup = () => {
               Already have an account?{" "}
               <a className="text-primary" href="/admin/login">
                 Login
+              </a>
+            </p>
+            <p className="text-center text-sm text-gray-600">
+              Dont have username?{" "}
+              <a className="text-primary" href="/admin/generate-username">
+                Generate username
               </a>
             </p>
             <div className="pt-4">
