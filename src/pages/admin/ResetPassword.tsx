@@ -31,6 +31,8 @@ const ResetPassword = () => {
         "https://aigenix-api-app-services.three-shelves.com/users/reset-password",
         {
           email,
+          password,
+          otp: otpCode,
         },
         {
           headers: {
