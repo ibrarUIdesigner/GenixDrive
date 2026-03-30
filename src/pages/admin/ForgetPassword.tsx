@@ -6,10 +6,14 @@ import { TextField } from "../../components/sharedui/Input";
 import axios, { AxiosError } from "axios";
 import { Mail } from "lucide-react";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+
 const ForgetPassword = () => {
   const [email, setEmail] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
+
+  const navigate = useNavigate();
 
   const handleForgotPassword = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -38,6 +42,9 @@ const ForgetPassword = () => {
       const data = response.data;
       if (data.success) {
         toast.success("OTP sent to your email");
+        setTimeout(() => {
+          navigate("/admin/reset-password");
+        }, 2000);
       }
 
       console.log("response : ", data);
