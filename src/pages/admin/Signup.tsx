@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import axios, { AxiosError } from "axios";
-import ab1 from "../../assets/ab1.jpg";
+import ab1 from "../../assets/logup.png";
 import { Eye, EyeOff, Mail, Phone, User, Lock } from "lucide-react";
 import Button from "../../components/Button";
 import SubHeading from "../../components/sharedui/SubHeading";
 import { TextField } from "../../components/sharedui/Input";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
 interface SignupPayload {
@@ -268,15 +268,15 @@ const Signup = () => {
             </Button>
             <p className="text-center text-sm text-gray-600">
               Already have an account?{" "}
-              <a className="text-primary" href="/admin/login">
+              <Link className="text-primary" to="/admin/login">
                 Login
-              </a>
+              </Link>
             </p>
             <p className="text-center text-sm text-gray-600">
               Dont have username?{" "}
-              <a className="text-primary" href="/admin/generate-username">
+              <Link className="text-primary" to="/admin/generate-username">
                 Generate username
-              </a>
+              </Link>
             </p>
             <div className="pt-4">
               <div className="flex items-center gap-4">

@@ -22,28 +22,20 @@ import icon4 from "../../assets/icons/4.png";
 const Features2 = () => {
   const faqs = [
     {
-      q: "Do I need permission to track a friend?",
-      a: "Yes. Friends must accept your request before you can track them, and the connection lasts for a maximum of 8 hours.",
+      q: "How does the driving score improve safety?",
+      a: "The score reflects safe or risky behaviors, showing you where small changes can make driving much safer.",
     },
     {
-      q: "Can I see my driving safety score?",
+      q: "Can I see risky events from my past trips?",
       a: "Yes. Your driving behavior is analyzed to generate a safety score with insights such as speed, braking, and cornering.",
     },
     {
-      q: "Is GenixDrive available on both Android and iOS?",
+      q: "Does it work for motorcycles?",
       a: "Yes. You can download GenixDrive from the Play Store and App Store.",
     },
     {
-      q: "Does GenixDrive work without internet?",
+      q: "Do I need extra devices for safety insights?",
       a: "Core features require internet for live tracking and syncing. Some data is cached and updates when connectivity is restored.",
-    },
-    {
-      q: "Can parents monitor teen drivers?",
-      a: "Yes. Family Connect allows location sharing, place notifications, and trip summaries for peace of mind.",
-    },
-    {
-      q: "How do rewards work?",
-      a: "Safe driving earns points which can be redeemed for vouchers and offers available in the app.",
     },
   ];
   const [open, setOpen] = useState<number | null>(0);
