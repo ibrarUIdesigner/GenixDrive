@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios, { AxiosError } from "axios";
-import ab1 from "../../assets/ab1.jpg";
+import ab1 from "../../assets/logup.png";
 import { Eye, EyeOff, Mail, Phone, User, Lock } from "lucide-react";
 import Button from "../../components/Button";
 import SubHeading from "../../components/sharedui/SubHeading";

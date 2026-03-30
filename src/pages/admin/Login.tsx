@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ab1 from "../../assets/ab1.jpg";
+import ab1 from "../../assets/login.png";
 import { Eye, EyeOff, Mail, Lock, Phone } from "lucide-react";
 import Button from "../../components/Button";
 import SubHeading from "../../components/sharedui/SubHeading";
