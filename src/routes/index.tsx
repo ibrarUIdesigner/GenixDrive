@@ -23,6 +23,8 @@ import GenerateUsername from "../pages/admin/GenerateUsername";
 import VerifyUsername from "../pages/admin/VerifyUsername";
 import GenerateOTP from "../pages/admin/GenerateOTP";
 import VerifyOTP from "../pages/admin/VerifyOTP";
+import ForgetPassword from "../pages/admin/ForgetPassword";
+import ResetPassword from "../pages/admin/ResetPassword";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +52,8 @@ const router = createBrowserRouter([
       { path: "verify-username", element: <VerifyUsername /> },
       { path: "generate-otp", element: <GenerateOTP /> },
       { path: "verify-otp", element: <VerifyOTP /> },
+      { path: "forget-password", element: <ForgetPassword /> },
+      { path: "reset-password", element: <ResetPassword /> },
     ],
   },
   {

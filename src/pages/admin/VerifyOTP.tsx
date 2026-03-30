@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import SubHeading from "../../components/sharedui/SubHeading";
 import { TextField } from "../../components/sharedui/Input";
-import { Mail } from "lucide-react";
+import { Mail, RectangleEllipsis } from "lucide-react";
 import Button from "../../components/Button";
 import ab1 from "../../assets/ab1.jpg";
 
@@ -113,7 +113,7 @@ const VerifyOTP = () => {
                 maxLength={6}
                 type="text"
                 placeholder="Enter OTP code"
-                leftIcon={<Mail className="w-5 h-5" />}
+                leftIcon={<RectangleEllipsis className="w-5 h-5" />}
                 onChange={(e) => setOTPCode(e.target.value)}
                 value={otpCode}
               />
