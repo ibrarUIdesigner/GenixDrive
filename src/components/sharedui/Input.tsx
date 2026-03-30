@@ -15,6 +15,7 @@ type TextFieldProps = CommonProps & {
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
   name?: string;
+  maxLength?: number;
 };
 
 type SelectOption = { value: string; label: string };
@@ -40,10 +41,11 @@ export const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
       containerClassName = "",
       leftIcon,
       rightIcon,
+      maxLength,
       name,
       ...rest
     },
-    ref
+    ref,
   ) => {
     const leftPad = leftIcon ? "pl-10" : "pl-4";
     const rightPad = rightIcon ? "pr-10" : "pr-4";
@@ -63,6 +65,7 @@ export const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
             placeholder={placeholder}
             value={value}
             onChange={onChange}
+            maxLength={maxLength}
             className={`w-full rounded-lg border border-gray-300 ${leftPad} ${rightPad} py-3 outline-none focus:ring-2 focus:ring-primary ${className}`}
             {...rest}
           />
@@ -74,7 +77,7 @@ export const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
         </div>
       </div>
     );
-  }
+  },
 );
 
 export const SelectField = React.forwardRef<
@@ -94,7 +97,7 @@ export const SelectField = React.forwardRef<
       rightIcon,
       ...rest
     },
-    ref
+    ref,
   ) => {
     return (
       <div className={containerClassName}>
@@ -121,5 +124,5 @@ export const SelectField = React.forwardRef<
         </div>
       </div>
     );
-  }
+  },
 );
