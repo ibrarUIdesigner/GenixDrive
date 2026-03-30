@@ -65,6 +65,7 @@ const Login = () => {
 
       // TODO: redirect user
       if (data.success) {
+        localStorage.setItem("accessToken", data.data?.token || "");
         navigate("/admin/dashboard");
       }
     } catch (err) {
@@ -73,7 +74,7 @@ const Login = () => {
 
       if (error.response) {
         // Server responded with error
-        setError(error.response.data?.message || "Login failed");
+        setError(error.response.data?.msg || "Login failed");
       } else if (error.request) {
         // No response from server
         setError("No response from server. Please try again.");
@@ -150,9 +151,9 @@ const Login = () => {
               </Button>
               <p className="text-center text-sm text-gray-600">
                 Don't have an account?{" "}
-                <a className="text-primary" href="/admin/signup">
+                <Link className="text-primary" to="/admin/signup">
                   Sign up
-                </a>
+                </Link>
               </p>
               <div className="pt-4">
                 <p className="text-center text-sm text-gray-500 mb-3">
