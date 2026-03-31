@@ -26,6 +26,7 @@ import VerifyOTP from "../pages/admin/VerifyOTP";
 import ForgetPassword from "../pages/admin/ForgetPassword";
 import ResetPassword from "../pages/admin/ResetPassword";
 import ProtectedRoute from "../Protection/ProtectedRoutes";
+import PublicRoute from "../Protection/PublicRoute";
 
 const router = createBrowserRouter([
   {
@@ -45,7 +46,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/admin",
-    element: <AdminAuthLayout />,
+    element: (
+      <PublicRoute>
+        <AdminAuthLayout />
+      </PublicRoute>
+    ),
     children: [
       { path: "login", element: <AdminLogin /> },
       { path: "signup", element: <AdminSignup /> },
