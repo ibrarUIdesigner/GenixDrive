@@ -50,10 +50,10 @@ const ResetPassword = () => {
     } catch (err) {
       // ✅ Handle errors properly
       const error = err as AxiosError<any>;
-
       if (error.response) {
+        const resData = error.response.data;
         // Server responded with error
-        setError(error.message || "Login failed");
+        setError(resData.msg || "Login failed");
       } else if (error.request) {
         // No response from server
         setError("No response from server. Please try again.");

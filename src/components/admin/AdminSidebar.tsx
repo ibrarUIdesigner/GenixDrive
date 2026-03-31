@@ -1,6 +1,8 @@
 import ab1 from "../../assets/ab1.jpg";
 import { Home, Settings, CreditCard } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import Button from "../Button";
+import toast from "react-hot-toast";
 
 const AdminSidebar = () => {
   const location = useLocation();
@@ -10,6 +12,8 @@ const AdminSidebar = () => {
   const isSettings = location.pathname.endsWith("/admin/settings");
   const isSubscriptions = location.pathname.endsWith("/admin/subscriptions");
   // const isSubscriptions = location.pathname.endsWith("/admin/subscriptions");
+
+  const navigate = useNavigate();
   return (
     <aside className="bg-white md:h-screen md:sticky md:top-0 p-6 md:p-8 border-r border-gray-100 md:col-span-2">
       <div className="flex flex-col items-center gap-2 border-b border-gray-100 pb-10">
@@ -88,6 +92,22 @@ const AdminSidebar = () => {
           <span>Subscriptions</span>
         </Link>
       </nav>
+
+      <Button
+        className="!text-gray-900 !border !border-gray-900 mt-10  w-full"
+        variant="outline"
+        size="sm"
+        isFullBtn
+        onClick={() => {
+          localStorage.clear();
+          toast.success("Logout successfully");
+          setTimeout(() => {
+            navigate("/admin/login");
+          }, 2000);
+        }}
+      >
+        Logout
+      </Button>
     </aside>
   );
 };

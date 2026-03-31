@@ -25,6 +25,7 @@ import GenerateOTP from "../pages/admin/GenerateOTP";
 import VerifyOTP from "../pages/admin/VerifyOTP";
 import ForgetPassword from "../pages/admin/ForgetPassword";
 import ResetPassword from "../pages/admin/ResetPassword";
+import ProtectedRoute from "../Protection/ProtectedRoutes";
 
 const router = createBrowserRouter([
   {
@@ -58,7 +59,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/admin",
-    element: <AdminAppLayout />,
+    element: (
+      <ProtectedRoute>
+        <AdminAppLayout />
+      </ProtectedRoute>
+    ),
     children: [
       { path: "dashboard", element: <AdminDashboard /> },
       { path: "my-trips", element: <AdminMyTrips /> },
