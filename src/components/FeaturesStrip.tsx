@@ -1,4 +1,4 @@
-import { Car, Share2, TrendingUp, HeartHandshake } from "lucide-react";
+// import { Car, Share2, TrendingUp, HeartHandshake } from "lucide-react";
 
 import Paragraph from "./sharedui/Paragraph";
 import { motion } from "framer-motion";

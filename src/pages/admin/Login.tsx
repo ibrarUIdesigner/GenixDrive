@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ab1 from "../../assets/login.png";
-import { Eye, EyeOff, Mail, Lock, Phone } from "lucide-react";
+import { Eye, EyeOff, Lock, Phone } from "lucide-react";
 import Button from "../../components/Button";
 import SubHeading from "../../components/sharedui/SubHeading";
 import { TextField } from "../../components/sharedui/Input";
