@@ -48,7 +48,7 @@ const FeatureSplitCard: React.FC<FeatureSplitCardProps> = ({
       <div
         className={`${
           reverse ? "md:col-span-4 md:order-2" : "md:col-span-4 md:order-1"
-        } h-[400px] md:h-auto p-5 ${containerBg} rounded-2xl relative overflow-hidden`}
+        } min-h-[404px] md:h-auto p-5 ${containerBg} rounded-2xl relative overflow-hidden`}
       >
         <motion.img
           className="absolute top-0 left-0 w-full h-full object-cover"
@@ -59,7 +59,7 @@ const FeatureSplitCard: React.FC<FeatureSplitCardProps> = ({
         />
 
         {overlay && (
-          <div className="absolute top-0 left-0 w-full h-full bg-black/50" />
+          <div className="absolute top-0 left-0 w-full h-full bg-black/10" />
         )}
       </div>
     </motion.div>

@@ -1,4 +1,4 @@
-import frame from "../../assets/frame.png";
+import frame from "../../assets/fframe.png";
 import SubHeading from "../../components/sharedui/SubHeading";
 import Paragraph from "../../components/sharedui/Paragraph";
 import { CircleCheck } from "lucide-react";
@@ -17,8 +17,18 @@ import heart from "../../assets/icons/heart.jpeg";
 const Pricing = () => {
   return (
     <div className="pricing">
-      <div className="banner">
+      <div className="banner relative">
         <img src={frame} alt="Pricing banner" className="w-full" />
+        <SubHeading
+          weight="medium"
+          size="4xl"
+          className="absolute text-[60px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white"
+        >
+          <p>Our Pricing Plans </p>
+          <p>
+            for <span className="text-light-green">Every Driver</span>
+          </p>
+        </SubHeading>
       </div>
 
       {/* PRICE CARDS SECTION */}

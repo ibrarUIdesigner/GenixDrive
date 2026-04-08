@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import frame from "../../assets/featursabot/b2.png";
+import frame from "../../assets/featursabot/b22.png";
 import frameMobile from "../../assets/FrameMobile.png";
 
 import SubHeading from "../../components/sharedui/SubHeading";

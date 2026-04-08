@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import frame from "../../assets/7th sec copy.png";
+import frame from "../../assets/7thsky.png";
 import frameMobile from "../../assets/FrameMobile.png";
 
 import SubHeading from "../../components/sharedui/SubHeading";
@@ -115,7 +115,7 @@ const Features = () => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="md:col-span-3 p-5 h-[400px] md:h-auto  bg-secondary rounded-2xl overflow-hidden z-10 relative">
+          <div className="md:col-span-3 p-5 min-h-[404px] md:h-auto  bg-secondary rounded-2xl overflow-hidden z-10 relative">
             <img
               className="absolute top-0 left-0 w-full h-full object-cover"
               src={ab1}
@@ -200,7 +200,7 @@ const Features = () => {
               </Paragraph>
             </div>
           </div>
-          <div className="md:col-span-3 h-[400px] md:h-auto p-5 bg-light-green rounded-2xl relative overflow-hidden">
+          <div className="md:col-span-3 min-h-[404px] md:h-auto p-5 bg-light-green rounded-2xl relative overflow-hidden">
             <img
               className="absolute top-0 left-0 w-full h-full object-cover"
               src={ab2}
@@ -217,7 +217,7 @@ const Features = () => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="md:col-span-3 p-5 h-[400px] md:h-auto  bg-secondary rounded-2xl overflow-hidden z-10 relative">
+          <div className="md:col-span-3 p-5 min-h-[404px] md:h-auto  bg-secondary rounded-2xl overflow-hidden z-10 relative">
             <img
               className="absolute top-0 left-0 w-full h-full object-cover"
               src={ab3}
@@ -300,7 +300,7 @@ const Features = () => {
               </Paragraph>
             </div>
           </div>
-          <div className="md:col-span-3 h-[400px] md:h-auto p-5 bg-light-green rounded-2xl relative overflow-hidden">
+          <div className="md:col-span-3 min-h-[404px] md:h-auto p-5 bg-light-green rounded-2xl relative overflow-hidden">
             <img
               className="absolute top-0 left-0 w-full h-full object-cover"
               src={ab4}
