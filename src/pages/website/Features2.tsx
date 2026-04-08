@@ -75,7 +75,7 @@ const Features2 = () => {
         >
           <SubHeading size="4xl" className="mb-5 mainheading">
             Driving
-            <span className="text-secondary">Insights</span>
+            <span className="text-secondary"> Insights</span>
           </SubHeading>
 
           <Paragraph size="sm" className="featuerHerText">

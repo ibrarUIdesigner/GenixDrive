@@ -129,7 +129,7 @@ const Navbar = () => {
           size="lg"
           variant={"primary"}
         >
-          {isHome ? "Sign Up/ Login" : "get started"}
+          {isHome ? "Sign Up/ Login" : "login"}
         </Button>
         {!isHome && (
           <Button size="lg" variant={"secondary"}>
@@ -268,7 +268,7 @@ const Navbar = () => {
             </div>
             <div className="mt-8 flex flex-col items-stretch gap-4">
               <Button size="lg" variant={isHome ? "primary" : "secondary"}>
-                {isHome ? "Sign Up/ Login" : "get started"}
+                {isHome ? "Sign Up/ Login" : "login"}
               </Button>
               {!isAbout && !isHome && (
                 <Button size="lg" variant={"secondary"}>

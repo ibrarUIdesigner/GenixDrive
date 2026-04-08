@@ -11,7 +11,7 @@ import SectionHeading from "../../components/web/SectionHeading";
 import ab1 from "../../assets/keyfeatureB.jpg";
 import ab2 from "../../assets/ff.png";
 import ab3 from "../../assets/ff3.jpg";
-import ab4 from "../../assets/ff4.png";
+import ab4 from "../../assets/ff44.png";
 
 import riskfree from "../../assets/featursabot/1.png";
 
@@ -183,7 +183,7 @@ const Features = () => {
                 weight="medium"
                 className="mb-4"
               >
-                2. Temporary Friend Tracking
+                2. Temporary Friend Monitoring
               </SubHeading>
               <Paragraph
                 size="sm"
@@ -311,7 +311,7 @@ const Features = () => {
       </motion.section>
 
       <motion.section className="bg-white  px-[56px] py-[120px] padding-50">
-        <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 items-center">
+        <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-12  items-center">
           <div className="content">
             <SubHeading
               size="4xl"

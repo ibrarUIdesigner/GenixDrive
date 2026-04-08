@@ -9,8 +9,9 @@ import StoreActionsButtons from "../../components/web/StoreActionsButtons";
 import SectionHeading from "../../components/web/SectionHeading";
 
 import kf1 from "../../assets/features/4kf1.png";
-import kf2 from "../../assets/features/4kf2.png";
-import kf3 from "../../assets/features/44kf3.png";
+import kf2 from "../../assets/features/4ff22.png";
+// import kf2 from "../../assets/features/4kf2.png";
+import kf3 from "../../assets/features/4kf2.png";
 import kf4 from "../../assets/features/4kf4.png";
 import FeatureSplitCard from "../../components/web/FeatureGridContainer";
 
