@@ -4,8 +4,10 @@ import grenStr from "../assets/grnstr.png";
 import Button from "./Button";
 import StoreActionsButtons from "./web/StoreActionsButtons";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
   const container = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -70,7 +72,11 @@ const Hero = () => {
             className="hidden md:flex flex-wrap gap-4 mt-4 justify-center md:justify-start"
             variants={item}
           >
-            <Button variant="primary" size="md">
+            <Button
+              variant="primary"
+              size="md"
+              onClick={() => navigate("../admin/login")}
+            >
               Get Started
             </Button>
           </motion.div>

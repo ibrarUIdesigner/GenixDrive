@@ -3,7 +3,7 @@ import Paragraph from "../../components/sharedui/Paragraph";
 import ReadytoDrive from "../../components/web/ReadytoDrive";
 
 import demoMobile from "../../assets/demoMobile.png";
-import demoDesktop from "../../assets/demoDEsktopt.png";
+import demoDesktop from "../../assets/demoDEsktopt1.png";
 import { motion } from "framer-motion";
 
 import frame from "../../assets/7th sec copy.png";
@@ -16,7 +16,7 @@ const Demo = () => {
     <div>
       {/* BANNER */}
       {/* BANNER */}
-      <section className="banner h-screen overflow-hidden relative">
+      <section className="banner bg-white h-screen overflow-hidden relative">
         {/* Desktop Image */}
         <motion.img
           src={frame}

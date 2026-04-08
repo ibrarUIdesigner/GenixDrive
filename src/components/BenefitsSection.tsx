@@ -1,6 +1,6 @@
 import img1 from "../assets/brings1.jpg";
 import img2 from "../assets/brings2.jpg";
-import img3 from "../assets/brings3.png";
+import img3 from "../assets/brings22.png";
 import blueStr from "../assets/bluestr.png";
 import SubHeading from "./sharedui/SubHeading";
 import Paragraph from "./sharedui/Paragraph";
@@ -15,18 +15,21 @@ const BenefitsSection = () => {
       title: "Enhanced Safety & Peace of Mind",
       description:
         "With instant alerts, geo-fencing, and family location sharing, GenixDrive ensures drivers and loved ones stay protected on every journey.",
-    },
-    {
-      image: img2,
-      title: "Smarter Driving & Vehicle Management",
-      description:
-        "Driving insights, trip history, and smart telematics help users improve their driving habits, extend vehicle health, and make every ride more efficient and reliable.",
+      redirectURL: "features1",
     },
     {
       image: img3,
+      title: "Smarter Driving & Vehicle Management",
+      description:
+        "Driving insights, trip history, and smart telematics help users improve their driving habits, extend vehicle health, and make every ride more efficient and reliable.",
+      redirectURL: "features2",
+    },
+    {
+      image: img2,
       title: "Motivation Through Rewards & Connectivity",
       description:
         "By gamifying safe driving and enabling family or social connections, GenixDrive not only encourages responsible driving but also makes safety engaging and rewarding.",
+      redirectURL: "features3",
     },
   ];
 
@@ -114,7 +117,7 @@ const BenefitsSection = () => {
                 </Paragraph>
 
                 <Link
-                  to="#"
+                  to={`../${item.redirectURL}`}
                   className="flex gap-1.5 items-center mt-4 text-sm font-medium text-secondary font-bold uppercase underline transition-colors duration-200 ease-in-out"
                 >
                   <span>Read More</span>

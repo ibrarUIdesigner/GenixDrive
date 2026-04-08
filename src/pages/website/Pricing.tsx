@@ -90,7 +90,8 @@ const Pricing = () => {
                 <span>Driver Rewards & Emergency Response</span>
               </p>
               <p className="flex items-center gap-4">
-                <CircleCheck size={18} /> <span>Event Planning & Tracking</span>
+                <CircleCheck size={18} />{" "}
+                <span>Event Planning & Monitoring</span>
               </p>
             </div>
             <div className="text-center">

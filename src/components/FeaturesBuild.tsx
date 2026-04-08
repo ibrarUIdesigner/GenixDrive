@@ -1,20 +1,22 @@
 import doodle from "../assets/Doodle.png";
 
-import feature1 from "../assets/fs/1.png";
+import feature1 from "../assets/fs/f11.png";
 import feature2 from "../assets/features/2.png";
 import feature3 from "../assets/fs/3.png";
 import feature4 from "../assets/fs/4.png";
-import feature5 from "../assets/fs/5.png";
+import feature5 from "../assets/fs/f5.png";
 import feature6 from "../assets/fs/6.png";
 import feature7 from "../assets/fs/7.png";
-import feature8 from "../assets/fs/8.png";
+import feature8 from "../assets/fs/f8.png";
 import path from "../assets/path.png";
 import grystr from "../assets/grystr.png";
 import Button from "./Button";
 import Paragraph from "./sharedui/Paragraph";
 import SubHeading from "./sharedui/SubHeading";
+import { useNavigate } from "react-router-dom";
 
 const FeaturesBuild = () => {
+  const navigate = useNavigate();
   return (
     <section className="bg-secondary text-white font-cairo padding-50 py-[116px] px-[58px] relative overflow-hidden">
       <img
@@ -59,10 +61,12 @@ const FeaturesBuild = () => {
                 are safe.
               </span>
             </Paragraph>
-            <Button size="lg">Learn More</Button>
+            <Button onClick={() => navigate("../features")} size="lg">
+              Learn More
+            </Button>
           </div>
           <div className="relative order-0 md:order-1   lg:order-none">
-            <img src={grystr} className="absolute -left-20" alt="" />
+            {/* <img src={grystr} className="absolute -left-20" alt="" /> */}
             <div className="w-full h-[220px]  md:w-[539px] md:h-[440px]  rounded-2xl">
               <img
                 src={feature1}
@@ -104,7 +108,9 @@ const FeaturesBuild = () => {
                 every mile with consistent protection.
               </span>
             </Paragraph>
-            <Button size="lg">Learn More</Button>
+            <Button onClick={() => navigate("../features3")} size="lg">
+              Learn More
+            </Button>
           </div>
         </div>
         {/* Feature3 */}
@@ -168,7 +174,9 @@ const FeaturesBuild = () => {
               everyone together in one chat, and watch the group’s movement
               unfold in real time with the race screen.
             </Paragraph>
-            <Button size="lg">Learn More</Button>
+            <Button onClick={() => navigate("../features")} size="lg">
+              Learn More
+            </Button>
           </div>
         </div>
         {/* Feature5 */}
@@ -190,7 +198,9 @@ const FeaturesBuild = () => {
               while they stay safe and protected.
             </Paragraph>
 
-            <Button size="lg">Learn More</Button>
+            <Button onClick={() => navigate("../features1")} size="lg">
+              Learn More
+            </Button>
           </div>
           <div className="relative  lg:order-none">
             <div className="w-full h-[220px]  md:w-[539px] md:h-[440px]  rounded-2xl">
@@ -269,12 +279,12 @@ const FeaturesBuild = () => {
           </div>
           <div className="build-container text-center md:text-left flex flex-col gap-4">
             <SubHeading color="white" weight="bold" size="3xl">
-              Device Tracking
+              Device Monitoring
             </SubHeading>
             <Paragraph size="sm" color="white">
               Power up your GenixDrive experience with seamless
               device-to-vehicle connectivity. Install the GenixDrive device and
-              tap into the full intelligence of your vehicle—live tracking,
+              tap into the full intelligence of your vehicle monitoring,
               performance monitoring, and safety insights all delivered to your
               app instantly
             </Paragraph>

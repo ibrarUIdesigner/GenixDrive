@@ -7,10 +7,10 @@ import ab1 from "../../assets/ab1.jpg";
 import ab2 from "../../assets/ab2.png";
 import aboutHeroImg from "../../assets/aboutHero.png";
 
-import kf1 from "../../assets/kf1.png";
-import kf2 from "../../assets/kf2.png";
+import kf1 from "../../assets/kf11.png";
+import kf2 from "../../assets/kf22.png";
 import kf3 from "../../assets/kf3.png";
-import kf4 from "../../assets/kf4.png";
+import kf4 from "../../assets/kf44.png";
 import kf5 from "../../assets/kf5.png";
 
 import grnstr from "../../assets/grnstr.png";
@@ -177,7 +177,7 @@ const About = () => {
               color="dark"
               className="mb-1"
             >
-              Trip & Behavior Tracking
+              Trip & Behavior Monitoring
             </SubHeading>
             <Paragraph
               size="base"

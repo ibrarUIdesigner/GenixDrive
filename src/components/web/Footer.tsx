@@ -3,8 +3,10 @@ import Paragraph from "../sharedui/Paragraph";
 import { Linkedin, Youtube, Twitter } from "lucide-react";
 import logo from "../../assets/logo.png";
 import StoreActionsButtons from "./StoreActionsButtons";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <footer className="font-cairo foooter text-center md:text-left bg-primary text-white px-[58px] py-12 rounded-t-[50px]">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-10 justify-between">
@@ -44,17 +46,28 @@ const Footer = () => {
         </div>
 
         <div>
-          <SubHeading color="white" weight="bold" size="4xl" className="mb-4 ">
+          <SubHeading
+            color="white"
+            weight="medium"
+            size="4xl"
+            className="mb-4 "
+          >
             Quick <p>Access</p>
           </SubHeading>
           <ul className="space-y-3 text-sm">
             <li>
-              <a className="hover:opacity-90" href="#">
+              <a
+                onClick={() => navigate("")}
+                className="hover:opacity-90 cursor-pointer"
+              >
                 Home
               </a>
             </li>
             <li>
-              <a className="hover:opacity-90" href="#">
+              <a
+                onClick={() => navigate("../about")}
+                className="hover:opacity-90 cursor-pointer"
+              >
                 About
               </a>
             </li>
@@ -64,12 +77,18 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a className="hover:opacity-90" href="#">
+              <a
+                onClick={() => navigate("../pricing")}
+                className="hover:opacity-90 cursor-pointer"
+              >
                 Pricing
               </a>
             </li>
             <li>
-              <a className="hover:opacity-90" href="#">
+              <a
+                onClick={() => navigate("../blogs")}
+                className="hover:opacity-90 cursor-pointer"
+              >
                 Blogs
               </a>
             </li>
@@ -77,27 +96,39 @@ const Footer = () => {
         </div>
 
         <div>
-          <SubHeading color="white" weight="bold" size="4xl" className="mb-4">
+          <SubHeading color="white" weight="medium" size="4xl" className="mb-4">
             Features
           </SubHeading>
           <ul className="space-y-3 text-sm">
             <li>
-              <a className="hover:opacity-90" href="#">
+              <a
+                className="hover:opacity-90 cursor-pointer"
+                onClick={() => navigate("../features")}
+              >
                 Social & Family Connect
               </a>
             </li>
             <li>
-              <a className="hover:opacity-90" href="#">
+              <a
+                className="hover:opacity-90 cursor-pointer"
+                onClick={() => navigate("../features1")}
+              >
                 Safety & Protection
               </a>
             </li>
             <li>
-              <a className="hover:opacity-90" href="#">
+              <a
+                className="hover:opacity-90 cursor-pointer"
+                onClick={() => navigate("../features2")}
+              >
                 Driving Insights
               </a>
             </li>
             <li>
-              <a className="hover:opacity-90" href="#">
+              <a
+                className="hover:opacity-90 cursor-pointer"
+                onClick={() => navigate("../features3")}
+              >
                 Gamification & Rewards
               </a>
             </li>
@@ -105,7 +136,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <SubHeading color="white" weight="bold" size="4xl" className="mb-4">
+          <SubHeading color="white" weight="medium" size="4xl" className="mb-4">
             Download <p>Now</p>
           </SubHeading>
           <StoreActionsButtons className="!block footer0actions" />
