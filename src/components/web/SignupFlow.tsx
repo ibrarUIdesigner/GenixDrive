@@ -14,7 +14,7 @@ const SignupFlow = () => {
   return (
     <section className="bg-white text-black font-cairo p-[70px] md:p-[135px] padding-50">
       <SectionHeading
-        className="paratExt"
+        className="paratExt w-full md:w-[560px]"
         paraText="Get started in minutes download the app or use our optional device,
           and begin protecting your loved ones with smart monitoring and peace
           of mind."
@@ -81,7 +81,7 @@ const SignupFlow = () => {
                 weight="light"
                 className="leading-5 text"
               >
-                Order the GenixDrive device to unlock live vehicle tracking,
+                Order the GenixDrive device to unlock live vehicle monitoring,
                 real-time safety alerts, and advanced driving insights. Install
                 it, connect to the app, and start monitoring instantly.
               </Paragraph>
@@ -143,7 +143,7 @@ const SignupFlow = () => {
                 className="leading-5 text"
               >
                 Once everything is set up, you can monitor driving behavior,
-                receive safety alerts, and track your family’s safety.
+                receive safety alerts, and monitor your family’s safety.
               </Paragraph>
               <img
                 src={step4}

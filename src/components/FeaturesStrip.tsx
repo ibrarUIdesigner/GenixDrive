@@ -1,4 +1,3 @@
-// import { Car, Share2, TrendingUp, HeartHandshake } from "lucide-react";
 
 import Paragraph from "./sharedui/Paragraph";
 import { motion } from "framer-motion";
@@ -8,6 +7,10 @@ import icon1 from "../assets/icons/h1.png";
 import icon2 from "../assets/icons/h2.png";
 import icon3 from "../assets/icons/h3.png";
 import icon4 from "../assets/icons/h4.png";
+import h1 from "../assets/hover/1.png";
+import h2 from "../assets/hover/2.png";
+import h3 from "../assets/hover/3.png";
+import h4 from "../assets/hover/4.png";
 
 const FeaturesStrip = () => {
   const features = [
@@ -20,6 +23,7 @@ const FeaturesStrip = () => {
       bgColor: "bg-white",
       textColor: "text-black",
       iconColor: "text-black",
+      himage: h1,
     },
     {
       id: 2,
@@ -30,6 +34,7 @@ const FeaturesStrip = () => {
       bgColor: "bg-light-green",
       textColor: "text-black",
       iconColor: "text-black",
+      himage: h2,
     },
     {
       id: 3,
@@ -40,6 +45,7 @@ const FeaturesStrip = () => {
       bgColor: "bg-white",
       textColor: "text-black",
       iconColor: "text-black",
+      himage: h3,
     },
     {
       id: 4,
@@ -50,6 +56,7 @@ const FeaturesStrip = () => {
       bgColor: "bg-secondary",
       textColor: "text-white",
       iconColor: "text-white",
+      himage: h4,
     },
   ];
 
@@ -107,6 +114,14 @@ const FeaturesStrip = () => {
             >
               {feature.description}
             </Paragraph>
+            {/* 🔹 IMAGE (Show on hover) */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300">
+              <img
+                src={feature.himage ?? ""}
+                alt=""
+                className="w-full h-full object-cover"
+              />
+            </div>
             {/* <span className="mt-6 h-1 w-16 rounded-full bg-current/20 transition-all duration-300 group-hover:w-24 group-hover:bg-current/40" /> */}
           </motion.div>
         ))}

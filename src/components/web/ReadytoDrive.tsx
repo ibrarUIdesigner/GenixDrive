@@ -39,7 +39,7 @@ const ReadytoDrive = () => {
             className="!rounded-full !max-w-[270px] mt-10 bg-white !text-gray-800 hover:bg-white/90"
             size="lg"
           >
-            Experince Demo Now
+            VISIT Demo Now
           </Button>
         </div>
         <img

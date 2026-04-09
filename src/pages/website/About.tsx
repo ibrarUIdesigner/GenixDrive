@@ -7,10 +7,10 @@ import ab1 from "../../assets/ab1.jpg";
 import ab2 from "../../assets/ab2.png";
 import aboutHeroImg from "../../assets/aboutHero.png";
 
-import kf1 from "../../assets/kf1.png";
-import kf2 from "../../assets/kf2.png";
+import kf1 from "../../assets/kf11.png";
+import kf2 from "../../assets/kf22.png";
 import kf3 from "../../assets/kf3.png";
-import kf4 from "../../assets/kf4.png";
+import kf4 from "../../assets/kf44.png";
 import kf5 from "../../assets/kf5.png";
 
 import grnstr from "../../assets/grnstr.png";
@@ -56,7 +56,7 @@ const About = () => {
         </SectionHeading>
 
         <div className="grid md:grid-cols-5 gap-5">
-          <div className="md:col-span-3 p-5 h-[400px] md:h-auto  bg-secondary rounded-2xl overflow-hidden z-10 relative">
+          <div className="md:col-span-3 p-5 min-h-[404px] md:h-auto  bg-secondary rounded-2xl overflow-hidden z-10 relative">
             <img
               className="absolute top-0 left-0 w-full h-full object-cover"
               src={ab1}
@@ -131,7 +131,7 @@ const About = () => {
               </Paragraph>
             </div>
           </div>
-          <div className="md:col-span-3 h-[400px] md:h-auto p-5 bg-light-green rounded-2xl relative overflow-hidden">
+          <div className="md:col-span-3 min-h-[404px] md:h-auto p-5 bg-light-green rounded-2xl relative overflow-hidden">
             <img
               className="absolute top-0 left-0 w-full h-full object-cover"
               src={ab2}
@@ -177,7 +177,7 @@ const About = () => {
               color="dark"
               className="mb-1"
             >
-              Trip & Behavior Tracking
+              Trip & Behavior Monitoring
             </SubHeading>
             <Paragraph
               size="base"

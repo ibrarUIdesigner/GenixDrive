@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import frame from "../../assets/7th sec copy.png";
+import frame from "../../assets/7thsky.png";
 import frameMobile from "../../assets/FrameMobile.png";
 
 import SubHeading from "../../components/sharedui/SubHeading";
@@ -11,7 +11,7 @@ import SectionHeading from "../../components/web/SectionHeading";
 import ab1 from "../../assets/keyfeatureB.jpg";
 import ab2 from "../../assets/ff.png";
 import ab3 from "../../assets/ff3.jpg";
-import ab4 from "../../assets/ff4.png";
+import ab4 from "../../assets/ff44.png";
 
 import riskfree from "../../assets/featursabot/1.png";
 
@@ -115,7 +115,7 @@ const Features = () => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="md:col-span-3 p-5 h-[400px] md:h-auto  bg-secondary rounded-2xl overflow-hidden z-10 relative">
+          <div className="md:col-span-3 p-5 min-h-[404px] md:h-auto  bg-secondary rounded-2xl overflow-hidden z-10 relative">
             <img
               className="absolute top-0 left-0 w-full h-full object-cover"
               src={ab1}
@@ -183,7 +183,7 @@ const Features = () => {
                 weight="medium"
                 className="mb-4"
               >
-                2. Temporary Friend Tracking
+                2. Temporary Friend Monitoring
               </SubHeading>
               <Paragraph
                 size="sm"
@@ -200,7 +200,7 @@ const Features = () => {
               </Paragraph>
             </div>
           </div>
-          <div className="md:col-span-3 h-[400px] md:h-auto p-5 bg-light-green rounded-2xl relative overflow-hidden">
+          <div className="md:col-span-3 min-h-[404px] md:h-auto p-5 bg-light-green rounded-2xl relative overflow-hidden">
             <img
               className="absolute top-0 left-0 w-full h-full object-cover"
               src={ab2}
@@ -217,7 +217,7 @@ const Features = () => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="md:col-span-3 p-5 h-[400px] md:h-auto  bg-secondary rounded-2xl overflow-hidden z-10 relative">
+          <div className="md:col-span-3 p-5 min-h-[404px] md:h-auto  bg-secondary rounded-2xl overflow-hidden z-10 relative">
             <img
               className="absolute top-0 left-0 w-full h-full object-cover"
               src={ab3}
@@ -300,7 +300,7 @@ const Features = () => {
               </Paragraph>
             </div>
           </div>
-          <div className="md:col-span-3 h-[400px] md:h-auto p-5 bg-light-green rounded-2xl relative overflow-hidden">
+          <div className="md:col-span-3 min-h-[404px] md:h-auto p-5 bg-light-green rounded-2xl relative overflow-hidden">
             <img
               className="absolute top-0 left-0 w-full h-full object-cover"
               src={ab4}
@@ -311,7 +311,7 @@ const Features = () => {
       </motion.section>
 
       <motion.section className="bg-white  px-[56px] py-[120px] padding-50">
-        <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 items-center">
+        <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-12  items-center">
           <div className="content">
             <SubHeading
               size="4xl"

@@ -7,39 +7,42 @@ import SignupFlow from "../../components/web/SignupFlow";
 import ReadytoDrive from "../../components/web/ReadytoDrive";
 import SectionHeading from "../../components/web/SectionHeading";
 import cric from "../../assets/circ.png";
+import user from "../../assets/bloguser.png";
 
 import blog1 from "../../assets/blogs/1.jpg";
 import blog2 from "../../assets/blogs/2.png";
 import SubHeading from "../../components/sharedui/SubHeading";
 import Paragraph from "../../components/sharedui/Paragraph";
 import { useNavigate } from "react-router-dom";
+import { Timer } from "lucide-react";
 
 const Home = () => {
   const BlogsRecords = [
     {
       blogImg: blog1,
       category: "Telematics",
-      title: "6 Tools & Resources We Used While Developing AlignUI",
+      title:
+        "How GenixDrive is Redefining Family Safety and Smarter Driving in Pakistan",
       description:
-        "Discover how telematics technology improves vehicle safety, efficiency, and real-time monitoring for modern drivers.",
+        "We have received multiple questions about how we achieve efficiency during the development process of AlignUI Design System. So, I thought it would be a good idea to share the six most significant tools and resources we used in creating our design system. Let’s dive in!",
       user: {
         userName: "Onur Eren",
-        userImg:
-          "https://img.freepik.com/free-photo/front-view-business-woman-suit_23-2148603018.jpg?semt=ais_hybrid&w=740&q=80",
-        date: "2026-02-10",
+        userImg: user,
+        date: "@createonur",
+        readTime: "4 min read",
       },
     },
     {
       blogImg: blog2,
       category: "Maintenance",
-      title: "Story of AlignUI Design System: From an Idea to the Release",
+      title: "what makes Genix Drive Different",
       description:
-        "Regular maintenance ensures long vehicle life. Learn simple steps to prevent breakdowns and reduce repair costs.",
+        "At first, it was just an idea of Erşad. Then we combined our skills and shaped AlignUI Design System over approximately 250 days. When I look back, I see nothing but hard work and dedication. That's the main reason why I wanted to write this blog, to inspire and inform.",
       user: {
         userName: "Onur Eren",
-        userImg:
-          "https://img.freepik.com/free-photo/portrait-smiling-businesswoman-posing_23-2148603020.jpg?semt=ais_hybrid&w=740&q=80",
+        userImg: user,
         date: "2026-02-08",
+        readTime: "5 min read",
       },
     },
   ];
@@ -81,7 +84,7 @@ const Home = () => {
               >
                 <div className="blog-img mb-4">
                   <img
-                    className="w-full h-[240px]  object-cover rounded-2xl"
+                    className="w-full h-[240px]  object-fill rounded-2xl"
                     src={blog.blogImg}
                     alt=""
                   />
@@ -98,29 +101,34 @@ const Home = () => {
                   </Paragraph>
                 </div>
                 <div className="user-details mt-5">
-                  <div className="flex items-center">
-                    <img
-                      className="w-8 h-8 rounded-full mr-2 object-cover"
-                      src={blog.user.userImg}
-                      alt=""
-                    />
-                    <div>
-                      <Paragraph
-                        className="blog-user"
-                        color="default"
-                        size="sm"
-                        weight="bold"
-                      >
-                        {blog.user.userName}
-                      </Paragraph>
-                      <Paragraph
-                        color="muted"
-                        size="sm"
-                        className="text-gray-600 blog-date"
-                      >
-                        {blog.user.date}
-                      </Paragraph>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <img
+                        className="w-8 h-8 rounded-full mr-2 object-cover"
+                        src={blog.user.userImg}
+                        alt=""
+                      />
+                      <div>
+                        <Paragraph
+                          className="blog-user"
+                          color="default"
+                          size="sm"
+                          weight="bold"
+                        >
+                          {blog.user.userName}
+                        </Paragraph>
+                        <Paragraph
+                          color="muted"
+                          size="sm"
+                          className="text-gray-600 blog-date"
+                        >
+                          {blog.user.date}
+                        </Paragraph>
+                      </div>
                     </div>
+                    <p className="text-xs text-gray-600 flex items-center gap-1 justify-center">
+                      <Timer size={16} /> {blog.user.readTime}
+                    </p>
                   </div>
                 </div>
               </div>

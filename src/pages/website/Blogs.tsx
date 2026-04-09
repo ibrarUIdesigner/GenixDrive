@@ -1,4 +1,4 @@
-import frame from "../../assets/frame2.png";
+import frame from "../../assets/fframe.png";
 import BlogBanner from "../../assets/blogbaner.jpg";
 import userPlaceHolder from "../../assets/userPlaceHolder.png";
 
@@ -101,8 +101,17 @@ const Blogs = () => {
   return (
     <div className="blogs">
       {/* BANNER */}
-      <div className="banner">
+      <div className="banner relative">
         <img src={frame} alt="Pricing banner" className="w-full" />
+        <SubHeading
+          weight="medium"
+          size="4xl"
+          className="absolute text-[60px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white"
+        >
+          <p>
+            Our <span className="text-light-green">Blogs</span>
+          </p>
+        </SubHeading>
       </div>
 
       {/* BLOGS SECTION */}
