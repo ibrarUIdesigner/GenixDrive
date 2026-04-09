@@ -5,7 +5,7 @@ import Paragraph from "../../components/sharedui/Paragraph";
 
 import ab1 from "../../assets/ab1.jpg";
 import ab2 from "../../assets/ab2.png";
-import aboutHeroImg from "../../assets/aboutHero.png";
+import aboutHeroImg from "../../assets/aboutHero.svg";
 
 import kf1 from "../../assets/kf11.png";
 import kf2 from "../../assets/kf22.png";
