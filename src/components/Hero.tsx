@@ -1,4 +1,4 @@
-import centerMobile from "../assets/homeMobile.png";
+import centerMobile from "../assets/homeMobile1.png";
 import grenStr from "../assets/grnstr.png";
 
 import Button from "./Button";
