@@ -61,7 +61,13 @@ const FeaturesBuild = () => {
                 are safe.
               </span>
             </Paragraph>
-            <Button onClick={() => navigate("../features")} size="lg">
+            <Button
+              onClick={() => {
+                navigate("../features");
+                window.scrollTo(0, 0);
+              }}
+              size="lg"
+            >
               Learn More
             </Button>
           </div>
@@ -108,7 +114,12 @@ const FeaturesBuild = () => {
                 every mile with consistent protection.
               </span>
             </Paragraph>
-            <Button onClick={() => navigate("../features3")} size="lg">
+            <Button
+              onClick={() => {
+                (navigate("../features3"), window.scrollTo(0, 0));
+              }}
+              size="lg"
+            >
               Learn More
             </Button>
           </div>
@@ -174,7 +185,12 @@ const FeaturesBuild = () => {
               everyone together in one chat, and watch the group’s movement
               unfold in real time with the race screen.
             </Paragraph>
-            <Button onClick={() => navigate("../features")} size="lg">
+            <Button
+              onClick={() => {
+                (navigate("../features"), window.scrollTo(0, 0));
+              }}
+              size="lg"
+            >
               Learn More
             </Button>
           </div>
@@ -198,7 +214,12 @@ const FeaturesBuild = () => {
               while they stay safe and protected.
             </Paragraph>
 
-            <Button onClick={() => navigate("../features1")} size="lg">
+            <Button
+              onClick={() => {
+                (navigate("../features1"), window.scrollTo(0, 0));
+              }}
+              size="lg"
+            >
               Learn More
             </Button>
           </div>
@@ -235,16 +256,28 @@ const FeaturesBuild = () => {
             </SubHeading>
             <Paragraph size="sm" color="white">
               Take care of your vehicle with smart telematics features.
-              GenixDrive helps you monitor usage, track performance, and keep
+              GenixDrive helps you monitor usage, monitor performance, and keep
               your car safer and smarter on the road.
             </Paragraph>
-            <Button size="lg">Learn More</Button>
+            <Button
+              onClick={() => {
+                (navigate("../features1"), window.scrollTo(0, 0));
+              }}
+              size="lg"
+            >
+              Learn More
+            </Button>
           </div>
         </div>
         {/* Feature7 */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 items-center mb-20">
           <div className="build-container order-1 md:order-0 text-center md:text-left flex flex-col gap-4">
-            <SubHeading color="white" weight="bold" size="3xl">
+            <SubHeading
+              className="mainheading"
+              color="white"
+              weight="bold"
+              size="3xl"
+            >
               Driving Insights
             </SubHeading>
             <Paragraph size="sm" color="white">
@@ -254,7 +287,14 @@ const FeaturesBuild = () => {
               your personal driving coach, helping you drive smarter and safer
             </Paragraph>
 
-            <Button size="lg">Learn More</Button>
+            <Button
+              onClick={() => {
+                (navigate("../features2"), window.scrollTo(0, 0));
+              }}
+              size="lg"
+            >
+              Learn More
+            </Button>
           </div>
           <div className="relative  lg:order-none">
             <div className="w-full h-[220px]  md:w-[539px] md:h-[440px]  rounded-2xl">
@@ -278,7 +318,12 @@ const FeaturesBuild = () => {
             </div>
           </div>
           <div className="build-container text-center md:text-left flex flex-col gap-4">
-            <SubHeading color="white" weight="bold" size="3xl">
+            <SubHeading
+              className="mainheading"
+              color="white"
+              weight="bold"
+              size="3xl"
+            >
               Device Monitoring
             </SubHeading>
             <Paragraph size="sm" color="white">
@@ -288,7 +333,14 @@ const FeaturesBuild = () => {
               performance monitoring, and safety insights all delivered to your
               app instantly
             </Paragraph>
-            <Button size="lg">Learn More</Button>
+            <Button
+              onClick={() => {
+                (navigate("../features2"), window.scrollTo(0, 0));
+              }}
+              size="lg"
+            >
+              Learn More
+            </Button>
           </div>
         </div>
       </div>

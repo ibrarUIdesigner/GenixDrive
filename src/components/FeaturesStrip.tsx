@@ -115,11 +115,22 @@ const FeaturesStrip = () => {
             </Paragraph>
             {/* 🔹 IMAGE (Show on hover) */}
             <div className="absolute inset-0 flex items-center justify-center opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300">
+              <SubHeading
+                color={"white"}
+                weight="bold"
+                size="2xl"
+                className="mb-6 stri-heading mt-[50px] absolute z-10"
+              >
+                {feature.title}
+              </SubHeading>
               <img
                 src={feature.himage ?? ""}
                 alt=""
                 className="w-full h-full object-cover"
               />
+
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black/40" />
             </div>
             {/* <span className="mt-6 h-1 w-16 rounded-full bg-current/20 transition-all duration-300 group-hover:w-24 group-hover:bg-current/40" /> */}
           </motion.div>

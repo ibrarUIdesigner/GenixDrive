@@ -5,10 +5,11 @@ import blueStr from "../assets/bluestr.png";
 import SubHeading from "./sharedui/SubHeading";
 import Paragraph from "./sharedui/Paragraph";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ArrowRightIcon } from "lucide-react";
 
 const BenefitsSection = () => {
+  const navigate = useNavigate();
   const items = [
     {
       image: img1,
@@ -87,6 +88,9 @@ const BenefitsSection = () => {
               whileTap={{ scale: 0.995 }}
               transition={{ type: "spring", stiffness: 240, damping: 22 }}
               className="group rounded-xl overflow-hidden "
+              onClick={() => {
+                (navigate(`../${item.redirectURL}`), window.scrollTo(0, 0));
+              }}
             >
               <div className="w-[428px] max-w-full h-[428px] bg-black/5 rounded-[17.09px] overflow-hidden mx-auto">
                 <motion.img
