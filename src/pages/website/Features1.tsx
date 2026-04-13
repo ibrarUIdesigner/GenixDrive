@@ -11,7 +11,7 @@ import SectionHeading from "../../components/web/SectionHeading";
 import kf1 from "../../assets/features/22kf1.png";
 import kf2 from "../../assets/features/2kf2.png";
 import kf3 from "../../assets/features/22kf3.png";
-import kf4 from "../../assets/features/22kf44.png";
+import kf4 from "../../assets/features/kf444.png";
 import FeatureSplitCard from "../../components/web/FeatureGridContainer";
 
 import riskfree from "../../assets/featursabot/2.png";

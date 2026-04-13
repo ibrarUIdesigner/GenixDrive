@@ -10,7 +10,7 @@ import aboutHeroImg from "../../assets/aboutHero.svg";
 import kf1 from "../../assets/kf11.png";
 import kf2 from "../../assets/kf22.png";
 import kf3 from "../../assets/kf3.png";
-import kf4 from "../../assets/kf44.png";
+import kf4 from "../../assets/kf4444.png";
 import kf5 from "../../assets/kf5.png";
 
 import grnstr from "../../assets/grnstr.png";
@@ -150,7 +150,7 @@ const About = () => {
             className="mb-4 mainheading relative"
           >
             <img
-              className="absolute doodle w-[358px] h-[90px] left-[60px] -top-[30px]"
+              className="absolute doodle md:w-[358px] h-[90px] left-[60px] -top-[30px]"
               src={kfborder}
               alt=""
             />
@@ -280,7 +280,7 @@ const About = () => {
               benefits and simplified claims handling.
             </Paragraph>
             <div className="mt-7 text-center">
-              <img className="m-auto block" src={kf4} alt="" />
+              <img className="m-auto block h-[300px]" src={kf4} alt="" />
             </div>
           </div>
           <div className="hidden md:block"></div>
