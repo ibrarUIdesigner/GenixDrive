@@ -27,6 +27,7 @@ import ForgetPassword from "../pages/admin/ForgetPassword";
 import ResetPassword from "../pages/admin/ResetPassword";
 import ProtectedRoute from "../Protection/ProtectedRoutes";
 import PublicRoute from "../Protection/PublicRoute";
+import Order from "../pages/admin/Order";
 
 const router = createBrowserRouter([
   {
@@ -75,6 +76,7 @@ const router = createBrowserRouter([
       { path: "settings", element: <AdminSettings /> },
       { path: "driving-score", element: <DrivingScore /> },
       { path: "subscriptions", element: <SubscriptionsManagements /> },
+      { path: "order", element: <Order /> },
     ],
   },
 ]);

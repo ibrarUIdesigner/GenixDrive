@@ -11,6 +11,7 @@ const AdminSidebar = () => {
   // const isDrivingScore = location.pathname.endsWith("/admin/driving-score");
   const isSettings = location.pathname.endsWith("/admin/settings");
   const isSubscriptions = location.pathname.endsWith("/admin/subscriptions");
+  const isOrder = location.pathname.endsWith("/admin/order");
   // const isSubscriptions = location.pathname.endsWith("/admin/subscriptions");
 
   const navigate = useNavigate();
@@ -37,6 +38,18 @@ const AdminSidebar = () => {
           )}
           <Home size={18} />
           <span className="font-medium">Dashboard</span>
+        </Link>
+        <Link
+          to="/admin/order"
+          className={`text-sm relative flex items-center gap-3 rounded-lg px-3 py-2 ${
+            isOrder ? "text-secondary" : "text-gray-700 hover:text-secondary"
+          }`}
+        >
+          {isOrder && (
+            <span className="absolute -left-8 top-1/2 -translate-y-1/2 w-2 h-10 bg-primary rounded-tr-full rounded-br-full"></span>
+          )}
+          <CreditCard size={18} />
+          <span>Create Order</span>
         </Link>
 
         {/* <Link
