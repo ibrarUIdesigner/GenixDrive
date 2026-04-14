@@ -218,6 +218,7 @@ button {
   z-index: +1;
   height: 35px;
   box-sizing: border-box;
+  flex-grow: 1;
 }
 .form-area label {
   position: absolute;

@@ -175,7 +175,7 @@ const Dashboard = () => {
         <div className="fixed top-0 left-0 z-10 h-full w-full backdrop-blur-sm bg-white/30 flex items-center justify-center">
           {/* step1 */}
           {step === 1 && (
-            <div className="bg-white p-5 w-2/4 border border-gray-400 rounded-lg">
+            <div className="bg-white p-5 w-2/5 border border-gray-400 rounded-lg">
               <SubHeading className="text-center mb-[20px]">
                 Schedule installation
               </SubHeading>
@@ -301,7 +301,7 @@ const Dashboard = () => {
             </div>
           )}
           {step === 2 && (
-            <div className="bg-white p-5 w-2/6 border border-gray-400 rounded-lg">
+            <div className="bg-white p-5 w-2/5 border border-gray-400 rounded-lg">
               Calendar UI
               {/* button */}
               <Button
@@ -314,7 +314,7 @@ const Dashboard = () => {
             </div>
           )}
           {step === 3 && (
-            <div className="bg-white p-5 w-2/6 border border-gray-400 rounded-lg text-center">
+            <div className="bg-white p-5 w-2/5 border border-gray-400 rounded-lg text-center">
               <img className="m-auto" src={img4} alt="" />
               <Paragraph>
                 You will receive a call from our customer service department to
