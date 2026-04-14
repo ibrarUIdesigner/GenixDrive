@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 import img4 from "../../assets/admin/4.png";
 import img3 from "../../assets/admin/3.png";
 import Paragraph from "../../components/sharedui/Paragraph";
+import DateTimeStep from "../../components/admin/DateTimeStep";
 const Dashboard = () => {
   const [isModal, setIsModal] = useState(false);
   const [step, setStep] = useState(1);
@@ -302,14 +303,14 @@ const Dashboard = () => {
           )}
           {step === 2 && (
             <div className="bg-white p-5 w-2/5 border border-gray-400 rounded-lg">
-              Calendar UI
+              <DateTimeStep />
               {/* button */}
               <Button
                 onClick={() => setStep(3)}
                 isFullBtn
                 className="w-full !bg-blue-600"
               >
-                Next
+                Continue
               </Button>
             </div>
           )}
