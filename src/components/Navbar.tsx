@@ -42,9 +42,13 @@ const Navbar = () => {
       <div className="flex items-center gap-2">
         <div
           onClick={() => navigate("/")}
-          className="h-10 w-32 rounded flex items-center justify-center text-sm font-bold tracking-wider"
+          className=" rounded flex items-center justify-center text-sm font-bold tracking-wider"
         >
-          <img src={isHome ? logo : logo2} alt="Genix Drive Logo" />
+          <img
+            className="max-w-[124px] md:max-w-[220px]"
+            src={isHome ? logo : logo2}
+            alt="Genix Drive Logo"
+          />
         </div>
       </div>
 

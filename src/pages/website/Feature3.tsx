@@ -145,7 +145,7 @@ const Feature3 = () => {
         />
       </motion.section>
 
-      <motion.section className="bg-white  px-[56px] py-[120px] padding-50">
+      <motion.section className="bg-white pt-[50px]  px-[56px] py-[120px] padding-50">
         <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 items-center">
           <div className="content">
             <SubHeading

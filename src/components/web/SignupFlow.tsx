@@ -11,6 +11,11 @@ import cric from "../../assets/circ.png";
 import SectionHeading from "./SectionHeading";
 
 const SignupFlow = () => {
+  const [data, setData] = useState<string>("with");
+  const handleChildClick = (data: string) => {
+    console.log("data from child compoment : ", data);
+    setData(data);
+  };
   return (
     <section className="bg-white text-black font-cairo p-[70px] md:p-[135px] padding-50">
       <SectionHeading
@@ -30,128 +35,194 @@ const SignupFlow = () => {
         </div>
       </SectionHeading>
       <div className="mt-[70px]">
-        <Switch />
+        <Switch onClick={handleChildClick} />
 
         <div className="steps sigup-flows flex items-center flex-wrap justify-center gap-10 mt-[76px]">
-          {/* STEP1 */}
-          <div className="w-[400px] h-full  step-container relative p-10 rounded-2xl bg-surface-light border overflow-hidden">
-            <div className="step-details">
-              <SubHeading
-                size="2xl"
-                weight="black"
-                className="uppercase text-secondary mb-2 mainclass"
-              >
-                step 1
-              </SubHeading>
-              <SubHeading size="lg" weight="bold" className="mb-2 subcalss">
-                Download the app & Sign up
-              </SubHeading>
-              <Paragraph
-                size="sm"
-                color="default"
-                weight="light"
-                className="leading-5 text"
-              >
-                First, download the GenixDrive app from the Google Play Store or
-                App Store and sign up through email or phone
-              </Paragraph>
-              <img
-                src={step1}
-                alt="step 1"
-                className="w-full h-[200px] mt-[50px] object-contain"
-              />
-            </div>
-          </div>
-          {/* STEP2 */}
-          <div className="w-[400px] h-full step-container relative p-10 rounded-2xl bg-surface-light border">
-            <div className="step-details">
-              <SubHeading
-                size="2xl"
-                weight="black"
-                className="uppercase text-secondary mb-2 mainclass"
-              >
-                step 2
-              </SubHeading>
-              <SubHeading size="lg" weight="bold" className="mb-2 subcalss">
-                Order a Device
-              </SubHeading>
-              <Paragraph
-                size="sm"
-                color="default"
-                weight="light"
-                className="leading-5 text"
-              >
-                Order the GenixDrive device to unlock live vehicle monitoring,
-                real-time safety alerts, and advanced driving insights. Install
-                it, connect to the app, and start monitoring instantly.
-              </Paragraph>
-              <img
-                src={step3}
-                alt="step 2"
-                className="w-full h-[200px] mt-[50px] object-contain"
-              />
-            </div>
-          </div>
-          {/* STEP3 */}
-          <div className="w-[400px]  step-container relative   p-10 rounded-2xl bg-surface-light border">
-            <div className="step-details">
-              <SubHeading
-                size="2xl"
-                weight="black"
-                className="uppercase text-secondary mb-2 mainclass"
-              >
-                step 3
-              </SubHeading>
-              <SubHeading size="lg" weight="bold" className="mb-2 subcalss">
-                Device Installation
-              </SubHeading>
-              <Paragraph
-                size="sm"
-                color="default"
-                weight="light"
-                className="leading-5 text"
-              >
-                Once your order is confirmed, a certified GenixDrive technician
-                will visit your location to professionally install the device in
-                your car. We ensure a seamless setup so you’re ready to hit the
-                road safely.
-              </Paragraph>
-              <img
-                src={step2}
-                alt="step 3"
-                className="w-full h-[200px]  mt-[50px] object-contain"
-              />
-            </div>
-          </div>
-          {/* STEP4 */}
-          <div className="w-[400px]  step-container p-10 relative rounded-2xl bg-surface-light border overflow-hidden">
-            <div className="step-details">
-              <SubHeading
-                size="2xl"
-                weight="black"
-                className="uppercase text-secondary mb-2 mainclass"
-              >
-                step 4
-              </SubHeading>
-              <SubHeading size="lg" weight="bold" className="mb-2 subcalss">
-                Start monitoring your score
-              </SubHeading>
-              <Paragraph
-                size="sm"
-                color="default"
-                weight="light"
-                className="leading-5 text"
-              >
-                Once everything is set up, you can monitor driving behavior,
-                receive safety alerts, and monitor your family’s safety.
-              </Paragraph>
-              <img
-                src={step4}
-                alt="step 4"
-                className="w-full h-[200px]  mt-[50px] object-contain"
-              />
-            </div>
-          </div>
+          {data === "with" ? (
+            <>
+              {/* STEP1 */}
+              <div className="w-[400px] h-full  step-container relative p-10 rounded-2xl bg-surface-light border overflow-hidden">
+                <div className="step-details">
+                  <SubHeading
+                    size="2xl"
+                    weight="black"
+                    className="uppercase text-secondary mb-2 mainclass"
+                  >
+                    step 1
+                  </SubHeading>
+                  <SubHeading size="lg" weight="bold" className="mb-2 subcalss">
+                    Download the app & Sign up
+                  </SubHeading>
+                  <Paragraph
+                    size="sm"
+                    color="default"
+                    weight="light"
+                    className="leading-5 text"
+                  >
+                    First, download the GenixDrive app from the Google Play
+                    Store or App Store and sign up through email or phone
+                  </Paragraph>
+                  <img
+                    src={step1}
+                    alt="step 1"
+                    className="w-full h-[200px] mt-[50px] object-contain"
+                  />
+                </div>
+              </div>
+              {/* STEP2 */}
+              <div className="w-[400px] h-full step-container relative p-10 rounded-2xl bg-surface-light border">
+                <div className="step-details">
+                  <SubHeading
+                    size="2xl"
+                    weight="black"
+                    className="uppercase text-secondary mb-2 mainclass"
+                  >
+                    step 2
+                  </SubHeading>
+                  <SubHeading size="lg" weight="bold" className="mb-2 subcalss">
+                    Order a Device
+                  </SubHeading>
+                  <Paragraph
+                    size="sm"
+                    color="default"
+                    weight="light"
+                    className="leading-5 text"
+                  >
+                    Order the GenixDrive device to unlock live vehicle
+                    monitoring, real-time safety alerts, and advanced driving
+                    insights. Install it, connect to the app, and start
+                    monitoring instantly.
+                  </Paragraph>
+                  <img
+                    src={step3}
+                    alt="step 2"
+                    className="w-full h-[200px] mt-[50px] object-contain"
+                  />
+                </div>
+              </div>
+              {/* STEP3 */}
+              <div className="w-[400px]  step-container relative   p-10 rounded-2xl bg-surface-light border">
+                <div className="step-details">
+                  <SubHeading
+                    size="2xl"
+                    weight="black"
+                    className="uppercase text-secondary mb-2 mainclass"
+                  >
+                    step 3
+                  </SubHeading>
+                  <SubHeading size="lg" weight="bold" className="mb-2 subcalss">
+                    Device Installation
+                  </SubHeading>
+                  <Paragraph
+                    size="sm"
+                    color="default"
+                    weight="light"
+                    className="leading-5 text"
+                  >
+                    Once your order is confirmed, a certified GenixDrive
+                    technician will visit your location to professionally
+                    install the device in your car. We ensure a seamless setup
+                    so you’re ready to hit the road safely.
+                  </Paragraph>
+                  <img
+                    src={step2}
+                    alt="step 3"
+                    className="w-full h-[200px]  mt-[50px] object-contain"
+                  />
+                </div>
+              </div>
+              {/* STEP4 */}
+              <div className="w-[400px]  step-container p-10 relative rounded-2xl bg-surface-light border overflow-hidden">
+                <div className="step-details">
+                  <SubHeading
+                    size="2xl"
+                    weight="black"
+                    className="uppercase text-secondary mb-2 mainclass"
+                  >
+                    step 4
+                  </SubHeading>
+                  <SubHeading size="lg" weight="bold" className="mb-2 subcalss">
+                    Start monitoring your score
+                  </SubHeading>
+                  <Paragraph
+                    size="sm"
+                    color="default"
+                    weight="light"
+                    className="leading-5 text"
+                  >
+                    Once everything is set up, you can monitor driving behavior,
+                    receive safety alerts, and monitor your family’s safety.
+                  </Paragraph>
+                  <img
+                    src={step4}
+                    alt="step 4"
+                    className="w-full h-[200px]  mt-[50px] object-contain"
+                  />
+                </div>
+              </div>
+            </>
+          ) : (
+            <>
+              {/* STEP1 */}
+              <div className="w-[400px] h-full  step-container relative p-10 rounded-2xl bg-surface-light border overflow-hidden">
+                <div className="step-details">
+                  <SubHeading
+                    size="2xl"
+                    weight="black"
+                    className="uppercase text-secondary mb-2 mainclass"
+                  >
+                    step 1
+                  </SubHeading>
+                  <SubHeading size="lg" weight="bold" className="mb-2 subcalss">
+                    Download the app & Sign up
+                  </SubHeading>
+                  <Paragraph
+                    size="sm"
+                    color="default"
+                    weight="light"
+                    className="leading-5 text"
+                  >
+                    First, download the GenixDrive app from the Google Play
+                    Store or App Store and sign up through email or phone
+                  </Paragraph>
+                  <img
+                    src={step1}
+                    alt="step 1"
+                    className="w-full h-[200px] mt-[50px] object-contain"
+                  />
+                </div>
+              </div>
+              {/* STEP4 */}
+              <div className="w-[400px]  step-container p-10 relative rounded-2xl bg-surface-light border overflow-hidden">
+                <div className="step-details">
+                  <SubHeading
+                    size="2xl"
+                    weight="black"
+                    className="uppercase text-secondary mb-2 mainclass"
+                  >
+                    step 2
+                  </SubHeading>
+                  <SubHeading size="lg" weight="bold" className="mb-2 subcalss">
+                    Start monitoring your score
+                  </SubHeading>
+                  <Paragraph
+                    size="sm"
+                    color="default"
+                    weight="light"
+                    className="leading-5 text"
+                  >
+                    Once everything is set up, you can monitor driving behavior,
+                    receive safety alerts, and monitor your family’s safety.
+                  </Paragraph>
+                  <img
+                    src={step4}
+                    alt="step 4"
+                    className="w-full h-[200px]  mt-[50px] object-contain"
+                  />
+                </div>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </section>
@@ -160,7 +231,11 @@ const SignupFlow = () => {
 
 export default SignupFlow;
 
-const Switch = () => {
+type Props = {
+  onClick: (data: string) => void;
+};
+
+const Switch = ({ onClick }: Props) => {
   const [mode, setMode] = useState<"with" | "without">("with");
   return (
     <div className="flex items-center justify-center">
@@ -172,7 +247,9 @@ const Switch = () => {
         />
         <button
           type="button"
-          onClick={() => setMode("with")}
+          onClick={() => {
+            (setMode("with"), onClick("with"));
+          }}
           className={`relative z-10 w-1/2 text-xs font-bold uppercase tracking-widest ${
             mode === "with" ? "text-white" : "text-black"
           }`}
@@ -181,7 +258,9 @@ const Switch = () => {
         </button>
         <button
           type="button"
-          onClick={() => setMode("without")}
+          onClick={() => {
+            (setMode("without"), onClick("without"));
+          }}
           className={`relative z-10 w-1/2 text-xs font-bold uppercase tracking-widest ${
             mode === "without" ? "text-white" : "text-black"
           }`}

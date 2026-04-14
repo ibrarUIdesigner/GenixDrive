@@ -25,16 +25,11 @@ const Hero = () => {
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
     >
       {/* Center Image (Absolute Positioned) */}
-      <div className="absolute -bottom-2 sm:-bottom-6 inset-0 z-0 hidden md:flex items-center justify-center pointer-events-none">
+      <div className="absolute -left-[150px] -bottom-2 sm:-bottom-6 inset-0 z-0 hidden md:flex items-center justify-center pointer-events-none">
         <motion.img
           src={centerMobile}
           alt="App Mockup"
           className="h-[65vh] lg:h-[95%] object-contain drop-shadow-2xl relative z-10 -bottom-[20px]"
-          animate={{
-            y: [0, -12, 0],
-            rotate: [0, -0.4, 0],
-            scale: [1, 1.02, 1],
-          }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
       </div>
@@ -138,7 +133,7 @@ const Hero = () => {
           </motion.div>
 
           <motion.p
-            className="text-xs  md:text-sm text-white/90 leading-relaxed font-light"
+            className="text-xs  md:text-[20px] text-white/90 leading-relaxed font-light"
             variants={item}
           >
             From real-time safety alerts to family location sharing and exciting
@@ -146,18 +141,13 @@ const Hero = () => {
           </motion.p>
 
           <motion.div className="mb-[24px] md:mb-auto" variants={item}>
-            <p className="text-xs font-bold uppercase mb-4 tracking-widest text-white">
+            <p className="text-xs md:text-[20px] font-bold uppercase mb-4 tracking-widest text-white">
               Download Now On:
             </p>
             <StoreActionsButtons className="!mt-0" />
           </motion.div>
         </motion.div>
       </motion.div>
-      <motion.div
-        className="absolute right-[-6rem] bottom-[-6rem] w-[20rem] h-[20rem] bg-light-green/20 blur-3xl rounded-full pointer-events-none"
-        animate={{ y: [0, -12, 0], x: [0, -8, 0] }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-      />
     </motion.section>
   );
 };

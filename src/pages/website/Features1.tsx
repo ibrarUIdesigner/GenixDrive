@@ -11,7 +11,7 @@ import SectionHeading from "../../components/web/SectionHeading";
 import kf1 from "../../assets/features/22kf1.png";
 import kf2 from "../../assets/features/2kf2.png";
 import kf3 from "../../assets/features/22kf3.png";
-import kf4 from "../../assets/features/22kf44.png";
+import kf4 from "../../assets/features/kf444.png";
 import FeatureSplitCard from "../../components/web/FeatureGridContainer";
 
 import riskfree from "../../assets/featursabot/2.png";
@@ -157,7 +157,7 @@ const Features1 = () => {
         />
       </motion.section>
 
-      <motion.section className="bg-white  px-[56px] py-[120px] padding-50">
+      <motion.section className="bg-white pt-[50px]  px-[56px] py-[120px] padding-50">
         <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 items-center">
           <div className="content">
             <SubHeading
