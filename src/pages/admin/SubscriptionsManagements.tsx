@@ -147,14 +147,14 @@ const SubscriptionsManagements = () => {
       </div>
       {/* cancel modal */}
       {isCancelModal && (
-        <div className="fixed top-0 left-0 z-10 h-full w-full backdrop-blur-sm bg-white/30 flex items-center justify-center">
-          <div className="bg-white p-10 w-2/5 border border-gray-400 rounded-lg">
-            <SubHeading className="text-center" size="lg">
+        <div className="fixed top-0 left-0 z-10 h-full w-full  bg-gray-900/30 flex items-center justify-center">
+          <div className="bg-white p-10 w-2/5  shadow-lg rounded-lg">
+            <SubHeading className="text-center lato-font text-[24px]" size="lg">
               Are you sure you want to cancel your subscription?
             </SubHeading>
 
             <div className="mt-[30px] bg-orange-500 text-white p-4 rounded-lg text-center">
-              <Paragraph color="white">
+              <Paragraph className="lato-font text-[14px]" color="white">
                 Disclaimer: By canceling, you will only be able to use the basic
                 version of the app. Features such as Monitoring, Trips, Friends,
                 etc will no longer be accessible.
@@ -171,7 +171,7 @@ const SubscriptionsManagements = () => {
               <Button
                 onClick={() => setIsCancelModal(false)}
                 isFullBtn={true}
-                className="w-full bg-purple-600 text-white hover:text-purple-600"
+                className="w-full !bg-indigo-600 text-white "
               >
                 Keep Subscription
               </Button>
@@ -188,9 +188,9 @@ const SubscriptionsManagements = () => {
       )}
       {/* upgrade modal */}
       {isUpgradeModal && (
-        <div className="fixed top-0 left-0 z-10 h-full w-full backdrop-blur-sm bg-white/30 flex items-center justify-center">
-          <div className="bg-white p-10 w-2/5 border border-gray-400 rounded-lg">
-            <SubHeading className="text-center" size="lg">
+        <div className="fixed top-0 left-0 z-10 h-full w-full  bg-gray-900/30 flex items-center justify-center">
+          <div className="bg-white p-10 w-2/5 shadow-lg rounded-lg">
+            <SubHeading className="text-center lato-font text-[24px]" size="lg">
               Go Premium & Unlock X, Y, Z!
             </SubHeading>
 
@@ -211,14 +211,14 @@ const SubscriptionsManagements = () => {
               <Button
                 onClick={() => setIsUpgradeModal(false)}
                 isFullBtn={true}
-                className="w-full bg-purple-600 text-white hover:text-purple-600"
+                className="w-full !bg-indigo-600 text-white "
               >
                 Upgrade Now
               </Button>
               <Button
                 isFullBtn={true}
                 onClick={() => setIsUpgradeModal(false)}
-                className="w-full bg-purple-200 text-purple-600 mt-4"
+                className="w-full bg-purple-200 text-indigo-600 mt-4"
               >
                 Maybe Later
               </Button>
