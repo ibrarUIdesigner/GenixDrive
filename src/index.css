@@ -201,6 +201,55 @@ button {
 #lato-font * {
   font-family: "Lato", sans-serif !important;
 }
+.lato-font {
+  font-family: "Lato", sans-serif !important;
+}
+.light-purple-color {
+  background-color: #7b77ff;
+}
+.card-bg {
+  background-color: #fcfbff;
+}
+
+.card-bg h3.sub {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+.card-bg h3.main {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+}
+.card-bg p {
+  font-size: 13px;
+  line-height: 20px;
+}
+.check label {
+  font-size: 13px;
+  line-height: 20px;
+}
+.features-head p {
+  font-size: 11px;
+  line-height: 15px;
+  font-weight: 400;
+}
+.features-head span {
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #b3b3b3;
+}
+.pricing strong {
+  font-size: 12px;
+  font-weight: bold;
+  color: #4d4d4d;
+}
+.pricing p {
+  font-size: 10px;
+  font-weight: 400;
+  color: #212121;
+}
 .admininput {
   border: none;
   width: 100%;

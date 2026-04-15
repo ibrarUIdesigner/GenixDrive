@@ -28,18 +28,22 @@ const Order = () => {
       <div className="grid grid-cols-5 gap-5">
         <div className="col-span-3">
           <div className="flex items-center  gap-5 mb-[20px]">
-            <span className="w-[30px] h-[30px] bg-purple-700 flex items-center justify-center text-white rounded-full">
+            <span className="w-[44px] h-[44px] light-purple-color flex items-center justify-center text-white rounded-full">
               1
             </span>
-            <SubHeading size="lg">Device Selection</SubHeading>
+            <SubHeading weight="bold" className="lato-font" size="xl">
+              Device Selection
+            </SubHeading>
           </div>
         </div>
         <div className="col-span-2">
           <div className="flex items-center  gap-5 mb-[20px]">
-            <span className="w-[30px] h-[30px] bg-purple-700 flex items-center justify-center text-white rounded-full">
+            <span className="w-[44px] h-[44px] light-purple-color flex items-center justify-center text-white rounded-full">
               2
             </span>
-            <SubHeading size="lg">Choose Plan</SubHeading>
+            <SubHeading weight="bold" className="lato-font" size="xl">
+              Choose Plan
+            </SubHeading>
           </div>
         </div>
       </div>
@@ -50,17 +54,21 @@ const Order = () => {
             {/* CARD 1 */}
             <div
               id="lato-font"
-              className=" bg-gray-100 flex-1  p-2 border-gray-300 border rounded-lg relative"
+              className=" bg-gray-100 flex-1 card-bg  p-2 border-gray-100 border rounded-lg relative"
             >
               <span className="w-[55px] h-[55px] bg-white border-gray-100 border rounded-full flex absolute -translate-y-1/2 left-1/2  -translate-x-1/2 items-center justify-center">
                 <Smartphone size={22} className="text-blue-500" />
               </span>
               <div className="mt-10 text-center">
-                <SubHeading className="text-center" weight="medium" size="lg">
+                <SubHeading
+                  className="text-center sub"
+                  weight="medium"
+                  size="lg"
+                >
                   Option 1: Smartphone Tracking
                 </SubHeading>
                 <SubHeading
-                  className="text-center mt-5"
+                  className="text-center mt-5 main"
                   weight="bold"
                   size="xl"
                 >
@@ -98,22 +106,22 @@ const Order = () => {
             {/* CARD 2 */}
             <div
               id="lato-font"
-              className=" bg-gray-100 flex-1 p-2 border-green-300 border rounded-lg relative"
+              className=" card-bg flex-1 p-2 border-green-300 border rounded-lg relative"
             >
               <span className="w-[55px] h-[55px] bg-white border-green-300 border rounded-full flex absolute -translate-y-1/2 left-1/2  -translate-x-1/2 items-center justify-center">
-                <CarFront size={22} className="text-blue-500" />
+                <CarFront size={22} className="text-dark" />
               </span>
               <div className="mt-10 text-center">
                 <Badge variant="success">Completed</Badge>
                 <SubHeading
-                  className="text-center mt-5"
+                  className="text-center mt-5 sub"
                   weight="medium"
                   size="lg"
                 >
                   Option 2: Dedicated Device
                 </SubHeading>
                 <SubHeading
-                  className="text-center mt-5"
+                  className="text-center mt-5 main"
                   weight="bold"
                   size="xl"
                 >
@@ -131,7 +139,7 @@ const Order = () => {
                 </Paragraph>
               </div>
               {/* key benifits */}
-              <div className="key-benifts mt-[30px]">
+              <div className="key-benifts mt-[20px] border-t border-gray-100 pt-[20px]">
                 <strong>Key Benefits:</strong>
                 <p className="flex items-center gap-1.5 mb-2 mt-2">
                   <span className="w-2 h-2 rounded-full bg-gray-900 flex"></span>
@@ -161,7 +169,11 @@ const Order = () => {
         <div className="col-span-2 p-5 rounded-lg bg-white ">
           <div className="bg-orange-100 p-2 border border-orange-400 rounded-lg text-center">
             <Badge variant="warning">PRIME</Badge>
-            <SubHeading weight="bold" size="lg" className="mt-[10px]">
+            <SubHeading
+              weight="bold"
+              size="lg"
+              className="mt-[10px] text-[14px]"
+            >
               GenixPrime
             </SubHeading>
           </div>
