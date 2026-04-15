@@ -3,7 +3,13 @@ import InfoCard from "../../components/sharedui/InfoCard";
 import SubHeading from "../../components/sharedui/SubHeading";
 import Badge from "../../components/sharedui/Badge";
 import { Link } from "react-router-dom";
-import { AlertTriangle, BadgeCheck, Phone, Smartphone } from "lucide-react";
+import {
+  AlertTriangle,
+  BadgeCheck,
+  CarFront,
+  Phone,
+  Smartphone,
+} from "lucide-react";
 import img1 from "../../assets/admin/1.png";
 import img2 from "../../assets/admin/2.png";
 import Paragraph from "../../components/sharedui/Paragraph";
@@ -11,6 +17,32 @@ import Paragraph from "../../components/sharedui/Paragraph";
 const Order = () => {
   return (
     <div>
+      <div className=" border-b border-gray-300 mb-5">
+        <SubHeading className="mb-6" size="2xl" weight="bold">
+          Active Your Plan
+          <span className="block text-xs font-light text-gray-400">
+            After Signup
+          </span>
+        </SubHeading>
+      </div>
+      <div className="grid grid-cols-5 gap-5">
+        <div className="col-span-3">
+          <div className="flex items-center  gap-5 mb-[20px]">
+            <span className="w-[30px] h-[30px] bg-purple-700 flex items-center justify-center text-white rounded-full">
+              1
+            </span>
+            <SubHeading size="lg">Device Selection</SubHeading>
+          </div>
+        </div>
+        <div className="col-span-2">
+          <div className="flex items-center  gap-5 mb-[20px]">
+            <span className="w-[30px] h-[30px] bg-purple-700 flex items-center justify-center text-white rounded-full">
+              2
+            </span>
+            <SubHeading size="lg">Choose Plan</SubHeading>
+          </div>
+        </div>
+      </div>
       <div className="grid grid-cols-5 gap-5">
         {/* section left */}
         <div className="col-span-3 p-5 rounded-lg bg-white ">
@@ -69,7 +101,7 @@ const Order = () => {
               className=" bg-gray-100 flex-1 p-2 border-green-300 border rounded-lg relative"
             >
               <span className="w-[55px] h-[55px] bg-white border-green-300 border rounded-full flex absolute -translate-y-1/2 left-1/2  -translate-x-1/2 items-center justify-center">
-                <Smartphone size={22} className="text-blue-500" />
+                <CarFront size={22} className="text-blue-500" />
               </span>
               <div className="mt-10 text-center">
                 <Badge variant="success">Completed</Badge>

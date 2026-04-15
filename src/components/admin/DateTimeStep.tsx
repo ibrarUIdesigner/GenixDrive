@@ -1,6 +1,7 @@
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useState } from "react";
+import SubHeading from "../sharedui/SubHeading";
 
 const DateTimeStep = () => {
   const [date, setDate] = useState<Date | null>(new Date());
@@ -8,10 +9,10 @@ const DateTimeStep = () => {
     <div className="bg-gray-100 p-6 rounded-xl">
       {/* Header */}
       <div className="flex items-center gap-2 mb-4">
-        <div className="w-6 h-6 flex items-center justify-center rounded-full bg-indigo-500 text-white text-sm">
+        <div className="w-[30px] h-[30px]  flex items-center justify-center rounded-full bg-indigo-500 text-white text-sm">
           3
         </div>
-        <h2 className="font-medium text-gray-700">Select Date and Time</h2>
+        <SubHeading size="lg">Select Date and Time</SubHeading>
       </div>
 
       {/* Container */}

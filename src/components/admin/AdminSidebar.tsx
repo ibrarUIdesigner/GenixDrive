@@ -49,7 +49,7 @@ const AdminSidebar = () => {
             <span className="absolute -left-8 top-1/2 -translate-y-1/2 w-2 h-10 bg-primary rounded-tr-full rounded-br-full"></span>
           )}
           <CreditCard size={18} />
-          <span>Create Order</span>
+          <span>Active Plan</span>
         </Link>
 
         {/* <Link
