@@ -17,13 +17,31 @@ import Paragraph from "../../components/sharedui/Paragraph";
 const Order = () => {
   return (
     <div>
-      <div className=" border-b border-gray-300 mb-5">
-        <SubHeading className="mb-6" size="2xl" weight="bold">
+      <div className=" border-b border-gray-300 mb-5 flex item-center justify-between pb-5">
+        <SubHeading className="lato-font" size="2xl" weight="bold">
           Active Your Plan
-          <span className="block text-xs font-light text-gray-400">
+          <span className="block text-xs font-light text-gray-400 lato-font">
             After Signup
           </span>
         </SubHeading>
+        <div className="steps flex gap-20 items-center">
+          <div className="step-container active-step">
+            <span></span>
+            <p className="lato-font">1. Device Selection</p>
+          </div>
+          <div className="step-container active-step">
+            <span></span>
+            <p className="lato-font">2. Choose Plan</p>
+          </div>
+          <div className="step-container">
+            <span></span>
+            <p className="lato-font">3. Payment</p>
+          </div>
+          <div className="step-container">
+            <span></span>
+            <p className="lato-font">4. Setup Completed</p>
+          </div>
+        </div>
       </div>
       <div className="grid grid-cols-5 gap-5">
         <div className="col-span-3">
