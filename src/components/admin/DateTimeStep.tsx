@@ -8,11 +8,13 @@ const DateTimeStep = () => {
   return (
     <div className="bg-gray-100 p-6 rounded-xl">
       {/* Header */}
-      <div className="flex items-center gap-2 mb-4">
-        <div className="w-[30px] h-[30px]  flex items-center justify-center rounded-full bg-indigo-500 text-white text-sm">
+      <div className="flex items-center gap-5 mb-4">
+        <div className="w-[30px] h-[30px] light-purple-color  flex items-center justify-center rounded-full bg-indigo-500 text-white text-sm">
           3
         </div>
-        <SubHeading size="lg">Select Date and Time</SubHeading>
+        <SubHeading className="lato-font text-[16px]" size="lg">
+          Select Date and Time
+        </SubHeading>
       </div>
 
       {/* Container */}
