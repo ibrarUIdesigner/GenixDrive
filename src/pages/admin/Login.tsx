@@ -23,18 +23,35 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   //? STATES
   const [email, setEmail] = useState<string>("");
+  const [phone, setPhone] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
 
+  const [data, setData] = useState<string>("email");
+
   const navigate = useNavigate();
+
+  const handleToggle = (data: string) => {
+    setData(data);
+  };
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Basic validation
-    if (!email || !password) {
-      setError("Email and password are required");
+    // Dynamic validation
+    if (!password) {
+      setError("Password is required");
+      return;
+    }
+
+    if (data === "email" && !email) {
+      setError("Email is required");
+      return;
+    }
+
+    if (data === "phone" && !phone) {
+      setError("Phone is required");
       return;
     }
 
@@ -42,12 +59,18 @@ const Login = () => {
       setLoading(true);
       setError("");
 
+      const payload = {
+        password,
+
+        // ✅ Conditional field
+        ...(data === "email" ? { email } : { phone }),
+      };
+
+      console.log("Login payload:", payload);
+
       const response = await axios.post<LoginResponse>(
         "https://aigenix-api-app-services.three-shelves.com/auth/login",
-        {
-          email,
-          password,
-        },
+        payload,
         {
           headers: {
             "x-account-id": "aigenix-uat",
@@ -56,16 +79,16 @@ const Login = () => {
       );
 
       // ✅ Success
-      const data = response.data;
+      const apidata = response.data;
 
       // Store token (choose your strategy)
       // localStorage.setItem("accessToken", data.accessToken);
 
-      console.log("Login Success:", data);
+      console.log("Login Success:", apidata);
 
       // TODO: redirect user
-      if (data.success) {
-        localStorage.setItem("accessToken", data.data?.token || "");
+      if (apidata.success) {
+        localStorage.setItem("accessToken", apidata.data?.token || "");
         navigate("/admin/dashboard");
       }
     } catch (err) {
@@ -97,14 +120,35 @@ const Login = () => {
             <p className="text-gray-600 mb-6">
               Login to access your GenixDrive account
             </p>
+            <Switch onClick={handleToggle} />
+
             <form className="space-y-4">
-              <TextField
-                type="email"
-                placeholder="Email"
-                leftIcon={<Phone className="w-5 h-5" />}
-                onChange={(e) => setEmail(e.target.value)}
-                value={email}
-              />
+              {data === "email" ? (
+                <>
+                  <TextField
+                    type="email"
+                    placeholder="Email"
+                    leftIcon={<Mail className="w-5 h-5" />}
+                    onChange={(e) => setEmail(e.target.value)}
+                    value={email}
+                  />
+                </>
+              ) : (
+                <>
+                  <TextField
+                    type="text"
+                    placeholder="Phone"
+                    leftIcon={<Phone className="w-5 h-5" />}
+                    onChange={(e) => setPhone(e.target.value)}
+                    value={phone}
+                    containerClassName="m-auto"
+                  />
+                  <span className="text-[10px]">
+                    Phone number must start with +92
+                  </span>
+                </>
+              )}
+
               <TextField
                 type={showPassword ? "text" : "password"}
                 placeholder="Password"
@@ -187,3 +231,44 @@ const Login = () => {
 };
 
 export default Login;
+
+type Props = {
+  onClick: (data: string) => void;
+};
+
+const Switch = ({ onClick }: Props) => {
+  const [mode, setMode] = useState<"with" | "without">("with");
+  return (
+    <div className="flex items-center justify-center mb-5">
+      <div className="relative inline-flex items-center w-[420px] h-14 rounded-full border border-black/10 bg-white shadow-sm p-1">
+        <div
+          className={`absolute inset-y-1 left-1 w-1/2 rounded-full bg-primary transition-transform duration-300 ${
+            mode === "with" ? "translate-x-0" : "translate-x-full"
+          }`}
+        />
+        <button
+          type="button"
+          onClick={() => {
+            (setMode("with"), onClick("email"));
+          }}
+          className={`relative z-10 w-1/2 text-xs font-bold uppercase tracking-widest ${
+            mode === "with" ? "text-white" : "text-black"
+          }`}
+        >
+          Login with email
+        </button>
+        <button
+          type="button"
+          onClick={() => {
+            (setMode("without"), onClick("phone"));
+          }}
+          className={`relative z-10 w-1/2 text-xs font-bold uppercase tracking-widest ${
+            mode === "without" ? "text-white" : "text-black"
+          }`}
+        >
+          Login with phone
+        </button>
+      </div>
+    </div>
+  );
+};
