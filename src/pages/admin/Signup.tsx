@@ -52,6 +52,7 @@ const Signup = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const [data, setData] = useState<string>("email");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
@@ -62,12 +63,27 @@ const Signup = () => {
     }));
   };
 
+  const handleToggle = (data: string) => {
+    console.log("Toggle : ", data);
+    setData(data);
+  };
+
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault();
 
     // Basic validation
-    if (!form.email || !form.password || !form.userName) {
+    if (!form.password || !form.userName) {
       setError("Required fields are missing");
+      return;
+    }
+
+    if (data === "email" && !form.email) {
+      setError("Email is required");
+      return;
+    }
+
+    if (data === "phone" && !form.phone) {
+      setError("Phone is required");
       return;
     }
 
@@ -77,10 +93,22 @@ const Signup = () => {
       setSuccess("");
 
       // Optional: auto-generate fullName
+
       const payload = {
-        ...form,
+        userName: form.userName,
+        password: form.password,
+        firstName: form.firstName,
+        lastName: form.lastName,
         fullName: `${form.firstName} ${form.lastName}`.trim(),
+        gender: form.gender,
+        tracking: form.tracking,
+        status: form.status,
+
+        // ✅ Conditional field
+        ...(data === "email" ? { email: form.email } : { phone: form.phone }),
       };
+
+      console.log("payload :", payload);
 
       const response = await axios.post<SignupResponse>(
         "https://aigenix-api-app-services.three-shelves.com/auth/signup",
@@ -156,6 +184,9 @@ const Signup = () => {
           <p className="text-gray-600 mb-6">
             Let's get you all set up so you can access your personal account.
           </p>
+
+          <Switch onClick={handleToggle} />
+
           <form className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <TextField
@@ -182,23 +213,32 @@ const Signup = () => {
                 name="userName"
               />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <TextField
-                type="email"
-                placeholder="Email"
-                leftIcon={<Mail className="w-5 h-5" />}
-                value={form.email}
-                onChange={handleChange}
-                name="email"
-              />
-              <TextField
-                type="tel"
-                placeholder="Phone Number"
-                leftIcon={<Phone className="w-5 h-5" />}
-                value={form.phone}
-                onChange={handleChange}
-                name="phone"
-              />
+            <div className="">
+              {data === "email" && (
+                <TextField
+                  type="email"
+                  placeholder="Email"
+                  leftIcon={<Mail className="w-5 h-5" />}
+                  value={form.email}
+                  onChange={handleChange}
+                  name="email"
+                />
+              )}
+              {data === "phone" && (
+                <>
+                  <TextField
+                    type="tel"
+                    placeholder="Phone Number"
+                    leftIcon={<Phone className="w-5 h-5" />}
+                    value={form.phone}
+                    onChange={handleChange}
+                    name="phone"
+                  />
+                  <span className="text-[10px]">
+                    Phone number must start with +92
+                  </span>
+                </>
+              )}
             </div>
             <TextField
               type={showPassword ? "text" : "password"}
@@ -222,7 +262,7 @@ const Signup = () => {
                 </button>
               }
             />
-            <TextField
+            {/* <TextField
               type={showConfirm ? "text" : "password"}
               placeholder="Confirm Password"
               leftIcon={<Lock className="w-5 h-5" />}
@@ -240,7 +280,7 @@ const Signup = () => {
                   )}
                 </button>
               }
-            />
+            /> */}
             <label className="flex items-center gap-2 text-sm text-gray-600">
               <input type="checkbox" className="rounded border-gray-300" />I
               agree to all the{" "}
@@ -314,3 +354,44 @@ const Signup = () => {
 };
 
 export default Signup;
+
+type Props = {
+  onClick: (data: string) => void;
+};
+
+const Switch = ({ onClick }: Props) => {
+  const [mode, setMode] = useState<"with" | "without">("with");
+  return (
+    <div className="flex items-center justify-center mb-5">
+      <div className="relative inline-flex items-center w-[420px] h-14 rounded-full border border-black/10 bg-white shadow-sm p-1">
+        <div
+          className={`absolute inset-y-1 left-1 w-1/2 rounded-full bg-primary transition-transform duration-300 ${
+            mode === "with" ? "translate-x-0" : "translate-x-full"
+          }`}
+        />
+        <button
+          type="button"
+          onClick={() => {
+            (setMode("with"), onClick("email"));
+          }}
+          className={`relative z-10 w-1/2 text-xs font-bold uppercase tracking-widest ${
+            mode === "with" ? "text-white" : "text-black"
+          }`}
+        >
+          Signup with email
+        </button>
+        <button
+          type="button"
+          onClick={() => {
+            (setMode("without"), onClick("phone"));
+          }}
+          className={`relative z-10 w-1/2 text-xs font-bold uppercase tracking-widest ${
+            mode === "without" ? "text-white" : "text-black"
+          }`}
+        >
+          signup with phone
+        </button>
+      </div>
+    </div>
+  );
+};
