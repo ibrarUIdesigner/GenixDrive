@@ -1,4 +1,4 @@
-import ab1 from "../../assets/ab1.jpg";
+import ab1 from "../../assets/admin/5.png";
 import { Mail, Phone, User } from "lucide-react";
 import { TextField, SelectField } from "../../components/sharedui/Input";
 
@@ -8,8 +8,8 @@ const Settings = () => {
       <div className="flex items-center gap-4">
         <img src={ab1} alt="" className="w-16 h-16 rounded-full object-cover" />
         <div>
-          <h2 className="text-xl font-bold text-gray-900">Michael White</h2>
-          <p className="text-gray-600 text-sm">michaelwhite@gmail.com</p>
+          <h2 className="text-xl font-bold text-gray-900">Ahmed Ali</h2>
+          <p className="text-gray-600 text-sm">ahmedali@gmail.com</p>
         </div>
       </div>
       <form className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
