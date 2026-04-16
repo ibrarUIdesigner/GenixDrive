@@ -173,18 +173,27 @@ const Dashboard = () => {
       </div>
       {/* modal */}
       {isModal && (
-        <div className="fixed top-0 left-0 z-10 h-full w-full backdrop-blur-sm bg-white/30 flex items-center justify-center">
+        <div className="fixed top-0 left-0 z-10 h-full w-full bg-gray-900/30 flex items-center justify-center">
           {/* step1 */}
           {step === 1 && (
             <div className="bg-white p-5 w-2/5 border border-gray-400 rounded-lg">
-              <SubHeading className="text-center mb-[20px]">
-                Schedule installation
+              <SubHeading
+                className="text-center lato-font mb-[20px] text-[24px]"
+                weight="bold"
+              >
+                Schedule Installation
               </SubHeading>
               <div className="flex items-center justify-center gap-5 mb-[20px]">
-                <span className="w-[30px] h-[30px] bg-purple-700 flex items-center justify-center text-white rounded-full">
+                <span className="w-[30px] h-[30px] light-purple-color  flex items-center justify-center text-white rounded-full">
                   1
                 </span>
-                <SubHeading size="lg">Customer Information</SubHeading>
+                <SubHeading
+                  weight="bold"
+                  className="lato-font text-[16px]"
+                  size="lg"
+                >
+                  Customer Information
+                </SubHeading>
               </div>
               {/* form1 */}
               <div>
@@ -236,10 +245,16 @@ const Dashboard = () => {
                 </div>
               </div>
               <div className="flex items-center justify-center gap-5 my-[20px]">
-                <span className="w-[30px] h-[30px] bg-purple-700 flex items-center justify-center text-white rounded-full">
+                <span className="w-[30px] h-[30px] light-purple-color  flex items-center justify-center text-white rounded-full">
                   2
                 </span>
-                <SubHeading size="lg">Vehicle Information</SubHeading>
+                <SubHeading
+                  className="lato-font text-[16px] "
+                  weight="bold"
+                  size="lg"
+                >
+                  Vehicle Information
+                </SubHeading>
               </div>
               {/* form2 */}
               <div className="mb-[30px]">
@@ -295,7 +310,7 @@ const Dashboard = () => {
               <Button
                 onClick={() => setStep(2)}
                 isFullBtn
-                className="w-full !bg-blue-600"
+                className="w-full !bg-blue-600 text-white "
               >
                 Next
               </Button>
@@ -308,7 +323,7 @@ const Dashboard = () => {
               <Button
                 onClick={() => setStep(3)}
                 isFullBtn
-                className="w-full !bg-blue-600"
+                className="w-full !bg-blue-600 mt-5 text-white"
               >
                 Continue
               </Button>

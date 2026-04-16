@@ -17,29 +17,51 @@ import Paragraph from "../../components/sharedui/Paragraph";
 const Order = () => {
   return (
     <div>
-      <div className=" border-b border-gray-300 mb-5">
-        <SubHeading className="mb-6" size="2xl" weight="bold">
+      <div className=" border-b border-gray-300 mb-5 flex item-center justify-between pb-5">
+        <SubHeading className="lato-font" size="2xl" weight="bold">
           Active Your Plan
-          <span className="block text-xs font-light text-gray-400">
+          <span className="block text-xs font-light text-gray-400 lato-font">
             After Signup
           </span>
         </SubHeading>
+        <div className="steps flex gap-20 items-center">
+          <div className="step-container active-step">
+            <span></span>
+            <p className="lato-font">1. Device Selection</p>
+          </div>
+          <div className="step-container active-step">
+            <span></span>
+            <p className="lato-font">2. Choose Plan</p>
+          </div>
+          <div className="step-container">
+            <span></span>
+            <p className="lato-font">3. Payment</p>
+          </div>
+          <div className="step-container">
+            <span></span>
+            <p className="lato-font">4. Setup Completed</p>
+          </div>
+        </div>
       </div>
       <div className="grid grid-cols-5 gap-5">
         <div className="col-span-3">
           <div className="flex items-center  gap-5 mb-[20px]">
-            <span className="w-[30px] h-[30px] bg-purple-700 flex items-center justify-center text-white rounded-full">
+            <span className="w-[44px] h-[44px] light-purple-color flex items-center justify-center text-white rounded-full">
               1
             </span>
-            <SubHeading size="lg">Device Selection</SubHeading>
+            <SubHeading weight="bold" className="lato-font" size="xl">
+              Device Selection
+            </SubHeading>
           </div>
         </div>
         <div className="col-span-2">
           <div className="flex items-center  gap-5 mb-[20px]">
-            <span className="w-[30px] h-[30px] bg-purple-700 flex items-center justify-center text-white rounded-full">
+            <span className="w-[44px] h-[44px] light-purple-color flex items-center justify-center text-white rounded-full">
               2
             </span>
-            <SubHeading size="lg">Choose Plan</SubHeading>
+            <SubHeading weight="bold" className="lato-font" size="xl">
+              Choose Plan
+            </SubHeading>
           </div>
         </div>
       </div>
@@ -50,17 +72,21 @@ const Order = () => {
             {/* CARD 1 */}
             <div
               id="lato-font"
-              className=" bg-gray-100 flex-1  p-2 border-gray-300 border rounded-lg relative"
+              className=" bg-gray-100 flex-1 card-bg  p-2 border-gray-100 border rounded-lg relative"
             >
               <span className="w-[55px] h-[55px] bg-white border-gray-100 border rounded-full flex absolute -translate-y-1/2 left-1/2  -translate-x-1/2 items-center justify-center">
                 <Smartphone size={22} className="text-blue-500" />
               </span>
               <div className="mt-10 text-center">
-                <SubHeading className="text-center" weight="medium" size="lg">
+                <SubHeading
+                  className="text-center sub"
+                  weight="medium"
+                  size="lg"
+                >
                   Option 1: Smartphone Tracking
                 </SubHeading>
                 <SubHeading
-                  className="text-center mt-5"
+                  className="text-center mt-5 main"
                   weight="bold"
                   size="xl"
                 >
@@ -78,10 +104,15 @@ const Order = () => {
               </div>
               {/* checkbox */}
               <div
-                className="check bg-white border border-gray-100 p-3 rounded-lg mt-[20px] flex items-center gap-3
+                className="check bg-white border border-gray-200 p-3 rounded-lg mt-[20px] flex items-center gap-3
               "
               >
-                <input type="checkbox" name="" id="smphone" />
+                <input
+                  type="checkbox"
+                  name=""
+                  id="smphone"
+                  className="w-5 h-5 accent-gray-600 cursor-pointer"
+                />
                 <label htmlFor="smphone">
                   Use my smartphone as primary tracking device.
                 </label>
@@ -98,22 +129,22 @@ const Order = () => {
             {/* CARD 2 */}
             <div
               id="lato-font"
-              className=" bg-gray-100 flex-1 p-2 border-green-300 border rounded-lg relative"
+              className=" card-bg flex-1 p-2 border-green-300 border rounded-lg relative"
             >
               <span className="w-[55px] h-[55px] bg-white border-green-300 border rounded-full flex absolute -translate-y-1/2 left-1/2  -translate-x-1/2 items-center justify-center">
-                <CarFront size={22} className="text-blue-500" />
+                <CarFront size={22} className="text-dark" />
               </span>
               <div className="mt-10 text-center">
-                <Badge variant="success">Completed</Badge>
+                <Badge variant="warning">Recommended</Badge>
                 <SubHeading
-                  className="text-center mt-5"
+                  className="text-center mt-5 sub"
                   weight="medium"
                   size="lg"
                 >
                   Option 2: Dedicated Device
                 </SubHeading>
                 <SubHeading
-                  className="text-center mt-5"
+                  className="text-center mt-5 main"
                   weight="bold"
                   size="xl"
                 >
@@ -131,7 +162,7 @@ const Order = () => {
                 </Paragraph>
               </div>
               {/* key benifits */}
-              <div className="key-benifts mt-[30px]">
+              <div className="key-benifts mt-[20px] border-t border-gray-200 pt-[20px]">
                 <strong>Key Benefits:</strong>
                 <p className="flex items-center gap-1.5 mb-2 mt-2">
                   <span className="w-2 h-2 rounded-full bg-gray-900 flex"></span>
@@ -148,10 +179,15 @@ const Order = () => {
               </div>
               {/* checkbox */}
               <div
-                className="check bg-white border border-gray-100 p-3 rounded-lg mt-[20px] flex items-center gap-3
+                className="check bg-white border border-gray-200 p-3 rounded-lg mt-[20px] flex items-center gap-3
               "
               >
-                <input type="checkbox" name="" id="device" />
+                <input
+                  type="checkbox"
+                  name=""
+                  id="device"
+                  className="w-5 h-5 accent-gray-600 cursor-pointer"
+                />
                 <label htmlFor="device">Order your device</label>
               </div>
             </div>
@@ -159,15 +195,19 @@ const Order = () => {
         </div>
         {/* section-right */}
         <div className="col-span-2 p-5 rounded-lg bg-white ">
-          <div className="bg-orange-100 p-2 border border-orange-400 rounded-lg text-center">
+          <div className="bg-orange-100  p-2 border border-orange-400 rounded-lg text-center">
             <Badge variant="warning">PRIME</Badge>
-            <SubHeading weight="bold" size="lg" className="mt-[10px]">
+            <SubHeading
+              weight="bold"
+              size="lg"
+              className="mt-[10px] text-[14px]"
+            >
               GenixPrime
             </SubHeading>
           </div>
           {/* features list */}
           <div className="mt-[10px] rounded-lg border border-gray-400 overflow-hidden">
-            <div className="features-head p-2 relative overflow-hidden border-b border-gray-400">
+            <div className="features-head featurprime p-2 relative overflow-hidden border-b border-gray-400">
               <strong>Features</strong>
               <span className="bg-orange-100 absolute right-0 top-0 h-full w-[80px] flex items-center justify-center">
                 <Badge variant="warning">PRIME</Badge>
