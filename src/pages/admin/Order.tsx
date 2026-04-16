@@ -104,10 +104,15 @@ const Order = () => {
               </div>
               {/* checkbox */}
               <div
-                className="check bg-white border border-gray-100 p-3 rounded-lg mt-[20px] flex items-center gap-3
+                className="check bg-white border border-gray-200 p-3 rounded-lg mt-[20px] flex items-center gap-3
               "
               >
-                <input type="checkbox" name="" id="smphone" />
+                <input
+                  type="checkbox"
+                  name=""
+                  id="smphone"
+                  className="w-5 h-5 accent-gray-600 cursor-pointer"
+                />
                 <label htmlFor="smphone">
                   Use my smartphone as primary tracking device.
                 </label>
@@ -130,7 +135,7 @@ const Order = () => {
                 <CarFront size={22} className="text-dark" />
               </span>
               <div className="mt-10 text-center">
-                <Badge variant="success">Completed</Badge>
+                <Badge variant="warning">Recommended</Badge>
                 <SubHeading
                   className="text-center mt-5 sub"
                   weight="medium"
@@ -157,7 +162,7 @@ const Order = () => {
                 </Paragraph>
               </div>
               {/* key benifits */}
-              <div className="key-benifts mt-[20px] border-t border-gray-100 pt-[20px]">
+              <div className="key-benifts mt-[20px] border-t border-gray-200 pt-[20px]">
                 <strong>Key Benefits:</strong>
                 <p className="flex items-center gap-1.5 mb-2 mt-2">
                   <span className="w-2 h-2 rounded-full bg-gray-900 flex"></span>
@@ -174,10 +179,15 @@ const Order = () => {
               </div>
               {/* checkbox */}
               <div
-                className="check bg-white border border-gray-100 p-3 rounded-lg mt-[20px] flex items-center gap-3
+                className="check bg-white border border-gray-200 p-3 rounded-lg mt-[20px] flex items-center gap-3
               "
               >
-                <input type="checkbox" name="" id="device" />
+                <input
+                  type="checkbox"
+                  name=""
+                  id="device"
+                  className="w-5 h-5 accent-gray-600 cursor-pointer"
+                />
                 <label htmlFor="device">Order your device</label>
               </div>
             </div>
@@ -185,7 +195,7 @@ const Order = () => {
         </div>
         {/* section-right */}
         <div className="col-span-2 p-5 rounded-lg bg-white ">
-          <div className="bg-orange-100 p-2 border border-orange-400 rounded-lg text-center">
+          <div className="bg-orange-100  p-2 border border-orange-400 rounded-lg text-center">
             <Badge variant="warning">PRIME</Badge>
             <SubHeading
               weight="bold"
@@ -197,7 +207,7 @@ const Order = () => {
           </div>
           {/* features list */}
           <div className="mt-[10px] rounded-lg border border-gray-400 overflow-hidden">
-            <div className="features-head p-2 relative overflow-hidden border-b border-gray-400">
+            <div className="features-head featurprime p-2 relative overflow-hidden border-b border-gray-400">
               <strong>Features</strong>
               <span className="bg-orange-100 absolute right-0 top-0 h-full w-[80px] flex items-center justify-center">
                 <Badge variant="warning">PRIME</Badge>

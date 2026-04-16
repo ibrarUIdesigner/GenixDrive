@@ -322,6 +322,9 @@ button {
 .active-step span {
   background-color: #7b77ff;
 }
+.featurprime span {
+  color: white !important;
+}
 .step-container p {
   font-size: 13px;
   line-height: 15px;
