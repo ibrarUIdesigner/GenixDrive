@@ -242,7 +242,7 @@ const Switch = ({ onClick }: Props) => {
     <div className="flex items-center justify-center mb-5">
       <div className="relative inline-flex items-center w-[420px] h-14 rounded-full border border-black/10 bg-white shadow-sm p-1">
         <div
-          className={`absolute inset-y-1 left-1 w-1/2 rounded-full bg-primary transition-transform duration-300 ${
+          className={`absolute inset-y-1 left-1 w-1/2 rounded-full bg-secondary transition-transform duration-300 ${
             mode === "with" ? "translate-x-0" : "translate-x-full"
           }`}
         />
