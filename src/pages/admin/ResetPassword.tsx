@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ab1 from "../../assets/login.png";
 import Button from "../../components/Button";
 import SubHeading from "../../components/sharedui/SubHeading";

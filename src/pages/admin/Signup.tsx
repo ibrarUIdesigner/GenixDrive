@@ -17,14 +17,14 @@ import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
 interface SignupPayload {
-  email: string;
+  email?: string;
   userName: string;
   firstName: string;
   lastName: string;
   fullName: string;
   password: string;
   gender: string;
-  phone: string;
+  phone?: string;
   tracking: boolean;
   status: string;
 }
@@ -65,7 +65,9 @@ const Signup = () => {
   const [success, setSuccess] = useState("");
   const [data, setData] = useState<string>("email");
 
-  const [signupPayload, setSignupPayload] = useState(null);
+  const [signupPayload, setSignupPayload] = useState<SignupPayload | null>(
+    null,
+  );
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
@@ -83,7 +85,7 @@ const Signup = () => {
 
   // handle generate OTP
   const handleGenerateOTP = async () => {
-    if (!form.phone.trim()) {
+    if (!form.phone?.trim()) {
       setError("Phone is required");
       return;
     }
@@ -279,92 +281,92 @@ const Signup = () => {
     await callSignUpAPI();
     return;
 
-    try {
-      setLoading(true);
-      setError("");
-      setSuccess("");
+    // try {
+    //   setLoading(true);
+    //   setError("");
+    //   setSuccess("");
 
-      // Optional: auto-generate fullName
+    //   // Optional: auto-generate fullName
 
-      const payload = {
-        userName: form.userName,
-        password: form.password,
-        firstName: form.firstName,
-        lastName: form.lastName,
-        fullName: `${form.firstName} ${form.lastName}`.trim(),
-        gender: form.gender,
-        tracking: form.tracking,
-        status: form.status,
+    //   const payload = {
+    //     userName: form.userName,
+    //     password: form.password,
+    //     firstName: form.firstName,
+    //     lastName: form.lastName,
+    //     fullName: `${form.firstName} ${form.lastName}`.trim(),
+    //     gender: form.gender,
+    //     tracking: form.tracking,
+    //     status: form.status,
 
-        // ✅ Conditional field
-        ...(data === "email" ? { email: form.email } : { phone: form.phone }),
-      };
+    //     // ✅ Conditional field
+    //     ...(data === "email" ? { email: form.email } : { phone: form.phone }),
+    //   };
 
-      console.log("payload :", payload);
+    //   console.log("payload :", payload);
 
-      const response = await axios.post<SignupResponse>(
-        "https://aigenix-api-app-services.three-shelves.com/auth/signup",
-        payload,
-        {
-          headers: {
-            "x-account-id": "aigenix-uat",
-          },
-        },
-      );
+    //   const response = await axios.post<SignupResponse>(
+    //     "https://aigenix-api-app-services.three-shelves.com/auth/signup",
+    //     payload,
+    //     {
+    //       headers: {
+    //         "x-account-id": "aigenix-uat",
+    //       },
+    //     },
+    //   );
 
-      // ✅ Success
-      setSuccess(response.data?.msg || "Signup successful");
+    //   // ✅ Success
+    //   setSuccess(response.data?.msg || "Signup successful");
 
-      // Optional: clear form
-      setForm({
-        email: "",
-        userName: "",
-        firstName: "",
-        lastName: "",
-        fullName: "",
-        password: "",
-        gender: "",
-        phone: "",
-        tracking: true,
-        status: "active",
-      });
+    //   // Optional: clear form
+    //   setForm({
+    //     email: "",
+    //     userName: "",
+    //     firstName: "",
+    //     lastName: "",
+    //     fullName: "",
+    //     password: "",
+    //     gender: "",
+    //     phone: "",
+    //     tracking: true,
+    //     status: "active",
+    //   });
 
-      if (response.data.success) {
-        toast.success(response.data.msg);
-        setTimeout(() => {
-          navigate("/admin/login");
-        }, 2000);
-      } else {
-        toast.error(response.data.msg);
-      }
+    //   if (response.data.success) {
+    //     toast.success(response.data.msg);
+    //     setTimeout(() => {
+    //       navigate("/admin/login");
+    //     }, 2000);
+    //   } else {
+    //     toast.error(response.data.msg);
+    //   }
 
-      console.log("Signup Success:", response.data);
-    } catch (err) {
-      const error = err as AxiosError<any>;
+    //   console.log("Signup Success:", response.data);
+    // } catch (err) {
+    //   const error = err as AxiosError<any>;
 
-      console.log("API ERROR:", error.response?.data);
+    //   console.log("API ERROR:", error.response?.data);
 
-      if (error.response) {
-        const resData = error.response.data;
+    //   if (error.response) {
+    //     const resData = error.response.data;
 
-        // ✅ Handle array of errors
-        if (Array.isArray(resData?.msg)) {
-          setError(resData.msg.join(", "));
-        }
-        // fallback
-        else if (resData?.msg) {
-          setError(resData.msg);
-        } else {
-          setError("Signup failed");
-        }
-      } else if (error.request) {
-        setError("No response from server. Try again.");
-      } else {
-        setError("Something went wrong");
-      }
-    } finally {
-      setLoading(false);
-    }
+    //     // ✅ Handle array of errors
+    //     if (Array.isArray(resData?.msg)) {
+    //       setError(resData.msg.join(", "));
+    //     }
+    //     // fallback
+    //     else if (resData?.msg) {
+    //       setError(resData.msg);
+    //     } else {
+    //       setError("Signup failed");
+    //     }
+    //   } else if (error.request) {
+    //     setError("No response from server. Try again.");
+    //   } else {
+    //     setError("Something went wrong");
+    //   }
+    // } finally {
+    //   setLoading(false);
+    // }
   };
 
   const callSignUpAPI = async () => {
@@ -412,6 +414,7 @@ const Signup = () => {
           tracking: true,
           status: "active",
         });
+        setSuccess(response.data?.msg || "Signup successful");
 
         setTimeout(() => {
           navigate("/admin/login");
