@@ -29,6 +29,7 @@ import ProtectedRoute from "../Protection/ProtectedRoutes";
 import PublicRoute from "../Protection/PublicRoute";
 import Order from "../pages/admin/Order";
 import PasswordSet from "../pages/admin/PasswordSet";
+import PasswordSetPhone from "../pages/admin/PasswordSetPhone";
 
 const router = createBrowserRouter([
   {
@@ -63,6 +64,7 @@ const router = createBrowserRouter([
       { path: "forget-password", element: <ForgetPassword /> },
       { path: "reset-password", element: <ResetPassword /> },
       { path: "set-password", element: <PasswordSet /> },
+      { path: "set-passworrd", element: <PasswordSetPhone /> },
     ],
   },
   {

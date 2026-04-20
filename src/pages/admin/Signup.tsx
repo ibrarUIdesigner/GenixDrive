@@ -80,37 +80,6 @@ const Signup = () => {
       setError("Phone is required");
       return;
     }
-    const password = form.password;
-
-    // Required
-    if (!password || !password.trim()) {
-      setError("Password is required");
-      return;
-    }
-
-    // Min length 8
-    if (password.length < 8) {
-      setError("Password must be at least 8 characters long");
-      return;
-    }
-
-    // At least 1 uppercase
-    if (!/[A-Z]/.test(password)) {
-      setError("Password must contain at least 1 uppercase letter");
-      return;
-    }
-
-    // At least 1 lowercase
-    if (!/[a-z]/.test(password)) {
-      setError("Password must contain at least 1 lowercase letter");
-      return;
-    }
-
-    // At least 1 special character
-    if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
-      setError("Password must contain at least 1 special character");
-      return;
-    }
 
     try {
       setLoading(true);
@@ -143,6 +112,8 @@ const Signup = () => {
         // ✅ Conditional field
         ...(data === "email" ? { email: form.email } : { phone: form.phone }),
       };
+
+      localStorage.setItem("payload", JSON.stringify(payload));
 
       setSignupPayload(payload);
 
@@ -177,10 +148,10 @@ const Signup = () => {
   // handle verify otp code
   const handleVerifyOTPcode = async () => {
     // ✅ Frontend validation
-    if (!email.trim()) {
-      toast.error("Email is required");
-      return;
-    }
+    // Get the string from localStorage
+    const userPayload = JSON.parse(localStorage.getItem("payload") || "");
+
+    // Convert the string back into an object
 
     if (!otpCode.trim()) {
       toast.error("OTP is required");
@@ -201,7 +172,7 @@ const Signup = () => {
       const res = await axios.post(
         "https://aigenix-api-app-services.three-shelves.com/auth/verify-otp",
         {
-          phone: email,
+          phone: userPayload.phone,
           otp: otpCode,
         },
         {
@@ -217,9 +188,9 @@ const Signup = () => {
       toast.success("OTP verified successfully 🎉");
 
       if (res.data?.success) {
-        await callSignUpAPI();
+        // await callSignUpAPI();
         setTimeout(() => {
-          // navigate("/admin/signup");
+          navigate("/admin/set-passworrd");
         }, 2000); // match toast duration
       }
     } catch (err) {
@@ -282,188 +253,6 @@ const Signup = () => {
     } catch (error) {}
 
     navigate("/admin/verify-otp");
-    return;
-
-    // Basic validation
-    if (!form.password || !form.userName) {
-      setError("Required fields are missing");
-      return;
-    }
-
-    if (data === "email" && !form.email) {
-      setError("Email is required");
-      return;
-    }
-
-    if (data === "phone" && !form.phone) {
-      setError("Phone is required");
-      return;
-    }
-
-    await callSignUpAPI();
-    return;
-
-    // try {
-    //   setLoading(true);
-    //   setError("");
-    //   setSuccess("");
-
-    //   // Optional: auto-generate fullName
-
-    //   const payload = {
-    //     userName: form.userName,
-    //     password: form.password,
-    //     firstName: form.firstName,
-    //     lastName: form.lastName,
-    //     fullName: `${form.firstName} ${form.lastName}`.trim(),
-    //     gender: form.gender,
-    //     tracking: form.tracking,
-    //     status: form.status,
-
-    //     // ✅ Conditional field
-    //     ...(data === "email" ? { email: form.email } : { phone: form.phone }),
-    //   };
-
-    //   console.log("payload :", payload);
-
-    //   const response = await axios.post<SignupResponse>(
-    //     "https://aigenix-api-app-services.three-shelves.com/auth/signup",
-    //     payload,
-    //     {
-    //       headers: {
-    //         "x-account-id": "aigenix-uat",
-    //       },
-    //     },
-    //   );
-
-    //   // ✅ Success
-    //   setSuccess(response.data?.msg || "Signup successful");
-
-    //   // Optional: clear form
-    //   setForm({
-    //     email: "",
-    //     userName: "",
-    //     firstName: "",
-    //     lastName: "",
-    //     fullName: "",
-    //     password: "",
-    //     gender: "",
-    //     phone: "",
-    //     tracking: true,
-    //     status: "active",
-    //   });
-
-    //   if (response.data.success) {
-    //     toast.success(response.data.msg);
-    //     setTimeout(() => {
-    //       navigate("/admin/login");
-    //     }, 2000);
-    //   } else {
-    //     toast.error(response.data.msg);
-    //   }
-
-    //   console.log("Signup Success:", response.data);
-    // } catch (err) {
-    //   const error = err as AxiosError<any>;
-
-    //   console.log("API ERROR:", error.response?.data);
-
-    //   if (error.response) {
-    //     const resData = error.response.data;
-
-    //     // ✅ Handle array of errors
-    //     if (Array.isArray(resData?.msg)) {
-    //       setError(resData.msg.join(", "));
-    //     }
-    //     // fallback
-    //     else if (resData?.msg) {
-    //       setError(resData.msg);
-    //     } else {
-    //       setError("Signup failed");
-    //     }
-    //   } else if (error.request) {
-    //     setError("No response from server. Try again.");
-    //   } else {
-    //     setError("Something went wrong");
-    //   }
-    // } finally {
-    //   setLoading(false);
-    // }
-  };
-
-  const callSignUpAPI = async () => {
-    try {
-      setLoading(true);
-      setError("");
-
-      const payload = {
-        userName: form.userName,
-        password: form.password,
-        firstName: form.firstName,
-        lastName: form.lastName,
-        fullName: `${form.firstName} ${form.lastName}`.trim(),
-        gender: form.gender,
-        tracking: form.tracking,
-        status: form.status,
-
-        ...(data === "email" ? { email: form.email } : { phone: form.phone }),
-      };
-
-      console.log("Signup payload:", payload);
-
-      const response = await axios.post<SignupResponse>(
-        "https://aigenix-api-app-services.three-shelves.com/auth/signup",
-        payload,
-        {
-          headers: {
-            "x-account-id": "aigenix-uat",
-          },
-        },
-      );
-
-      if (response.data.success) {
-        toast.success(response.data.msg);
-
-        setForm({
-          email: "",
-          userName: "",
-          firstName: "",
-          lastName: "",
-          fullName: "",
-          password: "",
-          gender: "",
-          phone: "",
-          tracking: true,
-          status: "active",
-        });
-        setSuccess(response.data?.msg || "Signup successful");
-
-        setTimeout(() => {
-          navigate("/admin/login");
-        }, 2000);
-      } else {
-        toast.error(response.data.msg);
-      }
-    } catch (err) {
-      const error = err as AxiosError<any>;
-
-      let message = "Signup failed";
-
-      if (error.response) {
-        const resData = error.response.data;
-
-        if (Array.isArray(resData?.msg)) {
-          message = resData.msg.join(", ");
-        } else {
-          message = resData?.msg || "Signup failed";
-        }
-      }
-
-      toast.error(message);
-      setError(message);
-    } finally {
-      setLoading(false);
-    }
   };
 
   // Generate username API
@@ -514,13 +303,6 @@ const Signup = () => {
                 Enter the 6-digit verification code sent to your phone number to
                 continue.
               </p>
-              <TextField
-                type="tel"
-                placeholder="Phone"
-                leftIcon={<Phone className="w-5 h-5" />}
-                onChange={(e) => setEmail(e.target.value)}
-                value={email}
-              />
               <TextField
                 maxLength={6}
                 type="text"
@@ -599,12 +381,23 @@ const Signup = () => {
                   )}
                 </div>
                 <div>
-                  <TextField
-                    placeholder="User Name"
-                    leftIcon={<User className="w-5 h-5" />}
-                    value={generatedUsername}
-                    name="userName"
-                  />
+                  {data === "email" && (
+                    <TextField
+                      placeholder="User Name"
+                      leftIcon={<User className="w-5 h-5" />}
+                      value={generatedUsername}
+                      name="userName"
+                    />
+                  )}
+                  {data === "phone" && (
+                    <TextField
+                      placeholder="User Name"
+                      leftIcon={<User className="w-5 h-5" />}
+                      value={form.userName}
+                      name="userName"
+                      onChange={handleChange}
+                    />
+                  )}
                 </div>
 
                 <label className="flex items-center gap-2 text-sm text-gray-600">
