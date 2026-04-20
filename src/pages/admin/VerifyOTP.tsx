@@ -20,10 +20,10 @@ const VerifyOTP = () => {
 
   const handleVerifyOTPcode = async () => {
     // ✅ Frontend validation
-    if (!email.trim()) {
-      toast.error("Email is required");
-      return;
-    }
+    // if (!email.trim()) {
+    //   toast.error("Email is required");
+    //   return;
+    // }
 
     if (!otpCode.trim()) {
       toast.error("OTP is required");
@@ -42,7 +42,7 @@ const VerifyOTP = () => {
       const res = await axios.post(
         "https://aigenix-api-app-services.three-shelves.com/auth/verify-otp",
         {
-          email,
+          email: localStorage.getItem("email"),
           otp: otpCode,
         },
         {
@@ -59,7 +59,7 @@ const VerifyOTP = () => {
 
       if (res.data?.success) {
         setTimeout(() => {
-          navigate("/admin/signup");
+          navigate("/admin/set-password");
         }, 2000); // match toast duration
       }
     } catch (err) {
@@ -102,13 +102,13 @@ const VerifyOTP = () => {
               continue.
             </p>
             <form className="space-y-4">
-              <TextField
+              {/* <TextField
                 type="email"
                 placeholder="Email"
                 leftIcon={<Mail className="w-5 h-5" />}
                 onChange={(e) => setEamil(e.target.value)}
                 value={email}
-              />
+              /> */}
               <TextField
                 maxLength={6}
                 type="text"

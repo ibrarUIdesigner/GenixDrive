@@ -1,4 +1,3 @@
-import React from "react";
 import InfoCard from "../../components/sharedui/InfoCard";
 import SubHeading from "../../components/sharedui/SubHeading";
 import Badge from "../../components/sharedui/Badge";
