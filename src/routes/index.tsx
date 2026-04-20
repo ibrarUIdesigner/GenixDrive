@@ -28,6 +28,7 @@ import ResetPassword from "../pages/admin/ResetPassword";
 import ProtectedRoute from "../Protection/ProtectedRoutes";
 import PublicRoute from "../Protection/PublicRoute";
 import Order from "../pages/admin/Order";
+import PasswordSet from "../pages/admin/PasswordSet";
 
 const router = createBrowserRouter([
   {
@@ -61,6 +62,7 @@ const router = createBrowserRouter([
       { path: "verify-otp", element: <VerifyOTP /> },
       { path: "forget-password", element: <ForgetPassword /> },
       { path: "reset-password", element: <ResetPassword /> },
+      { path: "set-password", element: <PasswordSet /> },
     ],
   },
   {

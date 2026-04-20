@@ -1,15 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios, { AxiosError } from "axios";
 import ab1 from "../../assets/logup.png";
-import {
-  Eye,
-  EyeOff,
-  Mail,
-  Phone,
-  User,
-  Lock,
-  RectangleEllipsis,
-} from "lucide-react";
+import { Mail, Phone, User, RectangleEllipsis } from "lucide-react";
 import Button from "../../components/Button";
 import SubHeading from "../../components/sharedui/SubHeading";
 import { TextField } from "../../components/sharedui/Input";
@@ -29,7 +21,7 @@ interface SignupPayload {
   status: string;
 }
 
-interface SignupResponse {
+export interface SignupResponse {
   msg: string;
   user?: {
     id: string;
@@ -39,8 +31,6 @@ interface SignupResponse {
 }
 
 const Signup = () => {
-  const [showPassword, setShowPassword] = useState(false);
-  // const [showConfirm, setShowConfirm] = useState(false);
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const [email, setEmail] = useState("");
   const [otpCode, setOTPCode] = useState("");
@@ -64,6 +54,7 @@ const Signup = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [data, setData] = useState<string>("email");
+  const [generatedUsername, setGeneratedUsername] = useState<string>("");
 
   const [signupPayload, setSignupPayload] = useState<SignupPayload | null>(
     null,
@@ -262,6 +253,37 @@ const Signup = () => {
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    // NEW
+    if (data === "email" && !form.email) {
+      setError("Email is required");
+      return;
+    }
+    if (!generatedUsername) {
+      setError("Username is required");
+      return;
+    }
+
+    localStorage.setItem("firstName", form.firstName);
+    localStorage.setItem("lastName", form.lastName);
+    localStorage.setItem("email", form.email || "");
+
+    // CALL GENERATE API
+    try {
+      const res = await axios.post(
+        "https://aigenix-api-app-services.three-shelves.com/auth/generate-otp",
+        { email: form.email },
+        {
+          headers: {
+            "x-account-id": "aigenix-uat",
+          },
+        },
+      );
+      console.log(res);
+    } catch (error) {}
+
+    navigate("/admin/verify-otp");
+    return;
+
     // Basic validation
     if (!form.password || !form.userName) {
       setError("Required fields are missing");
@@ -443,6 +465,41 @@ const Signup = () => {
       setLoading(false);
     }
   };
+
+  // Generate username API
+  const generateUsernameAPI = async () => {
+    try {
+      const res = await axios.post(
+        "https://aigenix-api-app-services.three-shelves.com/auth/generate-username",
+        { email: form.email },
+        {
+          headers: {
+            "x-account-id": "aigenix-uat",
+          },
+        },
+      );
+      // ✅ API success response
+      const generatedUsername = res.data?.data;
+
+      localStorage.setItem("username", generatedUsername);
+
+      setGeneratedUsername(generatedUsername);
+    } catch (error) {}
+  };
+
+  // EFFECTS
+  useEffect(() => {
+    if (!form.email) return;
+    // ✅ simple email validation
+    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email);
+    if (!isValidEmail) return;
+
+    const timer = setTimeout(() => {
+      generateUsernameAPI();
+    }, 500); // wait 500ms after typing stops
+
+    return () => clearTimeout(timer);
+  }, [form.email]);
   return (
     <section className="px-6 py-12 md:py-20 font-cairo">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
@@ -514,15 +571,6 @@ const Signup = () => {
                     name="lastName"
                   />
                 </div>
-                <div>
-                  <TextField
-                    placeholder="User Name"
-                    leftIcon={<User className="w-5 h-5" />}
-                    value={form.userName}
-                    onChange={handleChange}
-                    name="userName"
-                  />
-                </div>
                 <div className="">
                   {data === "email" && (
                     <TextField
@@ -550,47 +598,15 @@ const Signup = () => {
                     </>
                   )}
                 </div>
-                <TextField
-                  type={showPassword ? "text" : "password"}
-                  placeholder="Password"
-                  value={form.password}
-                  onChange={handleChange}
-                  name="password"
-                  leftIcon={<Lock className="w-5 h-5" />}
-                  rightIcon={
-                    <button
-                      type="button"
-                      className="text-gray-500"
-                      onClick={() => setShowPassword((v) => !v)}
-                      aria-label="Toggle password visibility"
-                    >
-                      {showPassword ? (
-                        <EyeOff className="w-5 h-5" />
-                      ) : (
-                        <Eye className="w-5 h-5" />
-                      )}
-                    </button>
-                  }
-                />
-                {/* <TextField
-              type={showConfirm ? "text" : "password"}
-              placeholder="Confirm Password"
-              leftIcon={<Lock className="w-5 h-5" />}
-              rightIcon={
-                <button
-                  type="button"
-                  className="text-gray-500"
-                  onClick={() => setShowConfirm((v) => !v)}
-                  aria-label="Toggle confirm password visibility"
-                >
-                  {showConfirm ? (
-                    <EyeOff className="w-5 h-5" />
-                  ) : (
-                    <Eye className="w-5 h-5" />
-                  )}
-                </button>
-              }
-            /> */}
+                <div>
+                  <TextField
+                    placeholder="User Name"
+                    leftIcon={<User className="w-5 h-5" />}
+                    value={generatedUsername}
+                    name="userName"
+                  />
+                </div>
+
                 <label className="flex items-center gap-2 text-sm text-gray-600">
                   <input type="checkbox" className="rounded border-gray-300" />I
                   agree to all the{" "}
