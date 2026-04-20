@@ -8,7 +8,7 @@ import axios, { AxiosError } from "axios";
 import type { SignupResponse } from "./Signup";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-const PasswordSet = () => {
+const PasswordSetPhone = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
   const [password, setPassword] = useState("");
@@ -30,21 +30,19 @@ const PasswordSet = () => {
 
   const handleSignup = async () => {
     setError("");
-    setLoading(true);
     if (!isMatch) {
       setError("Please enter password");
       return;
     }
+    setLoading(true);
+    const payloadData = JSON.parse(localStorage.getItem("payload") || "");
     const payload = {
-      email: localStorage.getItem("email"),
-      firstName: localStorage.getItem("firstName"),
-      lastName: localStorage.getItem("lastName"),
+      phone: payloadData.phone,
+      firstName: payloadData.firstName,
+      lastName: payloadData.lastName,
       password: password,
-      userName: localStorage.getItem("username"),
-      fullName:
-        localStorage.getItem("firstName") +
-        " " +
-        localStorage.getItem("lastName"),
+      userName: payloadData.userName,
+      fullName: payloadData.firstName + " " + payloadData.lastName,
       gender: "",
       tracking: true,
       status: "ACTIVE",
@@ -226,4 +224,4 @@ const PasswordSet = () => {
   );
 };
 
-export default PasswordSet;
+export default PasswordSetPhone;
