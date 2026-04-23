@@ -27,7 +27,7 @@ const About = () => {
     <div className="bg-white min-h-screen">
       {/* About Hero Section (Slider) */}
       {/* <AboutHero /> */}
-      <section className="about-hero">
+      <section className="about-hero relative z-0 -mt-[100px]">
         <div className="img">
           <img className="w-full" src={aboutHeroImg} alt="" />
         </div>
@@ -55,7 +55,7 @@ const About = () => {
           />
         </SectionHeading>
 
-        <div className="grid md:grid-cols-5 gap-5">
+        <div className="grid md:grid-cols-5 gap-5 mt-[50px]">
           <div className="md:col-span-3 p-5 min-h-[404px] md:h-auto  bg-secondary rounded-2xl overflow-hidden z-10 relative">
             <img
               className="absolute top-0 left-0 w-full h-full object-cover"
@@ -143,7 +143,7 @@ const About = () => {
 
       {/* SECTION4 */}
       <section className="px-[56px] py-[120px] pb-[60px] padding-50">
-        <div className="section-heading text-center mb-[50px] md:mb-[150px] w-full md:w-1/2 m-auto">
+        <div className="section-heading text-center mb-[50px]  w-full md:w-1/2 m-auto">
           <SubHeading
             size="4xl"
             color="dark"

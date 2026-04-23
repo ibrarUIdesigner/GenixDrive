@@ -36,7 +36,7 @@ const BenefitsSection = () => {
 
   return (
     <motion.section
-      className="bg-surface-light text-black font-cairo padding-50 py-[116px] px-[58px]"
+      className="bg-surface-light text-black font-cairo padding-50 py-[116px] px-[58px] mb-[50px]"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}
@@ -87,12 +87,14 @@ const BenefitsSection = () => {
               whileHover={{ y: -6, scale: 1.01 }}
               whileTap={{ scale: 0.995 }}
               transition={{ type: "spring", stiffness: 240, damping: 22 }}
-              className="group rounded-xl overflow-hidden "
+              className="group rounded-xl overflow-hidden flex flex-col h-full cursor-pointer"
               onClick={() => {
-                (navigate(`../${item.redirectURL}`), window.scrollTo(0, 0));
+                navigate(`../${item.redirectURL}`);
+                window.scrollTo(0, 0);
               }}
             >
-              <div className="w-[428px] max-w-full h-[428px] bg-black/5 rounded-[17.09px] overflow-hidden mx-auto">
+              {/* ✅ Image */}
+              <div className="w-full h-[230px] md:h-[430px] rounded-xl bg-black/5 overflow-hidden">
                 <motion.img
                   src={item.image}
                   alt={item.title}
@@ -101,7 +103,9 @@ const BenefitsSection = () => {
                   transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
                 />
               </div>
-              <div className="p-6">
+
+              {/* ✅ Content */}
+              <div className="p-6 flex flex-col flex-1">
                 <SubHeading
                   color="dark"
                   weight="semibold"
@@ -120,9 +124,11 @@ const BenefitsSection = () => {
                   {item.description}
                 </Paragraph>
 
+                {/* ✅ Bottom aligned button */}
                 <Link
                   to={`../${item.redirectURL}`}
-                  className="flex gap-1.5 items-center mt-4 text-sm font-medium text-secondary font-bold uppercase underline transition-colors duration-200 ease-in-out"
+                  className="mt-auto pt-4 flex gap-1.5 items-center text-sm font-bold text-secondary uppercase underline transition-colors duration-200"
+                  onClick={(e) => e.stopPropagation()}
                 >
                   <span>Read More</span>
                   <ArrowRightIcon size={18} />

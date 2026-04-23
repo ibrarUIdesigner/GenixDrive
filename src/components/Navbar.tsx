@@ -34,7 +34,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`w-full py-6 px-8 flex items-center justify-between font-cairo transition-colors duration-300 ${
+      className={`w-full z-40 py-6 px-8 flex items-center justify-between font-cairo transition-colors duration-300 ${
         isHome ? "bg-primary text-white" : "bg-white text-black shadow-sm"
       }`}
     >
