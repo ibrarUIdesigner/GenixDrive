@@ -63,7 +63,7 @@ const Login = () => {
         password,
 
         // ✅ Conditional field
-        ...(data === "email" ? { email } : { phone }),
+        ...(data === "email" ? { email } : { phone: "+92" + phone }),
       };
 
       console.log("Login payload:", payload);
@@ -134,7 +134,7 @@ const Login = () => {
                   />
                 </>
               ) : (
-                <>
+                <div className="relative">
                   <TextField
                     type="text"
                     placeholder="Phone"
@@ -142,11 +142,18 @@ const Login = () => {
                     onChange={(e) => setPhone(e.target.value)}
                     value={phone}
                     containerClassName="m-auto"
+                    className="pl-[80px]"
                   />
                   <span className="text-[10px]">
                     Phone number must start with +92
                   </span>
-                </>
+                  <span className="text-[10px] block">
+                    phone number should be registered on WhatsApp
+                  </span>
+                  <span className="absolute top-[15px] pl-[50px] text-sm text-gray-700">
+                    +92
+                  </span>
+                </div>
               )}
 
               <TextField
@@ -199,29 +206,13 @@ const Login = () => {
                   Sign up
                 </Link>
               </p>
-              <div className="pt-4">
-                <p className="text-center text-sm text-gray-500 mb-3">
-                  Or login with
-                </p>
-                <div className="grid grid-cols-3 gap-3">
-                  <button className="border rounded-lg py-2 text-sm">
-                    Facebook
-                  </button>
-                  <button className="border rounded-lg py-2 text-sm">
-                    Google
-                  </button>
-                  <button className="border rounded-lg py-2 text-sm">
-                    Apple
-                  </button>
-                </div>
-              </div>
             </form>
           </div>
           <div className="rounded-2xl overflow-hidden h-full">
             <img
               src={ab1}
               alt="Login visual"
-              className="w-full h-full object-cover rounded-2xl"
+              className="w-full h-[550px] object-cover rounded-2xl"
             />
           </div>
         </div>

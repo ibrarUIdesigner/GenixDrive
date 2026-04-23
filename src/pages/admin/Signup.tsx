@@ -86,7 +86,7 @@ const Signup = () => {
 
       const res = await axios.post(
         "https://aigenix-api-app-services.three-shelves.com/auth/generate-otp",
-        { phone: form.phone },
+        { phone: "+92" + form.phone },
         {
           headers: {
             "x-account-id": "aigenix-uat",
@@ -109,7 +109,9 @@ const Signup = () => {
         status: form.status,
 
         // ✅ Conditional field
-        ...(data === "email" ? { email: form.email } : { phone: form.phone }),
+        ...(data === "email"
+          ? { email: form.email }
+          : { phone: "+92" + form.phone }),
       };
 
       localStorage.setItem("payload", JSON.stringify(payload));
@@ -132,7 +134,9 @@ const Signup = () => {
         if (Array.isArray(resData?.msg)) {
           setError(resData.msg.join(", "));
         } else {
-          setError(resData?.message ||resData.msg || "Failed to generate username");
+          setError(
+            resData?.message || resData.msg || "Failed to generate username",
+          );
         }
       } else if (error.request) {
         setError("No response from server");
@@ -364,19 +368,26 @@ const Signup = () => {
                     />
                   )}
                   {data === "phone" && (
-                    <>
+                    <div className="relative ">
                       <TextField
                         type="tel"
-                        placeholder="Phone Number"
+                        placeholder="Mobile Number"
                         leftIcon={<Phone className="w-5 h-5" />}
                         value={form.phone}
                         onChange={handleChange}
                         name="phone"
+                        className="pl-[80px]"
                       />
                       <span className="text-[10px]">
                         Phone number must start with +92
                       </span>
-                    </>
+                      <span className="text-[10px] block">
+                        phone number should be registered on WhatsApp
+                      </span>
+                      <span className="absolute top-[15px] pl-[50px] text-sm text-gray-700">
+                        +92
+                      </span>
+                    </div>
                   )}
                 </div>
                 <div>
@@ -399,7 +410,7 @@ const Signup = () => {
                   )}
                 </div>
 
-                <label className="flex items-center gap-2 text-sm text-gray-600">
+                {/* <label className="flex items-center gap-2 text-sm text-gray-600">
                   <input type="checkbox" className="rounded border-gray-300" />I
                   agree to all the{" "}
                   <a href="#" className="text-primary">
@@ -409,7 +420,7 @@ const Signup = () => {
                   <a href="#" className="text-primary">
                     Privacy Policies
                   </a>
-                </label>
+                </label> */}
                 {error && <p className="text-red-500 text-sm">{error}</p>}
                 {success && <p className="text-green-500 text-sm">{success}</p>}
 
@@ -423,7 +434,7 @@ const Signup = () => {
                     type="button"
                     onClick={handleSignup}
                   >
-                    {loading ? "Creating account..." : "Sign Up"}
+                    {loading ? "Waiting..." : "Next - Verify OTP"}
                   </Button>
                 ) : (
                   <Button
@@ -451,26 +462,6 @@ const Signup = () => {
                     Generate username
                   </Link>
                 </p>
-                <div className="pt-4">
-                  <div className="flex items-center gap-4">
-                    <div className="flex-1 h-px bg-gray-200"></div>
-                    <p className="text-xs md:text-sm text-gray-500">
-                      Or Sign up with
-                    </p>
-                    <div className="flex-1 h-px bg-gray-200"></div>
-                  </div>
-                  <div className="grid grid-cols-3 gap-3 mt-3">
-                    <button className="border rounded-lg py-2 text-sm">
-                      Facebook
-                    </button>
-                    <button className="border rounded-lg py-2 text-sm">
-                      Google
-                    </button>
-                    <button className="border rounded-lg py-2 text-sm">
-                      Apple
-                    </button>
-                  </div>
-                </div>
               </form>
             </>
           )}
@@ -481,7 +472,7 @@ const Signup = () => {
           <img
             src={ab1}
             alt="Signup visual"
-            className={`w-full ${isSuccess ? "h-[410px]" : "h-full"} object-cover rounded-2xl`}
+            className={`w-full ${isSuccess ? "h-[410px]" : "h-[550px]"} object-cover rounded-2xl`}
           />
         </div>
       </div>
