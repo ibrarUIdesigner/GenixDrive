@@ -245,11 +245,7 @@ button {
   font-weight: bold;
   color: #4d4d4d;
 }
-.pricing p {
-  font-size: 10px;
-  font-weight: 400;
-  color: #212121;
-}
+
 .admininput {
   border: none;
   width: 100%;
@@ -352,7 +348,7 @@ button {
     object-fit: cover;
   }
   .sub-heading {
-    font-size: 25px;
+    font-size: 20px;
   }
   .footer0actions div {
     margin: auto !important;

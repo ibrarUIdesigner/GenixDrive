@@ -22,7 +22,7 @@ const Pricing = () => {
         <SubHeading
           weight="medium"
           size="4xl"
-          className="absolute text-[60px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white"
+          className="absolute text-[35px] md:text-[60px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white"
         >
           <p>Our Pricing Plans </p>
           <p>
