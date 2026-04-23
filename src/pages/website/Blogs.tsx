@@ -161,7 +161,7 @@ const Blogs = () => {
             >
               <div className="blog-img mb-4">
                 <img
-                  className="w-full h-[240px] object-cover rounded-2xl"
+                  className="w-full h-[240px] object-cover object-[50%_0%] rounded-2xl"
                   src={blog.blogImg}
                   alt=""
                 />

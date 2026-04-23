@@ -11,7 +11,7 @@ const Footer = () => {
     <footer className="font-cairo foooter text-center md:text-left bg-primary text-white px-[58px] py-12 rounded-t-[50px]">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-10 justify-between">
         <div className="space-y-4 md:col-span-2">
-          <div className="h-10 w-32 rounded flex items-center justify-center">
+          <div className=" rounded flex items-center ">
             <img src={logo} alt="Genix Drive Logo" />
           </div>
           <Paragraph
@@ -49,9 +49,9 @@ const Footer = () => {
           <SubHeading
             color="white"
             weight="medium"
-            className="mb-4 text-[32px]"
+            className="mb-4 text-[28px]"
           >
-            Quick <p>Access</p>
+            Quick Access
           </SubHeading>
           <ul className="space-y-3 text-sm">
             <li>
@@ -98,7 +98,7 @@ const Footer = () => {
           <SubHeading
             color="white"
             weight="medium"
-            className="mb-4 text-[32px]"
+            className="mb-4 text-[28px]"
           >
             Features
           </SubHeading>
@@ -142,9 +142,9 @@ const Footer = () => {
           <SubHeading
             color="white"
             weight="medium"
-            className="mb-4 text-[32px]"
+            className="mb-4 text-[28px]"
           >
-            Download <p>Now</p>
+            Download Now
           </SubHeading>
           <StoreActionsButtons className="!block footer0actions" />
         </div>
