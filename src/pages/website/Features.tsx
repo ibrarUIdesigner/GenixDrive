@@ -42,7 +42,7 @@ const Features = () => {
   return (
     <div>
       {/* BANNER */}
-      <section className="banner h-screen overflow-hidden relative">
+      <section className="banner h-screen md:h[900px] overflow-hidden relative">
         {/* Desktop Image */}
         <motion.img
           src={frame}
@@ -406,7 +406,7 @@ const Features = () => {
               >
                 {/* <span className="absolute left-6 top-6 w-6 h-1 bg-primary rounded-full"></span> */}
                 <span
-                  className={`inline-flex text-4xl items-center justify-center w-8 h-8 rounded-full ${
+                  className={`inline-flex absolute text-4xl items-center justify-center w-8 h-8 rounded-full ${
                     active ? " text-secondary" : " text-gray-900"
                   }`}
                 >

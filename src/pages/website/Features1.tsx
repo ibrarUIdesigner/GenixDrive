@@ -43,7 +43,7 @@ const Features1 = () => {
     <div>
       {/* BANNER */}
       <motion.section
-        className="banner h-screen overflow-hidden relative"
+        className="banner h-screen md:h-[900px] overflow-hidden relative"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
@@ -254,7 +254,7 @@ const Features1 = () => {
               >
                 {/* <span className="absolute left-6 top-6 w-6 h-1 bg-primary rounded-full"></span> */}
                 <span
-                  className={`inline-flex text-4xl items-center justify-center w-8 h-8 rounded-full ${
+                  className={`inline-flex absolute text-4xl items-center justify-center w-8 h-8 rounded-full ${
                     active ? " text-secondary" : " text-gray-900"
                   }`}
                 >
