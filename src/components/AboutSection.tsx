@@ -16,7 +16,7 @@ const AboutSection = ({ bg }: { bg: string }) => {
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
     >
       <motion.div
-        className="flex  items-center"
+        className="flex  items-center max-w-7xl m-auto"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}

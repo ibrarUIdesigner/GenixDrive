@@ -17,7 +17,7 @@ const SignupFlow = () => {
     setData(data);
   };
   return (
-    <section className="bg-white text-black font-cairo p-[70px] md:p-[135px] padding-50">
+    <section className="bg-white text-black font-cairo p-[70px] md:p-[135px] padding-50 ">
       <SectionHeading
         className="paratExt w-full md:w-[560px]"
         paraText="Get started in minutes download the app or use our optional device,
@@ -34,7 +34,7 @@ const SignupFlow = () => {
           />
         </div>
       </SectionHeading>
-      <div className="mt-[50px]">
+      <div className="mt-[50px] max-w-8xl  m-auto">
         <Switch onClick={handleChildClick} />
 
         <div className="steps sigup-flows flex items-center flex-wrap justify-center gap-10 mt-[76px]">
