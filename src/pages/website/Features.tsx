@@ -74,7 +74,7 @@ const Features = () => {
           </SubHeading>
 
           <Paragraph className="featuerHerText" size="sm">
-            tay close to what matters most — your loved ones. With AiGenix
+            Stay close to what matters most — your loved ones. With AiGenix
             Social & Family Connect, you can track, share, and ensure your
             family’s safety in real time, no matter where life takes you.
           </Paragraph>

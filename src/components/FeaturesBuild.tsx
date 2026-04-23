@@ -146,7 +146,14 @@ const FeaturesBuild = () => {
                 every mile with constant protection.
               </span>
             </Paragraph>
-            <Button size="lg">Learn More</Button>
+            <Button
+              onClick={() => {
+                (navigate("../features1"), window.scrollTo(0, 0));
+              }}
+              size="lg"
+            >
+              Learn More
+            </Button>
           </div>
           <div className="relative  lg:order-none">
             <img className="absolute -right-10 -top-10" src={grystr} />

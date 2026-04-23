@@ -11,6 +11,7 @@ interface FeatureSplitCardProps {
   containerBg?: string; // bg-secondary / bg-light-green etc
   textColor?: string; // text-white / text-dark
   overlay?: boolean; // dark overlay on image
+  id?: string;
 }
 
 const FeatureSplitCard: React.FC<FeatureSplitCardProps> = ({
@@ -21,6 +22,7 @@ const FeatureSplitCard: React.FC<FeatureSplitCardProps> = ({
   containerBg = "bg-secondary",
   textColor = "text-white",
   overlay = false,
+  id,
 }) => {
   return (
     <motion.div
@@ -29,6 +31,7 @@ const FeatureSplitCard: React.FC<FeatureSplitCardProps> = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6 }}
+      id={id}
     >
       {/* Text Section */}
       <div

@@ -118,6 +118,7 @@ const Features1 = () => {
 
         {/* .............. */}
         <FeatureSplitCard
+          id="Gooog"
           title="2. Speed & Driving Alerts"
           image={kf2}
           description="GenixDrive actively monitors driving behavior and sends instant
