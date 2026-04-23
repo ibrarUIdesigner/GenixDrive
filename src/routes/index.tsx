@@ -18,6 +18,7 @@ import Features2 from "../pages/website/Features2";
 import Feature3 from "../pages/website/Feature3";
 import Demo from "../pages/website/Demo";
 import DemoWalkthrough from "../pages/website/DemoWalkthrough";
+import InteractiveDemo from "../pages/website/InteractiveDemo";
 import DrivingScore from "../pages/admin/DrivingScore";
 import SubscriptionsManagements from "../pages/admin/SubscriptionsManagements";
 import GenerateUsername from "../pages/admin/GenerateUsername";
@@ -41,6 +42,7 @@ const router = createBrowserRouter([
       { path: "/pricing", element: <Pricing /> },
       { path: "/demo", element: <Demo /> },
       { path: "/demo-walkthrough", element: <DemoWalkthrough /> },
+      { path: "/interactive-demo", element: <InteractiveDemo /> },
       { path: "/blogs", element: <Blogs /> },
       { path: "/blogs/:id", element: <BlogDetails /> },
       { path: "/features", element: <Features /> },

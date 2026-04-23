@@ -6,13 +6,13 @@ import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import SubHeading from "../../components/sharedui/SubHeading";
 import { TextField } from "../../components/sharedui/Input";
-import { Mail, RectangleEllipsis } from "lucide-react";
+import { RectangleEllipsis } from "lucide-react";
 import Button from "../../components/Button";
 import ab1 from "../../assets/ab1.jpg";
 
 const VerifyOTP = () => {
   const [otpCode, setOTPCode] = useState<string>("");
-  const [email, setEamil] = useState<string>("");
+  // const [email, setEamil] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
 

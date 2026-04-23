@@ -32,7 +32,6 @@ export interface SignupResponse {
 
 const Signup = () => {
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
-  const [email, setEmail] = useState("");
   const [otpCode, setOTPCode] = useState("");
 
   const navigate = useNavigate();
@@ -52,7 +51,7 @@ const Signup = () => {
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
+  const [success] = useState("");
   const [data, setData] = useState<string>("email");
   const [generatedUsername, setGeneratedUsername] = useState<string>("");
 
@@ -97,7 +96,7 @@ const Signup = () => {
 
       // ✅ API success response
       const generatedUsername = res.data?.msg;
-      setEmail("");
+      // setEmail("");
 
       const payload = {
         userName: form.userName,
@@ -133,7 +132,7 @@ const Signup = () => {
         if (Array.isArray(resData?.msg)) {
           setError(resData.msg.join(", "));
         } else {
-          setError(resData?.message || "Failed to generate username");
+          setError(resData?.message ||resData.msg || "Failed to generate username");
         }
       } else if (error.request) {
         setError("No response from server");

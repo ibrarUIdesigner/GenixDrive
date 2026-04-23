@@ -1,6 +1,7 @@
 import SubHeading from "../../components/sharedui/SubHeading";
 import Paragraph from "../../components/sharedui/Paragraph";
 import ReadytoDrive from "../../components/web/ReadytoDrive";
+import { useNavigate } from "react-router-dom";
 
 import demoMobile from "../../assets/demoMobile.png";
 import demoDesktop from "../../assets/demoDEsktopt1.png";
@@ -13,6 +14,8 @@ import frameMobile from "../../assets/FrameMobile.png";
 import Button from "../../components/Button";
 
 const Demo = () => {
+  const navigate = useNavigate();
+
   return (
     <div>
       {/* BANNER */}
@@ -53,7 +56,7 @@ const Demo = () => {
             rewards — GenixDrive is your complete driving companion.
           </Paragraph>
 
-          <Button variant="primary" size="lg" className="mt-8">
+          <Button variant="primary" size="lg" className="mt-8" onClick={() => navigate("/interactive-demo")}>
             GET STARTED
           </Button>
         </motion.div>

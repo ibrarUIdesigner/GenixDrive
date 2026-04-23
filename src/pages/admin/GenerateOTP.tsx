@@ -55,7 +55,7 @@ const GenerateOTP = () => {
         if (Array.isArray(resData?.msg)) {
           setError(resData.msg.join(", "));
         } else {
-          setError(resData?.message || "Failed to generate username");
+          setError(resData.message || resData?.msg || "Failed to generate username");
         }
       } else if (error.request) {
         setError("No response from server");

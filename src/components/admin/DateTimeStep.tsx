@@ -23,7 +23,7 @@ const DateTimeStep = () => {
         <div className="flex-1">
           <DatePicker
             selected={date}
-            onChange={(d) => setDate(d)}
+            onChange={(d:any) => setDate(d)}
             inline
             calendarClassName="!border-none"
           />
