@@ -16,7 +16,7 @@ const AboutSection = ({ bg }: { bg: string }) => {
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
     >
       <motion.div
-        className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
+        className="flex  items-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
@@ -26,7 +26,7 @@ const AboutSection = ({ bg }: { bg: string }) => {
         }}
       >
         <motion.div
-          className="lg:col-span-6"
+          className="lg:col-span-6 flex-1"
           variants={{
             hidden: { opacity: 0, x: -24 },
             visible: { opacity: 1, x: 0 },
@@ -57,32 +57,24 @@ const AboutSection = ({ bg }: { bg: string }) => {
           </Button>
         </motion.div>
         <motion.div
-          className="lg:col-span-6"
+          className="lg:col-span-6 flex-1"
           variants={{
             hidden: { opacity: 0, x: 24 },
             visible: { opacity: 1, x: 0 },
           }}
           transition={{ duration: 0.6 }}
         >
-          <motion.div
-            className="hidden md:block "
-            whileHover={{ scale: 1.01 }}
-            transition={{ type: "spring", stiffness: 220, damping: 18 }}
-          >
+          <motion.div className="hidden md:block ">
             <motion.img
               src={ill}
               alt="GenixDrive app"
-              className="h-full w-auto object-contain drop-shadow-xl"
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+              className="h-full w-auto object-contain drop-shadow-xl  m-auto block"
             />
           </motion.div>
           <motion.img
             src={ill2}
             alt="GenixDrive app"
-            className="block md:hidden h-full w-auto object-contain drop-shadow-xl"
-            animate={{ y: [0, -8, 0] }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+            className="block md:hidden h-full w-auto object-contain drop-shadow-xl m-auto block"
           />
         </motion.div>
       </motion.div>

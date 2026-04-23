@@ -75,16 +75,16 @@ const Home = () => {
             </div>
           </SectionHeading>
 
-          <div className="flex flex-wrap justify-center gap-5 gap-5 place-items-center">
+          <div className="flex flex-wrap justify-center gap-5  items-stretch">
             {BlogsRecords.map((blog, index) => (
               <div
                 onClick={() => navigate(`/blogs/${index}`)}
                 key={index}
-                className="w-full max-w-sm blog-card-container cursor-pointer bg-white p-5 rounded-2xl shadow-2xl"
+                className="w-full h-[670px] flex-1 max-w-sm blog-card-container cursor-pointer bg-white p-5 rounded-2xl shadow-2xl"
               >
                 <div className="blog-img mb-4">
                   <img
-                    className="w-full h-[240px]  object-fill rounded-2xl"
+                    className="w-full h-[240px]  object-cover object-[50%_0%] rounded-2xl"
                     src={blog.blogImg}
                     alt=""
                   />

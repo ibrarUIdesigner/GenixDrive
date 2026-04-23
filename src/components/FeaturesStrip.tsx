@@ -1,4 +1,3 @@
-
 import Paragraph from "./sharedui/Paragraph";
 import { motion } from "framer-motion";
 import SubHeading from "./sharedui/SubHeading";
@@ -131,7 +130,7 @@ const FeaturesStrip = () => {
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-black/40" />
+              <div className="absolute inset-0 bg-black/90" />
             </div>
             {/* <span className="mt-6 h-1 w-16 rounded-full bg-current/20 transition-all duration-300 group-hover:w-24 group-hover:bg-current/40" /> */}
           </motion.div>

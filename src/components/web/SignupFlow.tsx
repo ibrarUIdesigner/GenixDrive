@@ -34,7 +34,7 @@ const SignupFlow = () => {
           />
         </div>
       </SectionHeading>
-      <div className="mt-[70px]">
+      <div className="mt-[50px]">
         <Switch onClick={handleChildClick} />
 
         <div className="steps sigup-flows flex items-center flex-wrap justify-center gap-10 mt-[76px]">
@@ -42,7 +42,7 @@ const SignupFlow = () => {
             <>
               {/* STEP1 */}
               <div className="w-[400px] h-full  step-container relative p-10 rounded-2xl bg-surface-light border overflow-hidden">
-                <div className="step-details">
+                <div className="step-details text-left">
                   <SubHeading
                     size="2xl"
                     weight="black"
@@ -71,7 +71,7 @@ const SignupFlow = () => {
               </div>
               {/* STEP2 */}
               <div className="w-[400px] h-full step-container relative p-10 rounded-2xl bg-surface-light border">
-                <div className="step-details">
+                <div className="step-details text-left">
                   <SubHeading
                     size="2xl"
                     weight="black"
@@ -102,7 +102,7 @@ const SignupFlow = () => {
               </div>
               {/* STEP3 */}
               <div className="w-[400px]  step-container relative   p-10 rounded-2xl bg-surface-light border">
-                <div className="step-details">
+                <div className="step-details text-left">
                   <SubHeading
                     size="2xl"
                     weight="black"
@@ -133,7 +133,7 @@ const SignupFlow = () => {
               </div>
               {/* STEP4 */}
               <div className="w-[400px]  step-container p-10 relative rounded-2xl bg-surface-light border overflow-hidden">
-                <div className="step-details">
+                <div className="step-details text-left">
                   <SubHeading
                     size="2xl"
                     weight="black"
@@ -165,7 +165,7 @@ const SignupFlow = () => {
             <>
               {/* STEP1 */}
               <div className="w-[400px] h-full  step-container relative p-10 rounded-2xl bg-surface-light border overflow-hidden">
-                <div className="step-details">
+                <div className="step-details text-left">
                   <SubHeading
                     size="2xl"
                     weight="black"
@@ -194,7 +194,7 @@ const SignupFlow = () => {
               </div>
               {/* STEP4 */}
               <div className="w-[400px]  step-container p-10 relative rounded-2xl bg-surface-light border overflow-hidden">
-                <div className="step-details">
+                <div className="step-details text-left">
                   <SubHeading
                     size="2xl"
                     weight="black"
