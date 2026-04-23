@@ -49,8 +49,7 @@ const Footer = () => {
           <SubHeading
             color="white"
             weight="medium"
-            size="4xl"
-            className="mb-4 "
+            className="mb-4 text-[32px]"
           >
             Quick <p>Access</p>
           </SubHeading>
@@ -96,7 +95,11 @@ const Footer = () => {
         </div>
 
         <div>
-          <SubHeading color="white" weight="medium" size="4xl" className="mb-4">
+          <SubHeading
+            color="white"
+            weight="medium"
+            className="mb-4 text-[32px]"
+          >
             Features
           </SubHeading>
           <ul className="space-y-3 text-sm">
@@ -136,7 +139,11 @@ const Footer = () => {
         </div>
 
         <div>
-          <SubHeading color="white" weight="medium" size="4xl" className="mb-4">
+          <SubHeading
+            color="white"
+            weight="medium"
+            className="mb-4 text-[32px]"
+          >
             Download <p>Now</p>
           </SubHeading>
           <StoreActionsButtons className="!block footer0actions" />
